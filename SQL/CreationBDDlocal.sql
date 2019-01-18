@@ -140,7 +140,7 @@ CREATE TABLE participe(
 
 
 #------------------------------------------------------------
-# Table: représente
+# Table: represente
 #------------------------------------------------------------
 
 CREATE TABLE represente(
@@ -211,16 +211,16 @@ CREATE TABLE contient(
 
 
 #------------------------------------------------------------
-# Table: represente
+# Table: correspond
 #------------------------------------------------------------
 
-CREATE TABLE represente(
+CREATE TABLE correspond(
         id_categorie Int NOT NULL ,
         id_article   Int NOT NULL
-	,CONSTRAINT represente_PK PRIMARY KEY (id_categorie,id_article)
+	,CONSTRAINT correspond_PK PRIMARY KEY (id_categorie,id_article)
 
-	,CONSTRAINT represente_categorie_FK FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie)
-	,CONSTRAINT represente_articles0_FK FOREIGN KEY (id_article) REFERENCES articles(id_article)
+	,CONSTRAINT correspond_categorie_FK FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie)
+	,CONSTRAINT correspond_articles0_FK FOREIGN KEY (id_article) REFERENCES articles(id_article)
 )ENGINE=InnoDB;
 
 
@@ -237,4 +237,3 @@ CREATE TABLE aime(
 	,CONSTRAINT aime_idee_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
 	,CONSTRAINT aime_Users0_FK FOREIGN KEY (id_users) REFERENCES Users(id_users)
 )ENGINE=InnoDB;
-
