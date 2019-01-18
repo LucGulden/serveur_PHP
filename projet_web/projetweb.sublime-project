@@ -1,0 +1,44 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "vendor\\monolog"
+		},
+		{
+			"path": "vendor\\composer"
+		},
+		{
+			"path": "vendor\\dnoegel"
+		},
+		{
+			"path": "vendor\\erusev"
+		},
+		{
+			"path": "vendor\\doctrine"
+		},
+		{
+			"path": "vendor\\fzaninotto"
+		},
+		{
+			"path": "vendor\\hamcrest"
+		},
+		{
+			"path": "vendor\\jakub-onderka"
+		},
+		{
+			"path": "vendor\\laravel"
+		},
+		{
+			"path": "vendor\\league"
+		},
+		{
+			"path": "vendor\\mdbootstrap"
+		},
+		{
+			"path": "vendor\\mockery"
+		}
+	]
+}

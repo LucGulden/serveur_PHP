@@ -1,0 +1,341 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"do",
+				"donnees"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"na",
+				"nav-link"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"ec",
+				"echo\techo \"…\""
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"fo",
+				"foreach\tforeach …"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"array_m",
+				"array_multisort"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"ech",
+				"echo\techo \"…\""
+			],
+			[
+				"uc",
+				"ucwords"
+			],
+			[
+				"php",
+				"phpversion"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "resources/views/welcome.blade.php",
+			"settings":
+			{
+				"buffer_size": 2747,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 588.0,
+		"last_filter": "sa",
+		"selected_items":
+		[
+			[
+				"sa",
+				"Project: Save As"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			]
+		],
+		"width": 786.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp64/www/projet_web"
+	],
+	"file_history":
+	[
+		"/C/wamp64/www/projet_web/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/wamp64/www/projet_web/database/.gitignore",
+		"/C/wamp64/www/laravel5/public/index.php",
+		"/C/wamp64/www/laravel5/composer.json",
+		"/C/wamp64/www/laravel5/resources/views/welcome.blade.php",
+		"/C/wamp64/bin/apache/apache2.4.35/conf/httpd.conf",
+		"/C/wamp64/bin/apache/apache2.4.35/bin/php.ini",
+		"/C/wamp64/bin/apache/apache2.4.35/conf/extra/httpd-vhosts.conf",
+		"/C/wamp64/logs/php_error.log",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/style.css",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/exercice5.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/exercice4.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/exercice7.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/session.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/workshop/accueil.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/navbar.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/index.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/e-commerce.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/page_inscription.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/exercice3.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/exercice2.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/scriptInscription.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/corbeille/exercice1.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/scriptRecupTable.php",
+		"/C/Users/lucas/OneDrive/Documents/Exia/Prosits/Prosits A2/Prosit3.1/www/workshop/scriptInscription.php",
+		"/C/Users/lucas/AppData/Local/Packages/microsoft.windowscommunicationsapps_8wekyb3d8bbwe/LocalState/Files/S0/613/ATT57139[884].env",
+		"/C/Users/lucas/Desktop/site web/Ceci est un site"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"directory",
+			"bg",
+			"collapse",
+			"Compact"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "resources/views/welcome.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "projetweb.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"e",
+				"www\\e-commerce.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
