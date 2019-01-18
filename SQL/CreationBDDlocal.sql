@@ -8,7 +8,7 @@
 #------------------------------------------------------------
 
 CREATE TABLE Users(
-        id_users Int  Auto_increment  NOT NULL
+        id_users    Int  NOT NULL
 	,CONSTRAINT Users_PK PRIMARY KEY (id_users)
 )ENGINE=InnoDB;
 
