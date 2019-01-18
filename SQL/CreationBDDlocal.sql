@@ -8,7 +8,7 @@
 #------------------------------------------------------------
 
 CREATE TABLE Users(
-        id_users    Int  NOT NULL
+        id_users    Int NOT NULL
 	,CONSTRAINT Users_PK PRIMARY KEY (id_users)
 )ENGINE=InnoDB;
 
@@ -160,7 +160,6 @@ CREATE TABLE represente(
 CREATE TABLE interagit(
         id_photos Int NOT NULL ,
         id_users  Int NOT NULL ,
-        aime      Bool NOT NULL
 	,CONSTRAINT interagit_PK PRIMARY KEY (id_photos,id_users)
 
 	,CONSTRAINT interagit_photos_event_FK FOREIGN KEY (id_photos) REFERENCES photos_event(id_photos)
@@ -231,7 +230,6 @@ CREATE TABLE correspond(
 CREATE TABLE aime(
         id_idee  Int NOT NULL ,
         id_users Int NOT NULL ,
-        aime     Bool NOT NULL
 	,CONSTRAINT aime_PK PRIMARY KEY (id_idee,id_users)
 
 	,CONSTRAINT aime_idee_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
