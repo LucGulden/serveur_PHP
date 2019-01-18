@@ -454,3 +454,6 @@ Stack trace:
 #13 C:\wamp64\www\serveur_PHP\projet_web\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
 #14 C:\wamp64\www\serveur_PHP\projet_web\server.php(21): require_once('C:\\wamp64\\www\\s...')
 #15 {main}  
+[2019-01-18 09:46:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'app' not found' in C:\wamp64\www\serveur_PHP\projet_web\storage\framework\views\817d9d3a9eeae128a5d67b4fafe1d58706c83539.php:2
+Stack trace:
+#0 {main}  
