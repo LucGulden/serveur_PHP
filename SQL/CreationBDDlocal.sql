@@ -107,10 +107,10 @@ CREATE TABLE recurrence(
 
 
 #------------------------------------------------------------
-# Table: event
+# Table: events
 #------------------------------------------------------------
 
-CREATE TABLE event(
+CREATE TABLE events(
         id_event              Int  Auto_increment  NOT NULL ,
         nom_event             Varchar (50) NOT NULL ,
         description_event     Text NOT NULL ,
@@ -159,7 +159,7 @@ CREATE TABLE represente(
 
 CREATE TABLE interagit(
         id_photos Int NOT NULL ,
-        id_users  Int NOT NULL ,
+        id_users  Int NOT NULL
 	,CONSTRAINT interagit_PK PRIMARY KEY (id_photos,id_users)
 
 	,CONSTRAINT interagit_photos_event_FK FOREIGN KEY (id_photos) REFERENCES photos_event(id_photos)
@@ -229,7 +229,7 @@ CREATE TABLE correspond(
 
 CREATE TABLE aime(
         id_idee  Int NOT NULL ,
-        id_users Int NOT NULL ,
+        id_users Int NOT NULL
 	,CONSTRAINT aime_PK PRIMARY KEY (id_idee,id_users)
 
 	,CONSTRAINT aime_idee_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
