@@ -35,9 +35,18 @@
             <span class="sr-only">(current)</span>
         </a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-cannabis" style="margin-right: 3px;"></i>Evénements</a>
-        </li>
+
+        <li class="nav-item dropdown" id="dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false"><i class="fas fa-glass-cheers" style="margin-right: 3px;"></i> Evenements</a>
+        <div class="dropdown-menu dropdown-primary" id="liste_deroulante_event" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+
         <li class="nav-item">
         <a class="nav-link" href="#"><i class="far fa-lightbulb" style="margin-right: 3px;"></i>Boîte à idées</a>
         </li>
@@ -46,6 +55,8 @@
         </li>
 
         
+        
+
     </ul>
     <form class="form-inline">
     <i class="fas fa-search" aria-hidden="true"></i>
@@ -53,14 +64,8 @@
         </form>
 
         <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false"><i class="fas fa-cog" style="margin-right: 3px;"></i>Compte</a>
-        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Se connecter</a>
-            <a class="dropdown-item" href="#">Se déconnecter</a>
-            <a class="dropdown-item" href="#">Paramètres</a>
-        </div>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-cog" style="margin-right: 3px;"></i>Déconnexion</a>
         </li>
         </ul>
     </div>      
@@ -157,8 +162,9 @@
             <li>
             <i class="fas fa-phone"></i> 0 800 054 568
             </li>
+            <br/>
             <li>
-            <i class="far fa-envelope"></i>
+            <i class="far fa-envelope"></i><a href="mailto:bde-strasbourg.exia.cesi@viacesi.fr"> bde-strasbourg.exia.cesi@viacesi.fr</a>
             </li>
           </ul>
 
@@ -246,8 +252,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">© CESI 2019
     </div>
     <!-- Copyright -->
 
