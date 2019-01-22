@@ -15,3 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/boutique', function () {
+    return view('boutique');
+})->name("boutique");
+
+Route::get('/a-propos', function () {
+    return view('a-propos');
+});

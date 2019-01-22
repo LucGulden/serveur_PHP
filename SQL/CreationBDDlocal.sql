@@ -107,10 +107,10 @@ CREATE TABLE recurrence(
 
 
 #------------------------------------------------------------
-# Table: event
+# Table: events
 #------------------------------------------------------------
 
-CREATE TABLE event(
+CREATE TABLE events(
         id_event              Int  Auto_increment  NOT NULL ,
         nom_event             Varchar (50) NOT NULL ,
         description_event     Text NOT NULL ,
@@ -119,9 +119,9 @@ CREATE TABLE event(
         prix_event            DECIMAL (15,3)  NOT NULL ,
         date_event            Date NOT NULL ,
         id_recurrence         Int
-	,CONSTRAINT event_PK PRIMARY KEY (id_event)
+	,CONSTRAINT events_PK PRIMARY KEY (id_event)
 
-	,CONSTRAINT event_recurrence_FK FOREIGN KEY (id_recurrence) REFERENCES recurrence(id_recurrence)
+	,CONSTRAINT events_recurrence_FK FOREIGN KEY (id_recurrence) REFERENCES recurrence(id_recurrence)
 )ENGINE=InnoDB;
 
 
@@ -135,7 +135,7 @@ CREATE TABLE participe(
 	,CONSTRAINT participe_PK PRIMARY KEY (id_users,id_event)
 
 	,CONSTRAINT participe_Users_FK FOREIGN KEY (id_users) REFERENCES Users(id_users)
-	,CONSTRAINT participe_event0_FK FOREIGN KEY (id_event) REFERENCES event(id_event)
+	,CONSTRAINT participe_event0_FK FOREIGN KEY (id_event) REFERENCES events(id_event)
 )ENGINE=InnoDB;
 
 
@@ -149,7 +149,7 @@ CREATE TABLE represente(
 	,CONSTRAINT represente_PK PRIMARY KEY (id_photos,id_event)
 
 	,CONSTRAINT represente_photos_event_FK FOREIGN KEY (id_photos) REFERENCES photos_event(id_photos)
-	,CONSTRAINT represente_event0_FK FOREIGN KEY (id_event) REFERENCES event(id_event)
+	,CONSTRAINT represente_event0_FK FOREIGN KEY (id_event) REFERENCES events(id_event)
 )ENGINE=InnoDB;
 
 
@@ -159,7 +159,7 @@ CREATE TABLE represente(
 
 CREATE TABLE interagit(
         id_photos Int NOT NULL ,
-        id_users  Int NOT NULL ,
+        id_users  Int NOT NULL
 	,CONSTRAINT interagit_PK PRIMARY KEY (id_photos,id_users)
 
 	,CONSTRAINT interagit_photos_event_FK FOREIGN KEY (id_photos) REFERENCES photos_event(id_photos)
@@ -176,7 +176,7 @@ CREATE TABLE inspire(
         id_idee  Int NOT NULL
 	,CONSTRAINT inspire_PK PRIMARY KEY (id_event,id_idee)
 
-	,CONSTRAINT inspire_event_FK FOREIGN KEY (id_event) REFERENCES event(id_event)
+	,CONSTRAINT inspire_event_FK FOREIGN KEY (id_event) REFERENCES events(id_event)
 	,CONSTRAINT inspire_idee0_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
 )ENGINE=InnoDB;
 
@@ -229,7 +229,7 @@ CREATE TABLE correspond(
 
 CREATE TABLE aime(
         id_idee  Int NOT NULL ,
-        id_users Int NOT NULL ,
+        id_users Int NOT NULL
 	,CONSTRAINT aime_PK PRIMARY KEY (id_idee,id_users)
 
 	,CONSTRAINT aime_idee_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
