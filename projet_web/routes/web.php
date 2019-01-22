@@ -23,6 +23,6 @@ Route::get('/boite-a-idees', function () {
     return view('idee');
 })->name("idee");
 
-Route::get('/evenements', function () {
-    return view('evenements');
-})->name("evenements");
+Route::get('/evenements-passes', function () {
+    return view('evenementspasses');
+})->name("evenementspasses");
