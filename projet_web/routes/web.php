@@ -22,3 +22,7 @@ Route::get('/boutique', function () {
 Route::get('/boite-a-idees', function () {
     return view('idee');
 })->name("idee");
+
+Route::get('/evenements', function () {
+    return view('evenements');
+})->name("evenements");
