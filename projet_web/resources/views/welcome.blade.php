@@ -41,7 +41,10 @@
         <li class="nav-item">
         <a class="nav-link" href="#"><i class="far fa-lightbulb" style="margin-right: 3px;"></i>Boîte à idées</a>
         </li>
-        <li>
+        <li class="nav-item">
+        <a class="nav-link" href="/boutique"><i class="fas fa-shopping-cart" style="margin-right: 3px;"></i>Boutique</a>
+        </li>
+
         
     </ul>
     <form class="form-inline">

@@ -3,9 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-tofit=no">
-		<link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
-		<link rel="stylesheet" href="assets/style.css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
+        <link href="css/boutique.css" rel="stylesheet">
+
+        <link href="css/all.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 		<title>Boutique</title>
@@ -84,7 +87,7 @@
 							<div class="pricing">
 								<div class="plan-header">
 									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
 											Teddy Exia.CESI Strasbourg
 										</h3>
@@ -106,7 +109,7 @@
 							<div class="pricing">
 								<div class="plan-header">
 									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
 											Teddy Exia.CESI Strasbourg
 										</h3>
@@ -128,7 +131,7 @@
 							<div class="pricing">
 								<div class="plan-header">
 									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
 											Teddy Exia.CESI Strasbourg
 										</h3>
@@ -174,7 +177,7 @@
 							<div class="pricing">
 								<div class="plan-header">
 									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
 											Teddy Exia.CESI Strasbourg
 										</h3>
@@ -196,7 +199,7 @@
 							<div class="pricing">
 								<div class="plan-header">
 									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
 											Teddy Exia.CESI Strasbourg
 										</h3>
@@ -218,7 +221,7 @@
 							<div class="pricing">
 								<div class="plan-header">
 									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
 											Teddy Exia.CESI Strasbourg
 										</h3>
@@ -244,7 +247,7 @@
 								<div class="pricing">
 									<div class="plan-header">
 										<div class="plan-price">
-										<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+										<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 											<h3 class="plan-title mbr-fonts-style display-5">
 												Teddy Exia.CESI Strasbourg
 											</h3>
@@ -266,7 +269,7 @@
 								<div class="pricing">
 									<div class="plan-header">
 										<div class="plan-price">
-										<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+										<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 											<h3 class="plan-title mbr-fonts-style display-5">
 												Teddy Exia.CESI Strasbourg
 											</h3>
@@ -288,7 +291,7 @@
 								<div class="pricing">
 									<div class="plan-header">
 										<div class="plan-price">
-										<img class="price-figure mbr-fonts-style display-1" src="./assets/images/teddy.jpg" alt="Article">									
+										<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 											<h3 class="plan-title mbr-fonts-style display-5">
 												Teddy Exia.CESI Strasbourg
 											</h3>
