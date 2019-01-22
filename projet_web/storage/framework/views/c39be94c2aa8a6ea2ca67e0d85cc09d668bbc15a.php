@@ -18,52 +18,55 @@
     </head>
     <body>
 		
+<!-- BARRE DE NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
+    <img src="images/logo_exia.png" style=" max-width: 6%; margin-right: 10px;" alt="logo exia">
+    <img src="images/logo_bde.png" style=" max-width: 4%; margin-right: 10px;" alt="logo bde">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="basicExampleNav">
 
-    <!-- BARRE DE NAVIGATION -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
-      <img src="images/logo_exia.png" style=" max-width: 6%; margin-right: 10px;" alt="logo exia">
-      <img src="images/logo_bde.png" style=" max-width: 4%; margin-right: 10px;" alt="logo bde">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="basicExampleNav">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="/a-propos"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
+            <span class="sr-only">(current)</span>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-cannabis" style="margin-right: 3px;"></i>Evénements</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="far fa-lightbulb" style="margin-right: 3px;"></i>Boîte à idées</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/boutique"><i class="fas fa-shopping-cart" style="margin-right: 3px;"></i>Boutique</a>
+        </li>
 
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/a-propos"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-cannabis" style="margin-right: 3px;"></i>Evénements</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="far fa-lightbulb" style="margin-right: 3px;"></i>Boîte à idées</a>
-          </li>
-          <li>
-            
+        
+    </ul>
+    <form class="form-inline">
+    <i class="fas fa-search" aria-hidden="true"></i>
+<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+        </form>
+
+        <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"><i class="fas fa-cog" style="margin-right: 3px;"></i>Compte</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Se connecter</a>
+            <a class="dropdown-item" href="#">Se déconnecter</a>
+            <a class="dropdown-item" href="#">Paramètres</a>
+        </div>
+        </li>
         </ul>
-        <form class="form-inline">
-        <i class="fas fa-search" aria-hidden="true"></i>
-  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-            </form>
-
-          <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false"><i class="fas fa-cog" style="margin-right: 3px;"></i>Compte</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Se connecter</a>
-              <a class="dropdown-item" href="#">Se déconnecter</a>
-              <a class="dropdown-item" href="#">Paramètres</a>
-            </div>
-          </li>
-          </ul>
-      </div>      
-    </nav>
+    </div>      
+</nav>
 <!--/.Navbar-->
+ 
 
 
 

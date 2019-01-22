@@ -19,4 +19,10 @@ Route::get('/boutique', function () {
     return view('boutique');
 })->name("boutique");
 
-Route::get('/a-propos', 'Apropos@test');
+Route::get('/boite-a-idees', function () {
+    return view('idee');
+})->name("idee");
+
+Route::get('/evenements-passes', function () {
+    return view('evenementspasses');
+})->name("evenementspasses");
