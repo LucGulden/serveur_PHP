@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/boutique', function () {
     return view('boutique');
 })->name("boutique");
+
+Route::get('/a-propos', function () {
+    return view('a-propos');
+});

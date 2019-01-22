@@ -628,3 +628,27 @@ Stack trace:
 #13 C:\wamp\www\ProjetWeb\serveur_PHP\projet_web\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
 #14 C:\wamp\www\ProjetWeb\serveur_PHP\projet_web\server.php(21): require_once('C:\\wamp\\www\\Pro...')
 #15 {main}  
+[2019-01-22 10:35:46] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:35:49] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:35:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:35:58] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:35:59] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:35:59] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:36:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
+[2019-01-22 10:36:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:18
+Stack trace:
+#0 {main}  
