@@ -32,7 +32,7 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/a-propos"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
+            <a class="nav-link" href="#"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -134,122 +134,6 @@
       </div>
     </div>
 
-
-<!-- Footer -->
-<footer class="page-footer font-small indigo" style="margin-top: 30px; background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contactez-nous</h5>
-
-          <ul class="list-unstyled">
-            <li>
-            <i class="fas fa-phone"></i> 0 800 054 568
-            </li>
-            <li>
-            <i class="far fa-envelope"></i>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Suivez-nous sur les réseaux</h5>
-
-         <div>
-            
-            <a class="btn-floating btn-lg btn-yt" type="button" role="button"><i class="fab fa-youtube"></i></a>
-            
-            <a class="btn-floating btn-lg btn-li" type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
-            
-            <a class="btn-floating btn-lg btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
-           
-            <a class="btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
-         </div>   
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
 
 
 

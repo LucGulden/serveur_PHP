@@ -32,7 +32,7 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
+            <a class="nav-link" href="/a-propos"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
               <span class="sr-only">(current)</span>
             </a>
           </li>
