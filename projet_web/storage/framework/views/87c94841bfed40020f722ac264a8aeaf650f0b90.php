@@ -162,12 +162,13 @@
 			<div class="dropdown" id="tri">
 				<button class="btn btn-black dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				  Catégorie
-				</button>
+				
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 				  <a class="dropdown-item" href="#">Vêtements</a>
 				  <a class="dropdown-item" href="#">Chapeaux</a>
 				  <a class="dropdown-item" href="#">Mugs</a>
 				</div>
+</button>
 			  </div>
 		
 			<section class="topsales">
@@ -433,5 +434,7 @@
 
 		<script src="./assets/vendors/jquery/jquery-3.3.1.min.js"></script>
 		<script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/all.min.js"></script>
+
 	</body>
 </html>
