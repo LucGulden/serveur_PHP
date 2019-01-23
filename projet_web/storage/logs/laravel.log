@@ -2241,6 +2241,7 @@ Stack trace:
 #49 C:\wamp64\www\serveur_PHP\projet_web\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #50 C:\wamp64\www\serveur_PHP\projet_web\server.php(21): require_once('C:\\wamp64\\www\\s...')
 #51 {main}  
+<<<<<<< HEAD
 [2019-01-23 10:23:17] local.ERROR: PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 La table 'users' existe déjà in C:\wamp\www\ProjetWeb\serveur_PHP\projet_web\vendor\laravel\framework\src\Illuminate\Database\Connection.php:449
 Stack trace:
 #0 C:\wamp\www\ProjetWeb\serveur_PHP\projet_web\vendor\laravel\framework\src\Illuminate\Database\Connection.php(449): PDOStatement->execute()
@@ -2302,3 +2303,8 @@ Stack trace:
 #24 C:\wamp\www\ProjetWeb\serveur_PHP\projet_web\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #25 C:\wamp\www\ProjetWeb\serveur_PHP\projet_web\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #26 {main}  
+=======
+[2019-01-23 09:21:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'Route' (T_STRING)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:22
+Stack trace:
+#0 {main}  
+>>>>>>> 0979ba01f49377e281df7244d18e1e853219f6d3
