@@ -38,9 +38,11 @@
         </form>
 
         <ul class="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-cog" style="margin-right: 3px;"></i>Déconnexion</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-cog" style="margin-right: 3px;"></i>Déconnexion
+                </a>
+            </li>
         </ul>
     </div>      
 </nav>
