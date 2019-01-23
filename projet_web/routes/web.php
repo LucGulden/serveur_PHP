@@ -24,7 +24,14 @@ Route::get('/evenementspasses', function(){
 });
 
 Route::get('/boutique', function () {
-    return view('boutique');
+    $topsales_names = [
+        'Teddy eXia cool',
+        'Mug trop beau',
+        'La daronne à Julien'
+    ];
+    
+
+    return view('boutique', compact('topsales_names'));
 })->name("boutique");
 
 Route::get('/boite-a-idees', function () {
