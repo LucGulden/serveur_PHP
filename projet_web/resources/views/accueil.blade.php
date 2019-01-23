@@ -20,8 +20,8 @@
 		
 <!-- BARRE DE NAVIGATION -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
-    <img src="images/logo_exia.png" style=" max-width: 6%; margin-right: 10px;" alt="logo exia">
-    <img src="images/logo_bde.png" style=" max-width: 4%; margin-right: 10px;" alt="logo bde">
+    <img src="images/logo_exia.png" style="width: 70px; margin-right: 10px;" alt="logo exia">
+    <img src="images/logo_bde.png" style=" width: 40px; margin-right: 10px;" alt="logo bde">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false"><i class="fas fa-glass-cheers" style="margin-right: 3px;"></i> Evenements</a>
         <div class="dropdown-menu dropdown-primary" id="liste_deroulante_event" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Evénements passés</a>
+          <a class="dropdown-item" href="/evenementspasses">Evénements passés</a>
           <a class="dropdown-item" href="#">Evénements à venir</a>
         </div>
       </li>
@@ -58,7 +58,7 @@
 
     </ul>
     <form class="form-inline">
-    <i class="fas fa-search" aria-hidden="true"></i>
+    <i class="fas fa-search" aria-hidden="true" style="color: white"></i>
 <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
         </form>
 

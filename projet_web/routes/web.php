@@ -19,6 +19,10 @@ Route::get('/mentions_legales', function(){
     return view('mentions_legales');
 });
 
+Route::get('/evenementspasses', function(){
+    return view('evenementspasses');
+});
+
 Route::get('/boutique', function () {
     return view('boutique');
 })->name("boutique");
