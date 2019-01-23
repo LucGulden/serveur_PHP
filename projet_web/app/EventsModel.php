@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EventsModel extends Model
+class events extends Model
 {
     protected $fillable = [
         'nom_event',
