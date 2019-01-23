@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="container">
         <div class="row justify-content-center">
@@ -64,4 +62,5 @@
     </div>
 
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
