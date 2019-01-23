@@ -1,6 +1,3 @@
-<head>
-<link href="css/boutique.css" rel="stylesheet">
-</head>
 @extends('layout')
 
 @section('content')
