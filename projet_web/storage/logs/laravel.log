@@ -2241,3 +2241,6 @@ Stack trace:
 #49 C:\wamp64\www\serveur_PHP\projet_web\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #50 C:\wamp64\www\serveur_PHP\projet_web\server.php(21): require_once('C:\\wamp64\\www\\s...')
 #51 {main}  
+[2019-01-23 09:21:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'Route' (T_STRING)' in C:\wamp64\www\serveur_PHP\projet_web\routes\web.php:22
+Stack trace:
+#0 {main}  

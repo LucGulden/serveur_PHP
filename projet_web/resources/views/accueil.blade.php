@@ -31,7 +31,7 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-        <a class="nav-link" href="/a-propos"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
+        <a class="nav-link" href="#"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
             <span class="sr-only">(current)</span>
         </a>
         </li>
@@ -40,9 +40,8 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false"><i class="fas fa-glass-cheers" style="margin-right: 3px;"></i> Evenements</a>
         <div class="dropdown-menu dropdown-primary" id="liste_deroulante_event" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Evénements passés</a>
+          <a class="dropdown-item" href="#">Evénements à venir</a>
         </div>
       </li>
 
@@ -89,13 +88,13 @@
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
             <!--First slide-->
-            <div class="carousel-item active">
+            <div class="carousel-item active"><h2 class="text-center">Lorem ipsum dolor sit amet</h2>
               <div class="row">
-                <div class="col-6">
-                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+                <div class="col-12 col-md-6 align-self-center">
+                  <img class="d-block w-100" style="margin-bottom:10px;" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
                 </div>
-                <div class="col-6">  
-                  <h2>Lorem ipsum dolor sit amet</h2>
+                <div class="col-12 col-md-6">  
+                  
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
                 </div>
               </div>
@@ -104,10 +103,10 @@
             <!--Second slide-->
             <div class="carousel-item">
               <div class="row">
-                  <div class="col-6">
+                  <div class="col-12 col-md-6">
                     <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
                   </div>
-                  <div class="col-6">  
+                  <div class="col-12 col-md-6">  
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
                   </div>
               </div>
@@ -116,10 +115,10 @@
             <!--Third slide-->
             <div class="carousel-item">
             <div class="row">
-                  <div class="col-6">
+                  <div class="col-12 col-md-6">
                     <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
                   </div>
-                  <div class="col-6">  
+                  <div class="col-12 col-md-6">  
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
                   </div>
               </div>
@@ -147,13 +146,13 @@
 <footer class="page-footer font-small indigo" style="margin-top: 30px; background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
 
     <!-- Footer Links -->
-    <div class="container text-center text-md-left">
+    <div class="container text-center">
 
       <!-- Grid row -->
       <div class="row">
 
         <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
+        <div class="col-12 col-md-6 mx-auto">
 
           <!-- Links -->
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contactez-nous</h5>
@@ -162,84 +161,36 @@
             <li>
             <i class="fas fa-phone"></i> 0 800 054 568
             </li>
-            <br/>
-            <li>
+            <li style="margin-top: 10px;">
             <i class="far fa-envelope"></i><a href="mailto:bde-strasbourg.exia.cesi@viacesi.fr"> bde-strasbourg.exia.cesi@viacesi.fr</a>
             </li>
           </ul>
 
         </div>
-        <!-- Grid column -->
+       
+
+    
+
+    
+       
 
         <hr class="clearfix w-100 d-md-none">
 
         <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
+        <div class="col-12 col-md-6 mx-auto">
 
           <!-- Links -->
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Suivez-nous sur les réseaux</h5>
 
          <div>
             
-            <a class="btn-floating btn-lg btn-yt" type="button" role="button"><i class="fab fa-youtube"></i></a>
+            <a class="btn-floating btn-lg btn-yt" role="button"><i class="fab fa-youtube"></i></a>
             
-            <a class="btn-floating btn-lg btn-li" type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn-floating btn-lg btn-li" role="button"><i class="fab fa-linkedin-in"></i></a>
             
-            <a class="btn-floating btn-lg btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
+            <a class="btn-floating btn-lg btn-tw" role="button"><i class="fab fa-twitter"></i></a>
            
-            <a class="btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn-floating btn-lg btn-fb" role="button"><i class="fab fa-facebook-f"></i></a>
          </div>   
 
         </div>
@@ -252,7 +203,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© CESI 2019
+    <div class="footer-copyright text-center py-3">© CESI 2019 - <a href="/mentions_legales">Mentions Légales</a>
     </div>
     <!-- Copyright -->
 
