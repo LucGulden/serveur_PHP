@@ -2755,3 +2755,203 @@ Stack trace:
 #49 C:\wamp64\www\serveur_PHP\projet_web\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #50 C:\wamp64\www\serveur_PHP\projet_web\server.php(21): require_once('C:\\wamp64\\www\\s...')
 #51 {main}  
+[2019-01-23 22:44:39] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:167)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(101): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(89): Illuminate\\Log\\LogManager->get(NULL)
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(493): Illuminate\\Log\\LogManager->driver()
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(114): Illuminate\\Log\\LogManager->error('Unable to prepa...', Array)
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\app\\Exceptions\\Handler.php(35): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(LogicException))
+#5 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(353): App\\Exceptions\\Handler->report(Object(LogicException))
+#6 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(124): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(LogicException))
+#7 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-01-23 22:44:39] laravel.ERROR: Unable to prepare route [api/user] for serialization. Uses Closure. {"exception":"[object] (LogicException(code: 0): Unable to prepare route [api/user] for serialization. Uses Closure. at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php:917)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\RouteCacheCommand.php(62): Illuminate\\Routing\\Route->prepareForSerialization()
+#1 [internal function]: Illuminate\\Foundation\\Console\\RouteCacheCommand->handle()
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#7 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#8 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#9 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeCommand.php(31): Illuminate\\Console\\Command->call('route:cache')
+#11 [internal function]: Illuminate\\Foundation\\Console\\OptimizeCommand->handle()
+#12 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#17 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2019-01-23 22:47:30] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:167)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(101): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(89): Illuminate\\Log\\LogManager->get(NULL)
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(493): Illuminate\\Log\\LogManager->driver()
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(114): Illuminate\\Log\\LogManager->error('Command \"make\" ...', Array)
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\app\\Exceptions\\Handler.php(35): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Console\\Exception\\CommandNotFoundException))
+#5 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(353): App\\Exceptions\\Handler->report(Object(Symfony\\Component\\Console\\Exception\\CommandNotFoundException))
+#6 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(124): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(Symfony\\Component\\Console\\Exception\\CommandNotFoundException))
+#7 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-01-23 22:47:30] laravel.ERROR: Command "make" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php:632)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(226): Symfony\\Component\\Console\\Application->find('make')
+#1 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-01-23 22:49:16] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:167)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(101): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(89): Illuminate\\Log\\LogManager->get(NULL)
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(493): Illuminate\\Log\\LogManager->driver()
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(114): Illuminate\\Log\\LogManager->error('Unable to prepa...', Array)
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\app\\Exceptions\\Handler.php(35): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(LogicException))
+#5 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(353): App\\Exceptions\\Handler->report(Object(LogicException))
+#6 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(124): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(LogicException))
+#7 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-01-23 22:49:16] laravel.ERROR: Unable to prepare route [api/user] for serialization. Uses Closure. {"exception":"[object] (LogicException(code: 0): Unable to prepare route [api/user] for serialization. Uses Closure. at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php:917)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\RouteCacheCommand.php(62): Illuminate\\Routing\\Route->prepareForSerialization()
+#1 [internal function]: Illuminate\\Foundation\\Console\\RouteCacheCommand->handle()
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#7 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#8 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#9 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeCommand.php(31): Illuminate\\Console\\Command->call('route:cache')
+#11 [internal function]: Illuminate\\Foundation\\Console\\OptimizeCommand->handle()
+#12 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#17 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2019-01-23 22:50:01] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:167)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(101): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(89): Illuminate\\Log\\LogManager->get(NULL)
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(493): Illuminate\\Log\\LogManager->driver()
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(114): Illuminate\\Log\\LogManager->error('Command \"genera...', Array)
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\app\\Exceptions\\Handler.php(35): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Console\\Exception\\CommandNotFoundException))
+#5 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(353): App\\Exceptions\\Handler->report(Object(Symfony\\Component\\Console\\Exception\\CommandNotFoundException))
+#6 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(124): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(Symfony\\Component\\Console\\Exception\\CommandNotFoundException))
+#7 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-01-23 22:50:01] laravel.ERROR: Command "generate" is not defined.
+
+Did you mean one of these?
+    event:generate
+    generate:controller
+    generate:migration
+    generate:model
+    generate:pivot
+    generate:publish-templates
+    generate:resource
+    generate:scaffold
+    generate:seed
+    generate:view
+    key:generate
+    migrate:generate {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"generate\" is not defined.
+
+Did you mean one of these?
+    event:generate
+    generate:controller
+    generate:migration
+    generate:model
+    generate:pivot
+    generate:publish-templates
+    generate:resource
+    generate:scaffold
+    generate:seed
+    generate:view
+    key:generate
+    migrate:generate at C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php:632)
+[stacktrace]
+#0 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(226): Symfony\\Component\\Console\\Application->find('generate')
+#1 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\wamp64\\www\\serveur_PHP\\projet_web\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
