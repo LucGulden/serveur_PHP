@@ -1,109 +1,22 @@
-<!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <title>Boite à idées</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
-  <link href="css/evenementspasses.css" rel="stylesheet">
-  <link href="css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  <link href="css/idee.css" rel="stylesheet">
-
-  
-  
-  
-</head>
-	<!--navbar-expand-lg -->
-	<body>
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
-				<img src="images/logo_exia.png" style=" max-width: 6%; margin-right: 10px;" alt="logo exia">
-				<img src="images/logo_bde.png" style=" max-width: 4%; margin-right: 10px;" alt="logo bde">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-				  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="basicExampleNav">
-		  
-				  <!-- Links -->
-				  <ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-					  <a class="nav-link" href="#"><i class="fas fa-home" style="margin-right: 3px;"></i>Accueil
-						<span class="sr-only">(current)</span>
-					  </a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#"><i class="fas fa-cannabis" style="margin-right: 3px;"></i>Evénements</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#"><i class="far fa-lightbulb" style="margin-right: 3px;"></i>Boîte à idées</a>
-					</li>
-					<li>
-					  
-				  </ul>
-				  <form class="form-inline">
-				  <i class="fas fa-search" aria-hidden="true"></i>
-			<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-					  </form>
-		  
-					<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-					  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"><i class="fas fa-cog" style="margin-right: 3px;"></i>Compte</a>
-					  <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Se connecter</a>
-						<a class="dropdown-item" href="#">Se déconnecter</a>
-						<a class="dropdown-item" href="#">Paramètres</a>
-					  </div>
-					</li>
-					</ul>
-				</div>      
-			  </nav>
-			
-		</header>
+<?php $__env->startSection('content'); ?>
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
-
-    
-
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="title col-12 col-lg-8">
-                <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">Boite à idées</h1>
-                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">Proposez nous des idées d'évènements</h2>
-            </div>
-        </div>
+    <div class="titrepage">
+                <h1>Boite à idées</h1>
+                <h2>Proposez nous des idées d'évènements</h2>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="media-container-column col-lg-8" data-form-type="formoid">
-                    <div data-form-alert="" hidden="">Merci pour votre proposition!</div>
-            
-                    <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="WMmqeGDhm2PE4DGic8j4s1wMMjo/qqBKMYyhjhuBSrPWFpIRclfoaqLNRR9fBqNXwZ9R/vye//7SCz9M5xqIyWEqN3n8BoIOrwUcyVpi93cav5MoqdGHLZq+4bs/enp7">
-                        <div class="row row-sm-offset">
-                            <div class="col-md-4 multi-horizontal" data-for="name">
-                                <div class="form-group">
-                                    <label class="form-control-label mbr-fonts-style display-7" for="name-form1-c">Titre de l'idée</label>
-                                    <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="name-form1-c">
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
-                        <div class="form-group" data-for="message">
-                            <label class="form-control-label mbr-fonts-style display-7" for="message-form1-c">Description de l'idée</label>
-                            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message-form1-c"></textarea>
-                        </div>
-            
-                        <span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">Soumettre</button></span>
-                    </form>
-            </div>
-        </div>
-    </div>
+	
+	<form method="post" action="traitement.php">
+   		<p>
+		   <label for="titreidee">Titre de votre idée :</label>
+       	   <input type="text" name="titreidee" id="titreidee" />
+       
+       <br />
+       		<label for="descriptionidee">Description de votre idée:</label>
+       		<textarea name="descriptionidee" id="descriptionidee"></textarea>
+		   </p>
+		   <p> <button type="submit">Soumettre l'idée!</button> </p>
+		</form>
+
 </section>
 
 <section>
@@ -132,133 +45,5 @@
     </div>
 
 </section>
-
-
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
-  
-  
-<!-- Footer -->
-<footer class="page-footer font-small indigo" style="margin-top: 30px; background-color: #e3f2fd; background: linear-gradient(#4E4E4E, #000000);">
-
-	<!-- Footer Links -->
-	<div class="container text-center text-md-left">
-
-		<!-- Grid row -->
-		<div class="row">
-
-			<!-- Grid column -->
-			<div class="col-md-3 mx-auto">
-
-				<!-- Links -->
-				<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contactez-nous</h5>
-
-				<ul class="list-unstyled">
-					<li>
-					<i class="fas fa-phone"></i> 0 800 054 568
-					</li>
-					<li>
-					<i class="far fa-envelope"></i>
-					</li>
-				</ul>
-
-			</div>
-			<!-- Grid column -->
-
-			<hr class="clearfix w-100 d-md-none">
-
-			<!-- Grid column -->
-			<div class="col-md-3 mx-auto">
-
-				<!-- Links -->
-				<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-				<ul class="list-unstyled">
-					<li>
-						<a href="#!">Link 1</a>
-					</li>
-					<li>
-						<a href="#!">Link 2</a>
-					</li>
-					<li>
-						<a href="#!">Link 3</a>
-					</li>
-					<li>
-						<a href="#!">Link 4</a>
-					</li>
-				</ul>
-
-			</div>
-			<!-- Grid column -->
-
-			<hr class="clearfix w-100 d-md-none">
-
-			<!-- Grid column -->
-			<div class="col-md-3 mx-auto">
-
-				<!-- Links -->
-				<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-				<ul class="list-unstyled">
-					<li>
-						<a href="#!">Link 1</a>
-					</li>
-					<li>
-						<a href="#!">Link 2</a>
-					</li>
-					<li>
-						<a href="#!">Link 3</a>
-					</li>
-					<li>
-						<a href="#!">Link 4</a>
-					</li>
-				</ul>
-
-			</div>
-			<!-- Grid column -->
-
-			<hr class="clearfix w-100 d-md-none">
-
-			<!-- Grid column -->
-			<div class="col-md-3 mx-auto">
-
-				<!-- Links -->
-				<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Suivez-nous sur les réseaux</h5>
-
-			 <div>
-					
-					<a class="btn-floating btn-lg btn-yt" type="button" role="button"><i class="fab fa-youtube"></i></a>
-					
-					<a class="btn-floating btn-lg btn-li" type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
-					
-					<a class="btn-floating btn-lg btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
-				 
-					<a class="btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
-			 </div>   
-
-			</div>
-			<!-- Grid column -->
-
-		</div>
-		<!-- Grid row -->
-
-	</div>
-	<!-- Footer Links -->
-
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3">© 2018 Copyright:
-		<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-	</div>
-	<!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-		<script src="./assets/vendors/jquery/jquery-3.3.1.min.js"></script>
-		<script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-	</body>
-</html>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
