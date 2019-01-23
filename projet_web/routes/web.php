@@ -20,9 +20,9 @@ Route::get('/mentions_legales', function(){
 });
 
 Route::get('/evenementspasses', function(){
-    $event_name = DB::table('events')->get(['nom_event']);
-    return $event_name;
-    // return view('evenementspasses');
+    // $event_name = DB::table('events')->get(['nom_event']);
+    // return $event_name;
+    return view('evenementspasses');
 });
 
 Route::get('/boutique', function () {
