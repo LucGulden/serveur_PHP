@@ -17,6 +17,8 @@
 					<div class="top-sales">
 						<h2 class="align-center">Top ventes</h2>
 					</div>
+					
+					@foreach ($topsales_names as $topsales_name)
 					<div class="media-container-row">
 						<div class=" col-12 col-lg-4 col-md-6 my-2">
 							<div class="pricing">
@@ -24,7 +26,7 @@
 									<div class="plan-price">
 									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
 										<h3 class="plan-title mbr-fonts-style display-5">
-											Teddy Exia.CESI Strasbourg
+											{{ $topsales_name }}
 										</h3>
 										<hr>
 									</div>
@@ -40,49 +42,7 @@
 							</div>
 						</div>
 			
-						<div class=" col-12 col-lg-4 col-md-6 my-2">
-							<div class="pricing">
-								<div class="plan-header">
-									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
-										<h3 class="plan-title mbr-fonts-style display-5">
-											Teddy Exia.CESI Strasbourg
-										</h3>
-										<hr>
-									</div>
-								</div>
-								<div class="plan-body">
-									<p class="mbr-text mbr-fonts-style display-7">
-										25,00€
-									</p>
-									<div class="mbr-section-btn pt-4 text-center">
-										<a href="#" class="btn btn-black display-4">ajouter au panier</a>
-									</div>
-								</div>
-							</div>
-						</div>
-			
-						<div class=" col-12 col-lg-4 col-md-6 my-2">
-							<div class="pricing">
-								<div class="plan-header">
-									<div class="plan-price">
-									<img class="price-figure mbr-fonts-style display-1" src="images/teddy.jpg" alt="Article">									
-										<h3 class="plan-title mbr-fonts-style display-5">
-											Teddy Exia.CESI Strasbourg
-										</h3>
-										<hr>
-									</div>
-								</div>
-								<div class="plan-body">
-									<p class="mbr-text mbr-fonts-style display-7">
-										25,00€
-									</p>
-									<div class="mbr-section-btn pt-4 text-center">
-										<a href="#" class="btn btn-black display-4">ajouter au panier</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						@endforeach
 			
 					</div>
 				</div>
