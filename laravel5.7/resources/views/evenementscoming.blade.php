@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="title col-12 col-lg-8">
-                <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">Evenements passés</h1>
+                <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">Evenements à venir</h1>
             </div>
         </div>
     </div>
@@ -34,5 +34,3 @@
 </section>
 
 @endsection
-  
-  

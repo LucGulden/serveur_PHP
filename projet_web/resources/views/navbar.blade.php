@@ -18,8 +18,8 @@
                     <i class="fas fa-glass-cheers" style="margin-right: 3px;"></i> Evenements
                 </a>
                 <div class="dropdown-menu dropdown-primary" id="liste_deroulante_event" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/evenementspasses">Evénements passés</a>
-                    <a class="dropdown-item" href="#">Evénements à venir</a>
+                    <a class="dropdown-item" href="evenementspasses">Evénements passés</a>
+                    <a class="dropdown-item" href="evenementscoming">Evénements à venir</a>
                 </div>
             </li>
             <li class="nav-item">
