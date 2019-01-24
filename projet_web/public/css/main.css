@@ -120,10 +120,18 @@ button:hover{
   
 button{
     background-color: black;
+    border:black;
     color: white;
     font-size: 16px;
     text-align: center;
-    display: inline-block;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#soumettre{
+
+  margin-left: 12em;
 }
 
 

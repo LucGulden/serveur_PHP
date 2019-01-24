@@ -14,7 +14,7 @@
        		<label for="descriptionidee">Description de votre idée:</label>
        		<textarea name="descriptionidee" id="descriptionidee"></textarea>
 		   </p>
-		   <p> <button type="submit" onclick="submitform" id="soumettre">Soumettre l'idée!</button> </p>
+		   <p> <button type="submit" onclick="submitform">Soumettre l'idée!</button> </p>
 		</form>
 
 </section>

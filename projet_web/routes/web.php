@@ -27,6 +27,7 @@ Route::get('/mentions_legales', function(){
 
 Route::resource('/evenementspasses', 'EventsController');
 
+
 Route::get('/boutique', function () {
     $topsales_names = [
         'Teddy eXia cool',
