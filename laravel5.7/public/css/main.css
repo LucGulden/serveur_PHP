@@ -76,6 +76,7 @@ h3
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
+    margin-bottom: 2em;
   }
   
   
@@ -131,8 +132,7 @@ button{
 
 #soumettre{
 
-  margin-left: 12em;
-}
+text-align: center}
 
 
 /* placement du bouton panier dans la boutique */
