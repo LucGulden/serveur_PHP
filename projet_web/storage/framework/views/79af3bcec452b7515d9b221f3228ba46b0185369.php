@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/mdb.min.css" rel="stylesheet">
-        <link href="css/style.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/all.min.css" rel="stylesheet">
         <title>BDE Exia</title>
@@ -15,14 +14,14 @@
     
     <body>
         <header>
-            <?php echo $__env->make('navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('navbar', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </header>
         
         <main>
             <?php echo $__env->yieldContent('content'); ?>
         </main>
         
-            <?php echo $__env->make('footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         
     </body>
 </html>
