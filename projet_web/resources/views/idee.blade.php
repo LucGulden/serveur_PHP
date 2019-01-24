@@ -95,7 +95,7 @@ function submitform(){
     console.log(JSON.stringify(datapost));
 
     console.log(datapost);
-    
+
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/",
