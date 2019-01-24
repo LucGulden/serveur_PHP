@@ -7,7 +7,7 @@
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	
-	<form method="post">
+	<form method="post" id="formulaire">
    		<p>
 		   <label for="titreidee">Titre de votre idée :</label>
        	   <input type="text" name="titreidee" id="titreidee" />
