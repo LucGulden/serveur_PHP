@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="container-fluid border border-primary rounded mb-0" style="margin-top: 30px; width: 90%; background-color: rgba(204,204,204,0.33); border-width: 10px;">
         <!--Carousel Wrapper-->
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel" style="padding-top: 20px; padding-bottom: 20px;">
@@ -54,11 +52,11 @@
           <!--/.Slides-->
           <!--Controls-->
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
           <!--/.Controls-->
@@ -66,4 +64,5 @@
       <!--/.Carousel Wrapper-->
       </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
