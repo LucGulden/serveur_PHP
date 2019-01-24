@@ -39,7 +39,7 @@
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('Deconnexion') }}">
                     <i class="fas fa-cog" style="margin-right: 3px;"></i>Déconnexion
                 </a>
             </li>
