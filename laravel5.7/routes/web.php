@@ -22,11 +22,11 @@ Route::get('/mentions_legales', function(){
     return view('mentions_legales');
 });
 
-Route::get('/evenementspasses', function(){
-    // $event_name = DB::table('events')->get(['nom_event']);
-    // return $event_name;
-    return view('evenementspasses');
-});
+
+
+Route::get('/evenementspasses', 'EventController@eventpassed');
+
+Route::get('/evenementscoming', 'EventController@eventcoming');
 
 Route::get('/boutique', function () {
     $topsales_names = [
@@ -43,9 +43,6 @@ Route::get('/boite-a-idees', function () {
     return view('idee');
 })->name("idee");
 
-Route::get('/evenements-passes', function () {
-    return view('evenementspasses');
-})->name("evenementspasses");
 
 Route::get('/inscription', function () {
     return view('inscription');
