@@ -19,11 +19,13 @@ Route::get('/mentions_legales', function(){
     return view('mentions_legales');
 });
 
-Route::get('/evenementspasses', function(){
-    // $event_name = DB::table('events')->get(['nom_event']);
-    // return $event_name;
-    return view('evenementspasses');
-});
+// Route::get('/evenementspasses', function(){
+//     // $event_name = DB::table('events')->get(['nom_event']);
+//     // return $event_name;
+//     return view('evenementspasses');
+// });
+
+Route::resource('/evenementspasses', 'EventsController');
 
 Route::get('/boutique', function () {
     $topsales_names = [
