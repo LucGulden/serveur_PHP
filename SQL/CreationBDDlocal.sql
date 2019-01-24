@@ -8,7 +8,11 @@
 #------------------------------------------------------------
 
 CREATE TABLE Users(
-        id_users    Int NOT NULL
+        id_users     Int NOT NULL ,
+        nom_users    Varchar (50) NOT NULL ,
+        prenom_users Varchar (50) NOT NULL ,
+        mail_users   Varchar (50) NOT NULL ,
+        mdp_users    Varchar (50) NOT NULL
 	,CONSTRAINT Users_PK PRIMARY KEY (id_users)
 )ENGINE=InnoDB;
 
@@ -65,7 +69,7 @@ CREATE TABLE idee(
 CREATE TABLE articles(
         id_article          Int  Auto_increment  NOT NULL ,
         nom_article         Varchar (50) NOT NULL ,
-        prix_article        DECIMAL (15,3)  NOT NULL ,
+        prix_article        Float NOT NULL ,
         description_article Text NOT NULL ,
         nbr_ventes_article  Int NOT NULL ,
         stock_article       Int NOT NULL ,
@@ -79,7 +83,8 @@ CREATE TABLE articles(
 #------------------------------------------------------------
 
 CREATE TABLE commande(
-        id_commande Int  Auto_increment  NOT NULL
+        id_commande         Int  Auto_increment  NOT NULL ,
+        achevement_commande Bool NOT NULL
 	,CONSTRAINT commande_PK PRIMARY KEY (id_commande)
 )ENGINE=InnoDB;
 
@@ -111,15 +116,15 @@ CREATE TABLE recurrence(
 #------------------------------------------------------------
 
 CREATE TABLE events(
-        id_event              Int  Auto_increment  NOT NULL ,
-        nom_event             Varchar (50) NOT NULL ,
-        description_event     Text NOT NULL ,
-        image_event           Varchar (100) NOT NULL ,
-        nbrparticipants_event Int NOT NULL ,
-        prix_event            DECIMAL (15,3)  NOT NULL ,
-        date_event            Date NOT NULL ,
-        id_recurrence         Int
-	,CONSTRAINT events_PK PRIMARY KEY (id_event)
+        id_events              Int  Auto_increment  NOT NULL ,
+        nom_events             Varchar (50) NOT NULL ,
+        description_events     Text NOT NULL ,
+        image_events           Varchar (100) NOT NULL ,
+        nbrparticipants_events Int NOT NULL ,
+        prix_events            Float NOT NULL ,
+        date_events            Date NOT NULL ,
+        id_recurrence          Int
+	,CONSTRAINT events_PK PRIMARY KEY (id_events)
 
 	,CONSTRAINT events_recurrence_FK FOREIGN KEY (id_recurrence) REFERENCES recurrence(id_recurrence)
 )ENGINE=InnoDB;
@@ -130,26 +135,26 @@ CREATE TABLE events(
 #------------------------------------------------------------
 
 CREATE TABLE participe(
-        id_users Int NOT NULL ,
-        id_event Int NOT NULL
-	,CONSTRAINT participe_PK PRIMARY KEY (id_users,id_event)
+        id_users  Int NOT NULL ,
+        id_events Int NOT NULL
+	,CONSTRAINT participe_PK PRIMARY KEY (id_users,id_events)
 
 	,CONSTRAINT participe_Users_FK FOREIGN KEY (id_users) REFERENCES Users(id_users)
-	,CONSTRAINT participe_event0_FK FOREIGN KEY (id_event) REFERENCES events(id_event)
+	,CONSTRAINT participe_events0_FK FOREIGN KEY (id_events) REFERENCES events(id_events)
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: represente
+# Table: représente
 #------------------------------------------------------------
 
 CREATE TABLE represente(
         id_photos Int NOT NULL ,
-        id_event  Int NOT NULL
-	,CONSTRAINT represente_PK PRIMARY KEY (id_photos,id_event)
+        id_events Int NOT NULL
+	,CONSTRAINT represente_PK PRIMARY KEY (id_photos,id_events)
 
 	,CONSTRAINT represente_photos_event_FK FOREIGN KEY (id_photos) REFERENCES photos_event(id_photos)
-	,CONSTRAINT represente_event0_FK FOREIGN KEY (id_event) REFERENCES events(id_event)
+	,CONSTRAINT represente_events0_FK FOREIGN KEY (id_events) REFERENCES events(id_events)
 )ENGINE=InnoDB;
 
 
@@ -172,11 +177,11 @@ CREATE TABLE interagit(
 #------------------------------------------------------------
 
 CREATE TABLE inspire(
-        id_event Int NOT NULL ,
-        id_idee  Int NOT NULL
-	,CONSTRAINT inspire_PK PRIMARY KEY (id_event,id_idee)
+        id_events Int NOT NULL ,
+        id_idee   Int NOT NULL
+	,CONSTRAINT inspire_PK PRIMARY KEY (id_events,id_idee)
 
-	,CONSTRAINT inspire_event_FK FOREIGN KEY (id_event) REFERENCES events(id_event)
+	,CONSTRAINT inspire_events_FK FOREIGN KEY (id_events) REFERENCES events(id_events)
 	,CONSTRAINT inspire_idee0_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
 )ENGINE=InnoDB;
 
@@ -201,7 +206,8 @@ CREATE TABLE achete(
 
 CREATE TABLE contient(
         id_article  Int NOT NULL ,
-        id_commande Int NOT NULL
+        id_commande Int NOT NULL ,
+        quantite    Int NOT NULL
 	,CONSTRAINT contient_PK PRIMARY KEY (id_article,id_commande)
 
 	,CONSTRAINT contient_articles_FK FOREIGN KEY (id_article) REFERENCES articles(id_article)
@@ -235,3 +241,4 @@ CREATE TABLE aime(
 	,CONSTRAINT aime_idee_FK FOREIGN KEY (id_idee) REFERENCES idee(id_idee)
 	,CONSTRAINT aime_Users0_FK FOREIGN KEY (id_users) REFERENCES Users(id_users)
 )ENGINE=InnoDB;
+
