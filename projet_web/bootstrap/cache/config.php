@@ -8,7 +8,11 @@
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
+<<<<<<< HEAD
     'key' => 'base64:seJ54bCDxED2JGawd82yexTRMAC3hRKevl813ex8LZA=',
+=======
+    'key' => 'base64:jbcI/RmISC6kcOw7iEZBsGUqQvb9RGLhUG5jOaEZ9ao=',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -169,7 +173,11 @@
       'file' => 
       array (
         'driver' => 'file',
+<<<<<<< HEAD
         'path' => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\storage\\framework/cache/data',
+=======
+        'path' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\framework/cache/data',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
       ),
       'memcached' => 
       array (
@@ -209,7 +217,11 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
+<<<<<<< HEAD
         'database' => 'projetweblocal',
+=======
+        'database' => 'homestead',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
         'prefix' => '',
       ),
       'mysql' => 
@@ -217,9 +229,15 @@
         'driver' => 'mysql',
         'host' => '127.0.0.1',
         'port' => '3306',
+<<<<<<< HEAD
         'database' => 'projetweblocal',
         'username' => 'root',
         'password' => '',
+=======
+        'database' => 'homestead',
+        'username' => 'homestead',
+        'password' => 'secret',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -232,9 +250,15 @@
         'driver' => 'pgsql',
         'host' => '127.0.0.1',
         'port' => '3306',
+<<<<<<< HEAD
         'database' => 'projetweblocal',
         'username' => 'root',
         'password' => '',
+=======
+        'database' => 'homestead',
+        'username' => 'homestead',
+        'password' => 'secret',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
         'charset' => 'utf8',
         'prefix' => '',
         'schema' => 'public',
@@ -245,9 +269,15 @@
         'driver' => 'sqlsrv',
         'host' => '127.0.0.1',
         'port' => '3306',
+<<<<<<< HEAD
         'database' => 'projetweblocal',
         'username' => 'root',
         'password' => '',
+=======
+        'database' => 'homestead',
+        'username' => 'homestead',
+        'password' => 'secret',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
         'charset' => 'utf8',
         'prefix' => '',
       ),
@@ -274,12 +304,20 @@
       'local' => 
       array (
         'driver' => 'local',
+<<<<<<< HEAD
         'root' => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\storage\\app',
+=======
+        'root' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\app',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
       ),
       'public' => 
       array (
         'driver' => 'local',
+<<<<<<< HEAD
         'root' => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\storage\\app/public',
+=======
+        'root' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\app/public',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -312,7 +350,11 @@
       'theme' => 'default',
       'paths' => 
       array (
+<<<<<<< HEAD
         0 => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\resources\\views/vendor/mail',
+=======
+        0 => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\resources\\views/vendor/mail',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
       ),
     ),
   ),
@@ -392,7 +434,11 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
+<<<<<<< HEAD
     'files' => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\storage\\framework/sessions',
+=======
+    'files' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\framework/sessions',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -411,9 +457,15 @@
   array (
     'paths' => 
     array (
+<<<<<<< HEAD
       0 => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\resources\\views',
     ),
     'compiled' => 'C:\\wamp\\www\\ProjetWeb\\serveur_PHP\\projet_web\\storage\\framework\\views',
+=======
+      0 => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\resources\\views',
+    ),
+    'compiled' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\framework\\views',
+>>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
   ),
   'tinker' => 
   array (
