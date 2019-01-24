@@ -5,7 +5,7 @@
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	
-	<form method="post">
+	<form method="post" id = "formulaire">
    		<p>
 		   <label for="titreidee">Titre de votre idée :</label>
        	   <input type="text" name="titreidee" id="titreidee" />
@@ -84,9 +84,6 @@ function submitform(){
   
   alert("test");
 
-    var titre = $("#titreidee").val();
-    var descrip = $("#descriptionidee").val();
-
     var datapost = {
 
         "titre_idee":$("#titreidee").val(),
@@ -96,10 +93,11 @@ function submitform(){
     console.log(JSON.stringify(datapost));
 
     console.log(datapost);
+
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/",
-        data: {titre_idee: titre, description_idee: descrip}, //JSON.stringify(datapost),
+        data: = JSON.stringify(datapost),
         success: function(){
            // window.location.reload()
         },
