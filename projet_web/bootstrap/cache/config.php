@@ -8,7 +8,7 @@
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:a1Lf62xlJhZTNuHfKAAvOkaho25VtlZSSbhQu47pjEw=',
+    'key' => 'base64:jbcI/RmISC6kcOw7iEZBsGUqQvb9RGLhUG5jOaEZ9ao=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -169,7 +169,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\storage\\framework/cache/data',
+        'path' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -209,7 +209,7 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => 'projet_web_local',
+        'database' => 'homestead',
         'prefix' => '',
       ),
       'mysql' => 
@@ -217,9 +217,9 @@
         'driver' => 'mysql',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'projet_web_local',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'homestead',
+        'username' => 'homestead',
+        'password' => 'secret',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -232,9 +232,9 @@
         'driver' => 'pgsql',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'projet_web_local',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'homestead',
+        'username' => 'homestead',
+        'password' => 'secret',
         'charset' => 'utf8',
         'prefix' => '',
         'schema' => 'public',
@@ -245,9 +245,9 @@
         'driver' => 'sqlsrv',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'projet_web_local',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'homestead',
+        'username' => 'homestead',
+        'password' => 'secret',
         'charset' => 'utf8',
         'prefix' => '',
       ),
@@ -274,12 +274,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\storage\\app',
+        'root' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\storage\\app/public',
+        'root' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -312,7 +312,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\resources\\views/vendor/mail',
+        0 => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -392,7 +392,7 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\storage\\framework/sessions',
+    'files' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -411,27 +411,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\resources\\views',
+      0 => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\resources\\views',
     ),
-    'compiled' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\storage\\framework\\views',
-  ),
-  'generators' => 
-  array (
-    'config' => 
-    array (
-      'model_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/model.txt',
-      'scaffold_model_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/scaffolding/model.txt',
-      'controller_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/controller.txt',
-      'scaffold_controller_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/scaffolding/controller.txt',
-      'migration_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/migration.txt',
-      'seed_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/seed.txt',
-      'view_template_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\vendor/xethron/laravel-4-generators/src/Way/Generators/templates/view.txt',
-      'model_target_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\app',
-      'controller_target_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\app\\Http/Controllers',
-      'migration_target_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\database/migrations',
-      'seed_target_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\database/seeds',
-      'view_target_path' => 'C:\\wamp64\\www\\serveur_PHP\\projet_web\\resources/views',
-    ),
+    'compiled' => 'C:\\wampServer\\www\\Projet_Web\\serveur_PHP\\projet_web\\storage\\framework\\views',
   ),
   'tinker' => 
   array (
