@@ -39,7 +39,3 @@ Route::get('/boutique', function () {
 Route::get('/boite-a-idees', function () {
     return view('idee');
 })->name("idee");
-
-// Route::get('/evenements-passes', function () {
-//     return view('evenementspasses');
-// })->name("evenementspasses");
