@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="titrepage">
                 <h1>Boite à idées</h1>
@@ -105,4 +103,5 @@ function submitform(){
     });
  }
  </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

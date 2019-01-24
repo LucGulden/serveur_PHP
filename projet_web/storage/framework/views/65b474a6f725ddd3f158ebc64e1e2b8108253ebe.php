@@ -14,14 +14,14 @@
     
     <body>
         <header>
-            @include('navbar')
+            <?php echo $__env->make('navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </header>
         
         <main>
-            @yield('content')
+            <?php echo $__env->yieldContent('content'); ?>
         </main>
         
-            @include('footer')
+            <?php echo $__env->make('footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         
     </body>
 </html>
