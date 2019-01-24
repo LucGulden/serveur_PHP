@@ -14,7 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+Route::get('/accueil', function () {
     return view('accueil');
 });
 
@@ -46,3 +46,13 @@ Route::get('/boite-a-idees', function () {
 Route::get('/evenements-passes', function () {
     return view('evenementspasses');
 })->name("evenementspasses");
+
+Route::get('/inscription', function () {
+    return view('inscription');
+});
+
+Route::post('Inscription','connexioncontroller@register')-> name('Inscription');
+
+Route::post('Connexion','connexioncontroller@login')-> name('Connexion');
+
+Route::get('Deconnexion', 'connexioncontroller@deconnexion')-> name('Deconnexion');
