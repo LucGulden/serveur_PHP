@@ -8,11 +8,7 @@
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-<<<<<<< HEAD
-    'key' => 'base64:seJ54bCDxED2JGawd82yexTRMAC3hRKevl813ex8LZA=',
-=======
     'key' => 'base64:jbcI/RmISC6kcOw7iEZBsGUqQvb9RGLhUG5jOaEZ9ao=',
->>>>>>> 19d56d907e30c05adb477fc783206d2f693b2470
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
