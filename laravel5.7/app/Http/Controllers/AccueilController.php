@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
-
 class AccueilController extends Controller
 {
     public function topvente()
@@ -12,6 +11,8 @@ class AccueilController extends Controller
         $topvente = Article::get()
         ->sortByDesc('nbr_ventes_article')
         ->take(3);
+
+       
         
         return view('accueil', [
             'articles' => $topvente

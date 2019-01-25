@@ -19,18 +19,25 @@
 <section>
 
     
-  @foreach($events as $event)
+  @foreach($events as $event)<?php
+  $id_event = $event->id_events;?>
     <div class="container-fluid border border-warning rounded mb-0">
         <h3>{{ $event->nom_events }}</h3>
         <p>{{ $event->description_events }}</p>
 		<img src="{{ $event->image_events }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
-		<div class="jaime">    
-		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">J'aime</button></span>
-		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">Voir les photos de l'évènements</button></span>
-        </div>
+		<div class="jaime">
+        <form method="post" action="{{ route('Evenementscoming_post') }}">
+        @csrf
+        <span class="input-group-btn"><button type="submit" class="btn btn-form btn-black display-4" name="participe_event" onclick="maFonction(<?php echo($id_event) ?>)">Participer à l'événement</button></span>
+        </form>
+		</div>
     </div>
     @endforeach
    
 </section>
-
+<script>
+    function maFonction(id) {
+        alert(id);
+    }
+</script>
 @endsection

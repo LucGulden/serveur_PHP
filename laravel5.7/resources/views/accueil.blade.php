@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+<?php
+use Illuminate\Support\Facades\Session;
+?>
 <div class="container-fluid border border-primary rounded mb-0" style="margin-top: 30px; width: 90%; background-color: rgba(204,204,204,0.33); border-width: 10px;">
         <!--Carousel Wrapper-->
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel" style="padding-top: 20px; padding-bottom: 20px;">
@@ -12,6 +15,7 @@
           </ol>
           <!--/.Indicators-->
           <!--Slides-->
+          <?php $id_utilisateur = Session::get('id'); echo($id_utilisateur) ?>
           <div class="carousel-inner" role="listbox">
             <?php $i=0; ?>
             @foreach($articles as $article)

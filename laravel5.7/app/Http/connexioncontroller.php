@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class connexioncontroller extends Controller
 {
@@ -32,9 +33,8 @@ class connexioncontroller extends Controller
 	if ($user->mdp_user==$request->input('password')) 
 	{
 		session_start();
-		$_SESSION['id']=$user->id_users;	
-		$_SESSION['nom']=$user->nom_users;
-		$_SESSION['role']='1';
+		Session::put('id', $user->id_users);
+		$id_utilisateur = Session::get('id');
 		return redirect('/accueil');
 	}
 	else 

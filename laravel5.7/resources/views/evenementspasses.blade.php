@@ -24,8 +24,7 @@
         <h3>{{ $event->nom_events }}</h3>
         <p>{{ $event->description_events }}</p>
 		<img src="{{ $event->image_events }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
-		<div class="jaime">    
-		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">J'aime</button></span>
+		<div class="jaime">
 		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">Voir les photos de l'évènements</button></span>
         </div>
     </div>
