@@ -24,28 +24,38 @@ class connexioncontroller extends Controller
   		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
   		/*var_dump($request->input('centre'));*/
     	DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>$request->input('password'),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
-    	return view('welcome');
+		$luc=DB::connection('mysql2')->table('users')->where('mail_user', $request->input('mail'))->first();
+		DB::connection('mysql')->table('users')->insert(['id_users'=>$luc->id_users]);
+		return view('welcome');
     } 
 
     function login (Request $request){
 
 	$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
+	if($user != null){
 	if ($user->mdp_user==$request->input('password')) 
 	{
 		session_start();
-		Session::put('id', $user->id_users);
-		$id_utilisateur = Session::get('id');
+		session::put('id', $user->id_users);
+		session::put('connexion','1');
+		session::put('role', $user->id_role);
 		return redirect('/accueil');
 	}
+	}
 	else 
-	{?>
-		<a class="btn btn-danger" onclick="toastr.error('Hi! I am error message.');">Error message</a><?php
+	{
+		?>
+	<script>
+	alert("Identifiant Incorrect");	
+	</script>
+	<?php
+	return view('welcome');
 	}
 	}
 
 	function deconnexion(){
 		session_start();
-		session_destroy();
+		session()->flush();
 
 		return view('welcome');
 

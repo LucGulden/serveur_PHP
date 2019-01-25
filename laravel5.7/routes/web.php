@@ -31,7 +31,7 @@ Route::get('/evenementspasses', 'EventController@eventpassed');
 Route::get('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming');
 Route::post('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming_post');
 
-Route::get('/boutique', 'BoutiqueController@topvente');
+Route::get('/boutique', 'BoutiqueController@topvente', 'BoutiqueController@listarticles');
 
 
 Route::get('/boite-a-idees', function () {
