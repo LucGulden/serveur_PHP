@@ -73,8 +73,7 @@ var getJSON = function(url) {
 
 var ideablock = "";
 const getIdea= function(data){
-    console.log(data.lenght);
-    for (var i = 0; i < data.lenght; i++) {
+    for (var i = 0; i < data.length; i++) {
         ideablock = ideablock + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit'>J'aime!</button></span></div> </div>";
         document.getElementById("testget").innerHTML = ideablock ;
         console.log(data[i]);

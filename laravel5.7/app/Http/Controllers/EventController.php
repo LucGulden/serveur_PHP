@@ -9,7 +9,7 @@ class EventController extends Controller
 
     public function eventcoming()
     {
-        $events = Event::where('date_event', '>=', Carbon::today()->toDateString())->get();
+        $events = Event::where('date_events', '>=', Carbon::today()->toDateString())->get();
          return view('evenementscoming', [
         'events' => $events
     ]);
@@ -17,7 +17,7 @@ class EventController extends Controller
 
     public function eventpassed()
     {
-        $events = Event::where('date_event', '<', Carbon::today()->toDateString())->get();
+        $events = Event::where('date_events', '<', Carbon::today()->toDateString())->get();
          return view('evenementspasses', [
         'events' => $events
     ]);
