@@ -73,10 +73,10 @@ var getJSON = function(url) {
 
 var ideablock = "";
 const getIdea= function(data){
-    for (var i = 0; i < data.length; i++) {
+    const taille = data.length - 1;
+    for (var i = taille; i >= 0; i--) {
         ideablock = ideablock + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit'>J'aime!</button></span></div> </div>";
-        document.getElementById("testget").innerHTML = ideablock ;
-        console.log(data[i]);
+        document.getElementById("testget").innerHTML = ideablock;
     }
 };
 
@@ -103,7 +103,7 @@ function submitform(){
         url: "http://localhost:3000/",
         data: JSON.stringify(datapost),
         success: function(){
-           alert("Query success !");
+            location.reload(true);
         },
         dataType: "json",
         contentType : "application/json"
