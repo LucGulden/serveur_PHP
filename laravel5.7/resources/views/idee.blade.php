@@ -7,7 +7,7 @@
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	
-	
+	<div id = "formulaire">
    		<p>
 		   <label for="titreidee">Titre de votre idée :</label>
        	   <input type="text" name="titreidee" id="titreidee" />
@@ -17,7 +17,7 @@
        		<textarea name="descriptionidee" id="descriptionidee"></textarea>
 		   </p>
 		   <p id="soumettre"> <button type="submit">Soumettre l'idée!</button> </p>
-		</form>
+    </div>
 
 </section>
 

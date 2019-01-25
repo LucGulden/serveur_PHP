@@ -20,22 +20,22 @@ class connexioncontroller extends Controller
 			'password'=> ['required','string','min:6','max:15','regex:/.*(?=.*\d+).*(?=.*[A-Z]).*/'],
 			'centre'=> ['required', 'string', 'regex:/(Strasbourg|Lyon|Nancy)/']
   		]);
-  		$centre = DB::table('centre')->where('lieu_centre', $request->input('centre'))->first();
+  		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
   		/*var_dump($request->input('centre'));*/
-    	DB::table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>$request->input('password'),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
+    	DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>$request->input('password'),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
     	return view('welcome');
     } 
 
     function login (Request $request){
 
-	$user = DB::table('users')->where('mail_user',$request->input('mail'))->first();
+	$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
 	if ($user->mdp_user==$request->input('password')) 
 	{
 		session_start();
 		$_SESSION['id']=$user->id_users;	
 		$_SESSION['nom']=$user->nom_users;
 		$_SESSION['role']='1';
-		return view('Accueil');
+		return redirect('/accueil');
 	}
 	else 
 	{
