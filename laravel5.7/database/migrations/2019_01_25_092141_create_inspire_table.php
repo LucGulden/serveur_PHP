@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateUsersTable extends Migration {
+class CreateInspireTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,11 @@ class CreateUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('users', function(Blueprint $table)
+		Schema::create('inspire', function(Blueprint $table)
 		{
-			$table->integer('id_users')->primary();
+			$table->integer('id_events');
+			$table->integer('id_idee')->index('inspire_idee0_FK');
+			$table->primary(['id_events','id_idee']);
 		});
 	}
 
@@ -26,7 +28,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('users');
+		Schema::drop('inspire');
 	}
 
 }

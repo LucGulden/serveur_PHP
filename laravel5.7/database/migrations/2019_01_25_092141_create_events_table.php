@@ -14,13 +14,13 @@ class CreateEventsTable extends Migration {
 	{
 		Schema::create('events', function(Blueprint $table)
 		{
-			$table->integer('id_event', true);
-			$table->string('nom_event', 50);
-			$table->text('description_event', 65535);
-			$table->string('image_event', 100);
-			$table->integer('nbrparticipants_event');
-			$table->decimal('prix_event', 15, 3);
-			$table->date('date_event');
+			$table->integer('id_events', true);
+			$table->string('nom_events', 50);
+			$table->text('description_events', 65535);
+			$table->string('image_events', 100);
+			$table->integer('nbrparticipants_events');
+			$table->float('prix_events', 10, 0);
+			$table->date('date_events');
 			$table->integer('id_recurrence')->nullable()->index('events_recurrence_FK');
 		});
 	}

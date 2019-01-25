@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateRecurrenceTable extends Migration {
+class CreateCommandeTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class CreateRecurrenceTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('recurrence', function(Blueprint $table)
+		Schema::create('commande', function(Blueprint $table)
 		{
-			$table->integer('id_recurrence', true);
-			$table->string('event_recurrence', 50);
+			$table->integer('id_commande', true);
+			$table->boolean('achevement_commande');
 		});
 	}
 
@@ -27,7 +27,7 @@ class CreateRecurrenceTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('recurrence');
+		Schema::drop('commande');
 	}
 
 }
