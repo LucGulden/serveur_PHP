@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateCommandeTable extends Migration {
+class CreateParticipeTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,11 @@ class CreateCommandeTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('commande', function(Blueprint $table)
+		Schema::create('participe', function(Blueprint $table)
 		{
-			$table->integer('id_commande', true);
+			$table->integer('id_users');
+			$table->integer('id_events')->index('participe_events0_FK');
+			$table->primary(['id_users','id_events']);
 		});
 	}
 
@@ -26,7 +28,7 @@ class CreateCommandeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('commande');
+		Schema::drop('participe');
 	}
 
 }

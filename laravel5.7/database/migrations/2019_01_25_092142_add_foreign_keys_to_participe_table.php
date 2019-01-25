@@ -15,7 +15,7 @@ class AddForeignKeysToParticipeTable extends Migration {
 		Schema::table('participe', function(Blueprint $table)
 		{
 			$table->foreign('id_users', 'participe_Users_FK')->references('id_users')->on('users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('id_event', 'participe_event0_FK')->references('id_event')->on('events')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_events', 'participe_events0_FK')->references('id_events')->on('events')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 
@@ -30,7 +30,7 @@ class AddForeignKeysToParticipeTable extends Migration {
 		Schema::table('participe', function(Blueprint $table)
 		{
 			$table->dropForeign('participe_Users_FK');
-			$table->dropForeign('participe_event0_FK');
+			$table->dropForeign('participe_events0_FK');
 		});
 	}
 

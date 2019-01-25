@@ -14,7 +14,7 @@ class AddForeignKeysToRepresenteTable extends Migration {
 	{
 		Schema::table('represente', function(Blueprint $table)
 		{
-			$table->foreign('id_event', 'represente_event0_FK')->references('id_event')->on('events')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('id_events', 'represente_events0_FK')->references('id_events')->on('events')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 			$table->foreign('id_photos', 'represente_photos_event_FK')->references('id_photos')->on('photos_event')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
@@ -29,7 +29,7 @@ class AddForeignKeysToRepresenteTable extends Migration {
 	{
 		Schema::table('represente', function(Blueprint $table)
 		{
-			$table->dropForeign('represente_event0_FK');
+			$table->dropForeign('represente_events0_FK');
 			$table->dropForeign('represente_photos_event_FK');
 		});
 	}

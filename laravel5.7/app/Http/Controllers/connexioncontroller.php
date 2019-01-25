@@ -38,8 +38,8 @@ class connexioncontroller extends Controller
 		return redirect('/accueil');
 	}
 	else 
-	{
-		return view('welcome');
+	{?>
+		<a class="btn btn-danger" onclick="toastr.error('Hi! I am error message.');">Error message</a><?php
 	}
 	}
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateCommandeTable extends Migration {
+class CreateRepresenteTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,11 @@ class CreateCommandeTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('commande', function(Blueprint $table)
+		Schema::create('represente', function(Blueprint $table)
 		{
-			$table->integer('id_commande', true);
+			$table->integer('id_photos');
+			$table->integer('id_events')->index('represente_events0_FK');
+			$table->primary(['id_photos','id_events']);
 		});
 	}
 
@@ -26,7 +28,7 @@ class CreateCommandeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('commande');
+		Schema::drop('represente');
 	}
 
 }
