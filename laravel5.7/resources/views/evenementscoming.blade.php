@@ -21,9 +21,9 @@
     
   @foreach($events as $event)
     <div class="container-fluid border border-warning rounded mb-0">
-        <h3>{{ $event->nom_event }}</h3>
-        <p>{{ $event->description_event }}</p>
-		<img src="{{ $event->image_event }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
+        <h3>{{ $event->nom_events }}</h3>
+        <p>{{ $event->description_events }}</p>
+		<img src="{{ $event->image_events }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
 		<div class="jaime">    
 		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">J'aime</button></span>
 		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">Voir les photos de l'évènements</button></span>
