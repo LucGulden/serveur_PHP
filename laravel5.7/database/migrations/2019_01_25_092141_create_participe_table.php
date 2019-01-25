@@ -15,8 +15,8 @@ class CreateParticipeTable extends Migration {
 		Schema::create('participe', function(Blueprint $table)
 		{
 			$table->integer('id_users');
-			$table->integer('id_event')->index('participe_event0_FK');
-			$table->primary(['id_users','id_event']);
+			$table->integer('id_events')->index('participe_events0_FK');
+			$table->primary(['id_users','id_events']);
 		});
 	}
 

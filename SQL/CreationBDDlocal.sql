@@ -8,11 +8,7 @@
 #------------------------------------------------------------
 
 CREATE TABLE Users(
-        id_users     Int NOT NULL ,
-        nom_users    Varchar (50) NOT NULL ,
-        prenom_users Varchar (50) NOT NULL ,
-        mail_users   Varchar (50) NOT NULL ,
-        mdp_users    Varchar (50) NOT NULL
+        id_users     Int NOT NULL
 	,CONSTRAINT Users_PK PRIMARY KEY (id_users)
 )ENGINE=InnoDB;
 

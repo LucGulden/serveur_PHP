@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateInspireTable extends Migration {
+class CreateCommandeTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,10 @@ class CreateInspireTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('inspire', function(Blueprint $table)
+		Schema::create('commande', function(Blueprint $table)
 		{
-			$table->integer('id_event');
-			$table->integer('id_idee')->index('inspire_idee0_FK');
-			$table->primary(['id_event','id_idee']);
+			$table->integer('id_commande', true);
+			$table->boolean('achevement_commande');
 		});
 	}
 
@@ -28,7 +27,7 @@ class CreateInspireTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('inspire');
+		Schema::drop('commande');
 	}
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateCommandeTable extends Migration {
+class CreateCentreTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,10 @@ class CreateCommandeTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('commande', function(Blueprint $table)
+		Schema::connection('mysql2')->create('centre', function(Blueprint $table)
 		{
-			$table->integer('id_commande', true);
+			$table->integer('id_centre', true);
+			$table->string('lieu_centre', 50);
 		});
 	}
 
@@ -26,7 +27,7 @@ class CreateCommandeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('commande');
+		Schema::connection('mysql2')->drop('centre');
 	}
 
 }

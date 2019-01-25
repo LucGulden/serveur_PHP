@@ -15,8 +15,8 @@ class CreateRepresenteTable extends Migration {
 		Schema::create('represente', function(Blueprint $table)
 		{
 			$table->integer('id_photos');
-			$table->integer('id_event')->index('represente_event0_FK');
-			$table->primary(['id_photos','id_event']);
+			$table->integer('id_events')->index('represente_events0_FK');
+			$table->primary(['id_photos','id_events']);
 		});
 	}
 

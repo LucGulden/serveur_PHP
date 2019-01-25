@@ -13,57 +13,24 @@
           <!--/.Indicators-->
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
-            <!--First slide-->
-            <div class="carousel-item active"><h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+            <?php $i=0; ?>
+            @foreach($articles as $article)
+            <div class="<?php if($i==0) {echo 'carousel-item active';} else {echo 'carousel-item';}?>">
+              <h2 class="text-center">{{ $article->nom_article }}</h2>
               <div class="row">
-                <div class="col-12 col-md-6 align-self-center">
-                  <img class="d-block w-100" style="margin-bottom:10px;" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+                <div class="col-12 col-md-6 align-self-center text-align-center">
+                  <img class="d-block w-100" style="margin-bottom:10px;" src="{{ $article->image_article }}" alt="First slide">
+                  <strong style="margin-left: 15px;">Prix: <?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€</strong>
                 </div>
-                <div class="col-12 col-md-6">  
+                <div class="col-12 col-md-6" style="margin-top: 10px;">  
                   
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
                 </div>
               </div>
             </div>
-            <!--/First slide-->
-            <!--Second slide-->
-            <div class="carousel-item">
-              <div class="row">
-                  <div class="col-12 col-md-6">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
-                  </div>
-                  <div class="col-12 col-md-6">  
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
-                  </div>
-              </div>
-            </div>
-            <!--/Second slide-->
-            <!--Third slide-->
-            <div class="carousel-item">
-            <div class="row">
-                  <div class="col-12 col-md-6">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
-                  </div>
-                  <div class="col-12 col-md-6">  
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
-                  </div>
-              </div>
-            </div>
-            <!--/Third slide-->
+            <?php $i++; ?>
+            @endforeach
           </div>
-          <!--/.Slides-->
-          <!--Controls-->
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-          <!--/.Controls-->
-        
-      <!--/.Carousel Wrapper-->
       </div>
     </div>
 @endsection

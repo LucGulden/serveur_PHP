@@ -16,6 +16,7 @@ class CreateContientTable extends Migration {
 		{
 			$table->integer('id_article');
 			$table->integer('id_commande')->index('contient_commande0_FK');
+			$table->integer('quantite');
 			$table->primary(['id_article','id_commande']);
 		});
 	}

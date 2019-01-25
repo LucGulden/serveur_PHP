@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration {
 		{
 			$table->integer('id_article', true);
 			$table->string('nom_article', 50);
-			$table->decimal('prix_article', 15, 3);
+			$table->float('prix_article', 10, 0);
 			$table->text('description_article', 65535);
 			$table->integer('nbr_ventes_article');
 			$table->integer('stock_article');

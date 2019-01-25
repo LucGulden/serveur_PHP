@@ -14,15 +14,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/accueil', function () {
-    return view('accueil');
-});
+// Route::get('/accueil', function () {
+//     return view('accueil');
+// });
 
 Route::get('/mentions_legales', function(){
     return view('mentions_legales');
 });
 
 
+
+Route::get('/accueil', 'AccueilController@topvente');
 
 Route::get('/evenementspasses', 'EventController@eventpassed');
 
