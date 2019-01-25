@@ -30,16 +30,8 @@ Route::get('/evenementspasses', 'EventController@eventpassed');
 
 Route::get('/evenementscoming', 'EventController@eventcoming');
 
-Route::get('/boutique', function () {
-    $topsales_names = [
-        'Teddy eXia cool',
-        'Mug trop beau',
-        'La daronne à Julien'
-    ];
-    
+Route::get('/boutique', 'BoutiqueController@topvente');
 
-    return view('boutique', compact('topsales_names'));
-})->name("boutique");
 
 Route::get('/boite-a-idees', function () {
     return view('idee');

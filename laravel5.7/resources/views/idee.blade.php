@@ -16,7 +16,7 @@
        		<label for="descriptionidee">Description de votre idée:</label>
        		<textarea name="descriptionidee" id="descriptionidee"></textarea>
 		   </p>
-		   <p id="soumettre"> <button type="submit">Soumettre l'idée!</button> </p>
+		   <p id="soumettre"> <button type="submit" onclick = "submitform()">Soumettre l'idée!</button> </p>
     </div>
 
 </section>
@@ -48,6 +48,8 @@
 
 </section>
 
+
+<!-- GET -->
 <script>
 
 var getJSON = function(url) {
@@ -71,15 +73,18 @@ var getJSON = function(url) {
 
 var ideablock = "";
 const getIdea= function(data){
-    ideablock = ideablock + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[0].titre_idee + "</h3> <p>" + data[0].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button href='' type='submit' class='btn btn-form btn-black display-4'>J'aime</button></span> </div> </div>";
-    document.getElementById("testget").innerHTML = ideablock ; 
-    console.log(data);
+    console.log(data.lenght);
+    for (var i = 0; i < data.lenght; i++) {
+        ideablock = ideablock + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit'>J'aime!</button></span></div> </div>";
+        document.getElementById("testget").innerHTML = ideablock ;
+        console.log(data[i]);
+    }
 };
-for (var i = 0; i < 15; i++) {
-    getJSON('http://localhost:3000/idee/'+ i).then(getIdea);
-}
+
+getJSON('http://localhost:3000/idee/').then(getIdea);
 </script>
 
+<!-- POST -->
 <script>
    
 function submitform(){
@@ -89,16 +94,17 @@ function submitform(){
     var datapost = {
 
         "titre_idee":$("#titreidee").val(),
-        "description_idee":$("#descriptionidee").val(),
+        "description_idee":$("#descriptionidee").val()
     };
 
-    console.log(datapost);
+   //console.log(datapost);
+    console.log(JSON.stringify(datapost));
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/",
         data: JSON.stringify(datapost),
         success: function(){
-           // window.location.reload()
+           alert("Query success !");
         },
         dataType: "json",
         contentType : "application/json"
