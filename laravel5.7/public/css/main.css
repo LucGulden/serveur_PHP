@@ -132,8 +132,12 @@ button{
 
 #soumettre{
 
-text-align: center}
+text-align: center
+}
 
+.vente{
+  max-height: 200px;
+}
 
 /* placement du bouton panier dans la boutique */
 .panier{

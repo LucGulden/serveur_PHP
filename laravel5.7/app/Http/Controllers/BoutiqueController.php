@@ -13,9 +13,11 @@ class BoutiqueController extends Controller
         ->sortByDesc('nbr_ventes_article')
         ->take(3);
         
+        $articles = Article::get();
+
         return view('boutique', [
-            'articles' => $topvente
-            
+            'topventes' => $topvente,
+            'articles' => $articles,
         ]);
     }
 }
