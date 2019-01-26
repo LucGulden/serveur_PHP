@@ -7,7 +7,7 @@
 					</h1>
 				</div>
 			<div class="panier">
-				<a href="#" class="btn btn-black display-4">Panier</a>
+				<a href="/panier" class="btn btn-black display-4">Panier</a>
 			</div>
 			<section class="topsales">
 				<div class="container">
