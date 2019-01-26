@@ -41,6 +41,15 @@ class connexioncontroller extends Controller
 		session::put('role', $user->id_role);
 		return redirect('/accueil');
 	}
+	else
+	{
+		?>
+	<script>
+	alert("Mdp Incorrect");	
+	</script>
+	<?php
+	return view('welcome');	
+	}
 	}
 	else 
 	{
