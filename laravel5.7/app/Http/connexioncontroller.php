@@ -63,11 +63,10 @@ class connexioncontroller extends Controller
 	}
 
 	function deconnexion(){
-		session_start();
-		session()->flush();
-
-		return view('welcome');
-
+	Session::forget('connexion');
+	Session::save();
+	header('location: /');
+	exit;
 	}
 }
 
