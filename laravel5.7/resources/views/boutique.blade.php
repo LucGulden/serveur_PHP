@@ -46,7 +46,7 @@
 									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€
 									</p>
 									<div class="mbr-section-btn pt-4 text-center">
-									<button type="submit" onclick = "">Ajouter au panier!</button>
+									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
 									</div>
 								</div>
 							</div>
@@ -94,7 +94,7 @@
 									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€
 									</p>
 									<div class="mbr-section-btn pt-4 text-center">
-									<button type="submit" onclick = "">Ajouter au panier!</button>
+									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
 									</div>
 								</div>
 							</div>
