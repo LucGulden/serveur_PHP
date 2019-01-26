@@ -21,8 +21,16 @@ class connexioncontroller extends Controller
 			'password'=> ['required','string','min:6','max:15','regex:/.*(?=.*\d+).*(?=.*[A-Z]).*/'],
 			'centre'=> ['required', 'string', 'regex:/(Strasbourg|Lyon|Nancy)/']
   		]);
-  		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
-  		/*var_dump($request->input('centre'));*/
+		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
+		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
+  		if($user != null){
+  			?>
+  			<script>
+			alert("email deja existant");	
+			</script>
+			<?php
+			return view('welcome');
+  		}
     	DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>Hash::make($request->input('password')),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
 		$luc=DB::connection('mysql2')->table('users')->where('mail_user', $request->input('mail'))->first();
 		DB::connection('mysql')->table('users')->insert(['id_users'=>$luc->id_users]);
