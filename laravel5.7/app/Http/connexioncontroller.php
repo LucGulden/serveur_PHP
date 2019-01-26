@@ -63,10 +63,20 @@ class connexioncontroller extends Controller
 	}
 
 	function deconnexion(){
-	Session::forget('connexion');
-	Session::save();
-	header('location: /');
-	exit;
+		Session::forget('connexion');
+		Session::save();
+		header('location: /');
+		exit;
 	}
+
+	function guest(){
+		session_start();
+		session::put('prenom','invité');
+		session::put('connexion','1');
+		session::put('role', '3');
+		return redirect('/accueil');
+
+	}
+
 }
 
