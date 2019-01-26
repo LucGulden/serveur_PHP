@@ -55,23 +55,45 @@ var getJSON = function(url) {
 	});
 };
 
-var like = 0;
+//var like = 0;
 var blockIdee = "";
 const getIdee= function(data){
     const taille = data.length - 1;
     for (var i = taille; i >= 0; i--) {
-        getJSON('http://localhost:3000/aime/' + data[i].id_idee, function (nbLike) {
-            like = nbLike[0];
-        });
-        console.log(like);
-        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + data[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + data[i].id_idee + "</button></span></div> </div>";
+        // getJSON('http://localhost:3000/aime/' + data[i].id_idee, function (nbLike) {
+        //     console.log(nbLike);
+        // });
+        // console.log(like);
+        // getJSON('http://localhost:3000/aime/1').then(getAime);
+        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + data[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + data[i].id_idee + "</button>" + like + "</span></div> </div>";
         document.getElementById("sectionIdee").innerHTML = blockIdee;
         
     }
 };
 
+const getAime = function (data) {
+    return new Promise(function (resolve, reject) {
+        like = data;
+        resolve(data);
+    });
+};
 
-getJSON('http://localhost:3000/idee/').then(getIdee);
+var like=0;
+
+getJSON('http://localhost:3000/aime/2').then(function (data) {
+    return new Promise(function (resolve, reject) {
+        like = data;
+        resolve(data);
+    }).then (function (data) {
+        console.log(like);
+    });
+});
+
+//console.log(like);
+
+
+
+//getJSON('http://localhost:3000/idee/').then(getIdee);
 </script>
 
 <!-- POST -->
@@ -80,7 +102,6 @@ getJSON('http://localhost:3000/idee/').then(getIdee);
 function soumettreIdee(){
 
     var datapost = {
-
         "titre_idee":$("#titreidee").val(),
         "description_idee":$("#descriptionidee").val()
     };
@@ -92,22 +113,21 @@ function soumettreIdee(){
         url: "http://localhost:3000/",
         data: JSON.stringify(datapost),
         success: function(){
-            location.reload(true);
+            window.location.reload(true);
         },
-        dataType: "json",
         contentType : "application/json"
     });
  }
  </script>
 
 <!-- J'aime -->
- <script>
+<script>
         
     function aimeIdee(id) {
         
         var datapost = {
             "id_idee": id,
-            "id_users": 2
+            "id_users": 3
         };
 
         $.ajax({
@@ -118,7 +138,6 @@ function soumettreIdee(){
                 // location.reload(true);
                 alert("Vous avez aimé l'idée " + id);
             },
-            dataType: "json",
             contentType : "application/json"
         });
     }       
