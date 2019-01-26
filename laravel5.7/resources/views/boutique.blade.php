@@ -1,13 +1,25 @@
 @extends('layout')
 
 @section('content')
+
+@if(Session::has('connexion')) 
+    <div class="alert alert-danger">
+        <p> voues etes bien connectée<p>
+        {{Session::get('connexion')}}
+    </div>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 				<div class="title">
 					<h1>
 						Boutique
 					</h1>
 				</div>
 			<div class="panier">
-				<a href="#" class="btn btn-black display-4">Panier</a>
+				<a href="/panier" class="btn btn-black display-4">Panier</a>
 			</div>
 			<section class="topsales">
 				<div class="container">

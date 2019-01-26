@@ -4,6 +4,18 @@
 <?php
 use Illuminate\Support\Facades\Session;
 ?>
+
+@if(Session::has('connexion')) 
+    <div class="alert alert-danger">
+        <p> voues etes bien connectée<p>
+        {{Session::get('connexion')}}
+    </div>
+@else 
+        <?php 
+        	header('Location: /');
+        	exit();
+         ?>
+@endif
 <div class="container-fluid border border-primary rounded mb-0" style="margin-top: 30px; width: 90%; background-color: rgba(204,204,204,0.33); border-width: 10px;">
         <!--Carousel Wrapper-->
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel" style="padding-top: 20px; padding-bottom: 20px;">

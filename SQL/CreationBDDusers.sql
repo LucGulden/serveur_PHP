@@ -34,7 +34,7 @@ CREATE TABLE users(
         nom_users    Varchar (50) NOT NULL ,
         prenom_users Varchar (50) NOT NULL ,
         mail_user    Varchar (50) NOT NULL ,
-        mdp_user     Varchar (50) NOT NULL ,
+        mdp_user     Varchar (100) NOT NULL ,
         id_role      Int NOT NULL ,
         id_centre    Int NOT NULL
 	,CONSTRAINT users_PK PRIMARY KEY (id_users)

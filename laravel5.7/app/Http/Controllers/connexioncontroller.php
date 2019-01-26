@@ -23,7 +23,7 @@ class connexioncontroller extends Controller
   		]);
   		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
   		/*var_dump($request->input('centre'));*/
-    	DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>Hash::make($request->input('password')),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
+    	DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>$request->input('password'),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
 		$luc=DB::connection('mysql2')->table('users')->where('mail_user', $request->input('mail'))->first();
 		DB::connection('mysql')->table('users')->insert(['id_users'=>$luc->id_users]);
 		return view('welcome');
@@ -33,7 +33,7 @@ class connexioncontroller extends Controller
 
 	$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
 	if($user != null){
-	if (Hash::check($request->input('password'), $user->mdp_user)) 
+	if ($user->mdp_user==$request->input('password')) 
 	{
 		session_start();
 		session::put('id', $user->id_users);
@@ -63,10 +63,11 @@ class connexioncontroller extends Controller
 	}
 
 	function deconnexion(){
-	Session::forget('connexion');
-	Session::save();
-	header('location: /');
-	exit;
+		session_start();
+		session()->flush();
+
+		return view('welcome');
+
 	}
 }
 
