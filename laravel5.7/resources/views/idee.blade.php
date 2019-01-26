@@ -21,7 +21,7 @@
 
 </section>
 
-<section id = "testget">
+<section id = "sectionIdee">
     <div class="container-fluid border border-warning rounded mb-0">
         <h3>Lorem ipsum dolor sit amet</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula vehicula sapien, in accumsan ipsum gravida a. Integer scelerisque, felis sed ultricies lobortis, justo quam aliquet est, id pretium ante odio eu orci. In sit amet mauris et risus suscipit vehicula vel a justo. Sed velit tellus, faucibus in magna ac, faucibus posuere enim. Mauris nec tortor neque. Mauris non nulla urna. Maecenas ut risus ac odio tincidunt imperdiet pharetra quis nunc. Nunc in laoreet libero. Fusce lobortis dolor sit amet ultricies sodales. Quisque laoreet massa a urna aliquet laoreet. Proin sed aliquet neque, sed ultrices massa. Vivamus aliquam lacinia eros in condimentum. Sed lobortis molestie tellus eu euismod. Fusce dignissim blandit felis, id finibus mi sollicitudin eu. Aenean venenatis nulla quis finibus faucibus. Duis in risus et justo maximus laoreet et ut enim.</p>
@@ -55,24 +55,29 @@ var getJSON = function(url) {
 	});
 };
 
-var ideablock = "";
-const getIdea= function(data){
+var like = 0;
+var blockIdee = "";
+const getIdee= function(data){
     const taille = data.length - 1;
     for (var i = taille; i >= 0; i--) {
-        ideablock = ideablock + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + data[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + data[i].id_idee + "</button></span></div> </div>";
-        document.getElementById("testget").innerHTML = ideablock;
+        getJSON('http://localhost:3000/aime/' + data[i].id_idee, function (nbLike) {
+            like = nbLike[0];
+        });
+        console.log(like);
+        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + data[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + data[i].id_idee + "</button></span></div> </div>";
+        document.getElementById("sectionIdee").innerHTML = blockIdee;
+        
     }
 };
 
-getJSON('http://localhost:3000/idee/').then(getIdea);
+
+getJSON('http://localhost:3000/idee/').then(getIdee);
 </script>
 
 <!-- POST -->
 <script>
    
 function soumettreIdee(){
-  
-  alert("test");
 
     var datapost = {
 
@@ -102,7 +107,7 @@ function soumettreIdee(){
         
         var datapost = {
             "id_idee": id,
-            "id_users": 1
+            "id_users": 2
         };
 
         $.ajax({
@@ -110,7 +115,8 @@ function soumettreIdee(){
             url: "http://localhost:3000/aime/",
             data: JSON.stringify(datapost),
             success: function(){
-                location.reload(true);
+                // location.reload(true);
+                alert("Vous avez aimé l'idée " + id);
             },
             dataType: "json",
             contentType : "application/json"
