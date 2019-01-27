@@ -74,6 +74,16 @@ form-input:before{
 
 }
 
+.guest{
+	border-radius:12px 0 12px 0;
+	background: #ffb938;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 8px 6px 8px;
+
+}
+
 a{
 	text-decoration: none;
 	color: rgba(168, 168,168,0.8);
@@ -114,7 +124,8 @@ a:hover{
     			</div>
     				<input type="submit" name="submit" value="Connexion" class="btn-login" required="true">	
     		</form><br>
-    			<a href="http://127.0.0.1:8000/inscription"> Pas encore inscrit ?</a>
+    			<a href="http://127.0.0.1:8000/inscription"> Pas encore inscrit ?</a><br><br>
+				<a href="/Guest" class="button guest" >Continuer en tant qu'invité</a>
     	</div>  	
     </main>   
     </body>
