@@ -29,7 +29,12 @@
         @csrf
         <span class="input-group-btn">
         <input type="hidden" name="id_event_post" value="{{ $event->id_events }}"/>
+        <?php
+        $guest = Session::get('role');
+        if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        {?>
         <button type="submit" class="btn btn-form btn-black display-4" name="participe_event">Participer à l'événement</button></span>
+        <?php }?>
         </form>
         <p>{{ $event->nbrparticipants_events }} personnes participent à cet événement</p>
 		</div>
