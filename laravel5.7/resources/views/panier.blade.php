@@ -6,10 +6,13 @@
 						Votre panier
 					</h1>
 				</div>
-				<div class="panier">
-				<a href="#" class="btn btn-black display-4">Commander</a>
-			</div>
-		
+				<?php
+				$guest = Session::get('role');
+        		if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        				{?>
+        					<div class="panier">
+							<a href="#" class="btn btn-black display-4">Commander</a>
+        				<?php }?>
 			<section class="topsales">
 				<div class="container">
 					<div class="row">
