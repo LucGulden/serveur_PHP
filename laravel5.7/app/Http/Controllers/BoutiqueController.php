@@ -23,6 +23,15 @@ class BoutiqueController extends Controller
 
         $categories = Categorie::get();
 
+        if(isset($_POST['add_article']))
+        {
+            $nom_article=$_POST['nom_article'];
+            $description_article=$_POST['description_article'];
+            $prix_article=$_POST['prix_article'];
+            $image_article=$_POST['image_article'];
+
+            Article::create(['nom_article'=>$nom_article, 'description_article'=>$description_article, 'prix_article'=>$prix_article, 'image_article'=>$image_article, 'nbr_ventes_article'=>0, 'stock_article'=>0]);
+        }
         
         if(isset($_POST['supprimer']))
         {

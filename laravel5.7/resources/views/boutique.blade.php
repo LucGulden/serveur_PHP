@@ -86,6 +86,22 @@
 							<input type="text" name="newcategory"><br>
 							<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
 				</form>
+				<form method="post" action="{{ route('Boutique_post') }}">
+							@csrf
+							<span class="input-group-btn">
+							Créer une nouvelle catégorie:<br>
+							<label for="nom_article">Nom de l'article :</label>
+       	   					<input type="text" name="nom_article" id="nom_article" /><br>
+       						<label for="description_article">Description de l'article:</label>
+							<textarea name="description_article" id="description_article"></textarea><br>
+							<label for="prix_article">Prix de l'article :</label>
+							<input type="text" name="prix_article" id="prix_article" /><br>
+							<label for="image_article">Photo de l'article :</label>
+							<input type="text" name="image_article" id="image_article" /><br>
+							<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
+				</form>
+				
+			
 			</div>
 		
 			<section class="topsales">
