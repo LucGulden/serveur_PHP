@@ -21,6 +21,18 @@ body{
 	margin: 0;
 }
 
+.title {
+color: #fff;
+font-size: 7em;
+font-weight: bold;
+font-family: Helvetica;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+.title {
+  text-align: center;
+}
+
 .container{
 	width:500px;
 	height: 400px;
@@ -74,6 +86,16 @@ form-input:before{
 
 }
 
+.guest{
+	border-radius:12px 0 12px 0;
+	background: #ffb938;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 8px 6px 8px;
+
+}
+
 a{
 	text-decoration: none;
 	color: rgba(168, 168,168,0.8);
@@ -101,6 +123,9 @@ a:hover{
         </style>
     </head>
     <body>
+	<header>
+    	<h1 class="title">Bienvenue sur le site du BDE</h1>
+    </header>
     <main>
     	<div class="container">
     	    <img src="https://www.conversationnel.fr/wp-content/uploads/2018/04/personnage.png" alt="personnage">
@@ -114,7 +139,8 @@ a:hover{
     			</div>
     				<input type="submit" name="submit" value="Connexion" class="btn-login" required="true">	
     		</form><br>
-    			<a href="http://127.0.0.1:8000/inscription"> Pas encore inscrit ?</a>
+    			<a href="http://127.0.0.1:8000/inscription"> Pas encore inscrit ?</a><br><br>
+				<a href="/Guest" class="button guest" >Continuer en tant qu'invité</a>
     	</div>  	
     </main>   
     </body>

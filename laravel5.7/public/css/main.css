@@ -113,22 +113,11 @@ h3
     height: 5em;
   }
   
-button:hover{
+.btn:hover{
    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
    -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important; 
    Color: #ffb938 !important;
 } 
-  
-button{
-    background-color: black;
-    border:black;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-      border-radius: 6px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 #soumettre{
 

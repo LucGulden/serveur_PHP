@@ -6,7 +6,13 @@
 						Votre panier
 					</h1>
 				</div>
-		
+				<?php
+				$guest = Session::get('role');
+        		if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        				{?>
+        					<div class="panier">
+							<a href="#" class="btn btn-black display-4">Commander</a>
+        				<?php }?>
 			<section class="topsales">
 				<div class="container">
 					<div class="row">
@@ -24,10 +30,14 @@
 								</div>
 								<div class="plan-body">
 									<p class="mbr-text mbr-fonts-style display-7">
-									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€
+										<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€<br>
+										Quantité: {{$article->quantite}}<br>
+										Description: {{$article->description_article}}
+
 									</p>
+								
 									<div class="mbr-section-btn pt-4 text-center">
-									<button type="submit" onclick = "">Ajouter au panier!</button>
+									<a href="" class="btn btn-black display-4">Supprimer</a>
 									</div>
 								</div>
 							</div>

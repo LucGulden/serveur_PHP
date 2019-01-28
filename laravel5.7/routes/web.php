@@ -44,6 +44,8 @@ Route::get('/inscription', function () {
     return view('inscription');
 });
 
+Route::get('/Guest', 'connexioncontroller@guest');
+
 Route::post('Inscription','connexioncontroller@register')-> name('Inscription');
 
 Route::post('Connexion','connexioncontroller@login')-> name('Connexion');

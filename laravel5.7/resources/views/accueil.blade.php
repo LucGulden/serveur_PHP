@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Session;
         	exit();
          ?>
 @endif
-<div class="container-fluid border border-primary rounded mb-0" style="margin-top: 30px; width: 90%; background-color: rgba(204,204,204,0.33); border-width: 10px;">
+<div class="container-fluid border border-warning rounded mb-0" style="margin-top: 30px; width: 90%; background-color: rgba(204,204,204,0.33); border-width: 10px;">
         <!--Carousel Wrapper-->
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel" style="padding-top: 20px; padding-bottom: 20px;">
           <!--Indicators-->
@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Session;
               <h2 class="text-center">{{ $article->nom_article }}</h2>
               <div class="row">
                 <div class="col-12 col-md-6 align-self-center text-align-center">
-                  <img class="d-block w-100" style="margin-bottom:10px;" src="{{ $article->image_article }}" alt="First slide">
+                  <img class="d-block vente" style="margin-bottom:10px;" src="{{ $article->image_article }}" alt="First slide">
                   <strong style="margin-left: 15px;">Prix: <?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€</strong>
                 </div>
                 <div class="col-12 col-md-6" style="margin-top: 10px;">  
