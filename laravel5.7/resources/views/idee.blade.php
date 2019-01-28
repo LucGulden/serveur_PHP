@@ -55,45 +55,32 @@ var getJSON = function(url) {
 	});
 };
 
-//var like = 0;
+
 var blockIdee = "";
-const getIdee= function(data){
-    const taille = data.length - 1;
-    for (var i = taille; i >= 0; i--) {
-        // getJSON('http://localhost:3000/aime/' + data[i].id_idee, function (nbLike) {
-        //     console.log(nbLike);
-        // });
-        // console.log(like);
-        // getJSON('http://localhost:3000/aime/1').then(getAime);
-        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + data[i].titre_idee + "</h3> <p>" + data[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + data[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + data[i].id_idee + "</button>" + like + "</span></div> </div>";
+const getIdee = function(idee){
+    var taille = idee.length - 1;
+    for(var i = taille; i >=0; i--) {
+        //getJSON('http://localhost:3000/aime/' + idee[i].id_idee).then(getLike(data, i));
+        console.log(i);
+        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + idee[i].id_idee + "</button></span></div> </div>";
         document.getElementById("sectionIdee").innerHTML = blockIdee;
-        
     }
+    //getJSON('http://localhost:3000/aime/11').then(getLike);
+
+    // var taille = idee.length - 1;
+    // for(var i = taille; i >= 0; i--) {
+    //     blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + idee[i].id_idee + "</button> </span></div> </div>";
+    //     document.getElementById("sectionIdee").innerHTML = blockIdee;
+    // }
 };
 
-const getAime = function (data) {
-    return new Promise(function (resolve, reject) {
-        like = data;
-        resolve(data);
-    });
-};
+const getLike = function(like, test) {
+    console.log(like);
+    console.log(test);
+}
 
-var like=0;
-
-getJSON('http://localhost:3000/aime/2').then(function (data) {
-    return new Promise(function (resolve, reject) {
-        like = data;
-        resolve(data);
-    }).then (function (data) {
-        console.log(like);
-    });
-});
-
-//console.log(like);
-
-
-
-//getJSON('http://localhost:3000/idee/').then(getIdee);
+getJSON('http://localhost:3000/idee/').then(getIdee);
+//getJSON('http://localhost:3000/aime/11').then(getLike);
 </script>
 
 <!-- POST -->
@@ -101,17 +88,18 @@ getJSON('http://localhost:3000/aime/2').then(function (data) {
    
 function soumettreIdee(){
 
-    var datapost = {
+    var ideePost = JSON.stringify({
         "titre_idee":$("#titreidee").val(),
-        "description_idee":$("#descriptionidee").val()
-    };
+        "description_idee":$("#descriptionidee").val(),
+        "id_users": 1
+    });
 
    //console.log(datapost);
-    console.log(JSON.stringify(datapost));
+    console.log(ideePost);
     $.ajax({
         type: "POST",
-        url: "http://localhost:3000/",
-        data: JSON.stringify(datapost),
+        url: "http://localhost:3000/idee/",
+        data: ideePost,
         success: function(){
             window.location.reload(true);
         },
@@ -125,18 +113,18 @@ function soumettreIdee(){
         
     function aimeIdee(id) {
         
-        var datapost = {
+        var aimePost = JSON.stringify({
             "id_idee": id,
-            "id_users": 3
-        };
+            "id_users": 1
+        });
 
         $.ajax({
             type: "POST",
             url: "http://localhost:3000/aime/",
-            data: JSON.stringify(datapost),
+            data: aimePost,
             success: function(){
-                // location.reload(true);
                 alert("Vous avez aimé l'idée " + id);
+                location.reload(true);
             },
             contentType : "application/json"
         });
