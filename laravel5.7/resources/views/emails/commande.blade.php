@@ -7,7 +7,7 @@
     <h1>Vous avez reçu une nouvelle commande!</h1>
     <p>
 @foreach($users as $user)
-    {{$user->nom_users}} {{$user->prenom_users}} a passé une commande! <br>
+    {{$user->nom_users}} {{$user->prenom_users}} a passé une commande! <br><br>
 @endforeach
 @foreach($articles as $article)
     Nom de l'article: {{$article->nom_article}};<br>
