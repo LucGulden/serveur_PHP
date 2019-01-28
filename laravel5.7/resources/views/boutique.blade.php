@@ -27,8 +27,6 @@
 						<h2 class="align-center">Top ventes</h2>
 					</div>
 					<div class="media-container-row">
-						
-						<!--  -->
 						@foreach($topventes as $topvente)
 						<div class=" col-12 col-lg-4 col-md-6 my-2">
 							<div class="pricing">
@@ -46,19 +44,31 @@
 									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€<br>
 									Description: {{$topvente->description_article}}.
 									</p>
+									
+									<?php
+        								$guest = Session::get('role');
+       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        								{?>
 									<form method="post" action="{{ route('Boutique_post') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
-										<?php
-        								$guest = Session::get('role');
-       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
-        								{?>
 										<label for="number">Quantité :</label>
 										<input type="number" name="number" id="number"value=1>
        									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
-       									<?php }?>
 									</form>
+									<?php }?>
+								
+									<?php
+       									if ($guest == 4) 
+        								{?>
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
+										<button type="submit" class="btn btn-form btn-black display-4" name="supprimer">Supprimer</button></span>
+									</form>
+									<?php }?>
 								</div>
 							</div>
 						</div>
@@ -73,37 +83,40 @@
 				</p>
 			</div>
 			
-			<div id="categorie">
-				<form action="/action_page.php">
-					@foreach($categories as $categorie)
-					<input type="checkbox" name="categorie" value="{{$categorie->nom_categorie}}"> {{$categorie->nom_categorie}} <br>
-  					@endforeach
-					<input type="submit" value="Submit">
-				</form>
-				<form method="post" action="{{ route('Boutique_post') }}">
-							@csrf
-							<span class="input-group-btn">
-							Créer une nouvelle catégorie:<br>
-							<input type="text" name="newcategory"><br>
-							<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
-				</form>
-				<form method="post" action="{{ route('Boutique_post') }}">
-							@csrf
-							<span class="input-group-btn">
-							Créer une nouvelle catégorie:<br>
-							<label for="nom_article">Nom de l'article :</label>
-       	   					<input type="text" name="nom_article" id="nom_article" /><br>
-       						<label for="description_article">Description de l'article:</label>
-							<textarea name="description_article" id="description_article"></textarea><br>
-							<label for="prix_article">Prix de l'article :</label>
-							<input type="text" name="prix_article" id="prix_article" /><br>
-							<label for="image_article">Photo de l'article :</label>
-							<input type="text" name="image_article" id="image_article" /><br>
-							<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
-				</form>
-				
-			
-			</div>
+			<?php
+				if ($guest == 4) 
+        	{?>
+					<div id="categorie">
+						<form action="/action_page.php">
+							@foreach($categories as $categorie)
+							<input type="checkbox" name="categorie" value="{{$categorie->nom_categorie}}"> {{$categorie->nom_categorie}} <br>
+							@endforeach
+							<input type="submit" value="Submit">
+						</form>
+						
+						<form method="post" action="{{ route('Boutique_post') }}">
+									@csrf
+									<span class="input-group-btn">
+									Créer une nouvelle catégorie:<br>
+									<input type="text" name="newcategory"><br>
+									<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
+						</form>
+						<form method="post" action="{{ route('Boutique_post') }}">
+									@csrf
+									<span class="input-group-btn">
+									Créer une nouvelle catégorie:<br>
+									<label for="nom_article">Nom de l'article :</label>
+									<input type="text" name="nom_article" id="nom_article" /><br>
+									<label for="description_article">Description de l'article:</label>
+									<textarea name="description_article" id="description_article"></textarea><br>
+									<label for="prix_article">Prix de l'article :</label>
+									<input type="text" name="prix_article" id="prix_article" /><br>
+									<label for="image_article">Photo de l'article :</label>
+									<input type="text" name="image_article" id="image_article" /><br>
+									<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
+						</form>
+					</div>
+					<?php }?>
 		
 			<section class="topsales">
 				<div class="container">
@@ -125,25 +138,29 @@
 									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€<br>
 									Description: {{$article->description_article}}.
 									</p>
+									<?php
+       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        								{?>
 									<form method="post" action="{{ route('Boutique_post') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
-										<?php
-        								$guest = Session::get('role');
-       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
-        								{?>
 										<label for="number">Quantité :</label>
 										<input type="number" name="number" id="number" value=1>
        									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
-       									<?php }?>
 									</form>
+									<?php }?>
+
+									<?php
+       									if ($guest == 4) 
+        								{?>
 									<form method="post" action="{{ route('Boutique_post') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
 										<button type="submit" class="btn btn-form btn-black display-4" name="supprimer">Supprimer</button></span>
 									</form>
+									<?php }?>
 								</div>
 							</div>
 						</div>
