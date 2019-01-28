@@ -1,6 +1,14 @@
 @extends('layout')
 
 @section('content')
+@if(Session::has('connexion'))
+		<p > <p>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 				<div class="title">
 					<h1>
 						Votre panier

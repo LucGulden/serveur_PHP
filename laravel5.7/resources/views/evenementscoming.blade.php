@@ -1,12 +1,16 @@
 @extends('layout')
 
 @section('content')
+@if(Session::has('connexion'))
+		<p > <p>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
-
-    
-
-    
     <div class="container">
         <div class="row justify-content-center">
             <div class="title col-12 col-lg-8">

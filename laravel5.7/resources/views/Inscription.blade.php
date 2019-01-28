@@ -151,6 +151,10 @@ a:hover{
 	color:#fff;
 	font-family: verdana;
 }
+
+.align{
+	vertical-align:top;
+}
     </style>
     </head>
     <body>
@@ -180,9 +184,8 @@ a:hover{
     			<div>
     				<input type="text" name="centre" placeholder="Centre" required="true">
     			</div>
-				<div>
-				<input type="checkbox" name="validation" required="true">
-    				<p class="Conditions">En cliquant sur Inscription, vous acceptez nos <a href="/ConditionsG">Conditions générales</a>, <a href="/ConditionsV">Conditions de Ventes </a> ainsi que nos <a href="/mentions_legales">Mentions légal.</a> <p>
+				<div class="aligne">
+    				<p class="Conditions"><input type="checkbox" name="validation" required="true">En cochant cette case, vous acceptez nos <a href="/ConditionsG">Conditions du règlement</a>, <a href="/ConditionsV">Conditions de Ventes </a> ainsi que nos <a href="/mentions_legales">Mentions légales.</a> <p>
 				</div>
     				<input type="submit" name="submit" value="Inscription" class="btn-sign">	
     		</form>
