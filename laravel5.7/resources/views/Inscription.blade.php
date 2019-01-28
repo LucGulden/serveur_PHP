@@ -23,12 +23,12 @@ body{
 
 .container{
 	width:400px;
-	height: 500px;
+	height: 600px;
 	text-align: center;
 	background-color:rgba(0, 0, 0, 0.7);
 	border-radius: 4px;
 	margin: 0 auto;
-	margin-top: 150px;
+	margin-top: 80px;
 	padding-top: 3px;
 	padding-left:15px;
 
@@ -145,6 +145,12 @@ a:hover{
 	color:red;
 	font-family: verdana;
 }
+
+.Conditions
+{
+	color:#fff;
+	font-family: verdana;
+}
     </style>
     </head>
     <body>
@@ -174,6 +180,10 @@ a:hover{
     			<div>
     				<input type="text" name="centre" placeholder="Centre" required="true">
     			</div>
+				<div>
+				<input type="checkbox" name="validation" required="true">
+    				<p class="Conditions">En cliquant sur Inscription, vous acceptez nos <a href="/ConditionsG">Conditions générales</a>, <a href="/ConditionsV">Conditions de Ventes </a> ainsi que nos <a href="/mentions_legales">Mentions légal.</a> <p>
+				</div>
     				<input type="submit" name="submit" value="Inscription" class="btn-sign">	
     		</form>
     	</div>  	

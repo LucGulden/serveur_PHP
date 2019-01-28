@@ -15,18 +15,10 @@
     
     <body>
         
-    
-        <header>
-            @include('navbar')
-        </header>
         
-        <main>
+      <main>
             @yield('content')
-        </main>
-        
-            @include('footer')
-        
-
+</main>
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
