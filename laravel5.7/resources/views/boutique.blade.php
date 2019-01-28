@@ -118,6 +118,12 @@
 									<input type="text" name="prix_article" id="prix_article" /><br>
 									<label for="image_article">Photo de l'article :</label>
 									<input type="text" name="image_article" id="image_article" /><br>
+									<label for="categorie_article">Photo de l'article :</label>
+									<select name="categorie_article" id="categorie_article">
+										@foreach($categories as $categorie)
+											<option value="{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</option>
+										@endforeach
+									</select><br>
 									<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
 						</form>
 						<?php }?>

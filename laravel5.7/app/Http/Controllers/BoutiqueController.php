@@ -8,6 +8,7 @@ use App\Article;
 use App\Categorie;
 use App\Contient;
 use App\Achete;
+use App\Correspond;
 use Illuminate\Support\Facades\DB;
 
 
@@ -29,8 +30,25 @@ class BoutiqueController extends Controller
             $description_article=$_POST['description_article'];
             $prix_article=$_POST['prix_article'];
             $image_article=$_POST['image_article'];
+            $categorie_article=$_POST['categorie_article'];
 
             Article::create(['nom_article'=>$nom_article, 'description_article'=>$description_article, 'prix_article'=>$prix_article, 'image_article'=>$image_article, 'nbr_ventes_article'=>0, 'stock_article'=>0]);
+            
+            $newArticleID=0;
+
+            $articleIDs=DB::table('articles')
+            ->OrderBy('id_article','asc')
+            ->get();
+
+            $categorieIDs=Categorie::where('nom_categorie', '=', '$categorie_article')->get();
+
+            foreach($articleIDs as $articleID){
+            $newArticleID=$articleID->id_article;
+            }
+
+            foreach($categorieIDs as $categorieID){
+            Correspond::create(['id_article'=>$newArticleID, 'id_categorie'=>$categorieID->id_categorie]);
+            }
         }
         
         if(isset($_POST['supprimer']))
