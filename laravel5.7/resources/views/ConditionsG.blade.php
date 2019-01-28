@@ -1,3 +1,7 @@
+@extends('second_layout')
+
+
+@section('content')
 <boilerplate _ngcontent-c11="" _nghost-c13=""><div _ngcontent-c13="" class="boilerWrapper">
   <div _ngcontent-c13="" class="boiler" id="boiler">
     <div _ngcontent-c13=""></div><ng-component _nghost-c22=""><h3 _ngcontent-c22="" placeholder="Document name" style="color: rgb(51, 51, 51); font-style: normal; text-align: center;" type="name"><span _ngcontent-c22="" style="color:#2c3e50;"><span _ngcontent-c22="" style="font-size:16px;">Mentions légales et politique de confidentialité</span></span></h3>
@@ -350,3 +354,5 @@
 </ng-component>
   </div>
 </div></boilerplate>
+
+@endsection
