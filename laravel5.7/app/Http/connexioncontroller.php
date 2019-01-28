@@ -34,6 +34,10 @@ class connexioncontroller extends Controller
     	DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>Hash::make($request->input('password')),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
 		$luc=DB::connection('mysql2')->table('users')->where('mail_user', $request->input('mail'))->first();
 		DB::connection('mysql')->table('users')->insert(['id_users'=>$luc->id_users]);
+		DB::connection('mysql')->table('commande')->insert(['achevement_commande'=>0]);
+		$julien=DB::getPdo()->lastInsertId();
+
+		DB::connection('mysql')->table('achete')->insert(['id_users'=>$luc->id_users,'id_commande'=>$julien]);
 		return view('welcome');
     } 
 
