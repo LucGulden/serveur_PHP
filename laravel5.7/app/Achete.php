@@ -8,4 +8,6 @@ class Achete extends Model
 {
     protected $table = 'achete';
     public $timestamps = false;
+    protected $fillable = ['id_commande', 'id_users'];
+
 }

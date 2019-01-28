@@ -47,14 +47,14 @@ class BoutiqueController extends Controller
                     $count++;
                 }
             
-                if($count==0)
-                {
+                // if($count==0)
+                // {
                     $contient=new Contient;
                     $contient->id_article=$id_article;
                     $contient->id_commande=$commande->id_commande;
                     $contient->quantite=$quantite;
                     $contient->save();
-                }
+                // }
             }
         }
 

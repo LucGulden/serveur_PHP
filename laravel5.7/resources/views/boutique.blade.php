@@ -54,7 +54,7 @@
        									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         								{?>
 										<label for="number">Quantité :</label>
-										<input type="number" name="number" id="number">
+										<input type="number" name="number" id="number"value=1>
        									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
        									<?php }?>
 									</form>
@@ -114,7 +114,7 @@
        									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         								{?>
 										<label for="number">Quantité :</label>
-										<input type="number" name="number" id="number">
+										<input type="number" name="number" id="number" value=1>
        									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
        									<?php }?>
 									</form>
