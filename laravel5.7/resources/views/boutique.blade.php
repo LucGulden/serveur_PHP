@@ -43,7 +43,8 @@
 								</div>
 								<div class="plan-body">
 									<p class="mbr-text mbr-fonts-style display-7">
-									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€
+									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€<br>
+									Description: {{$topvente->description_article}}.
 									</p>
 									<form method="post" action="{{ route('Boutique_post') }}">
 										@csrf
@@ -121,7 +122,8 @@
 								</div>
 								<div class="plan-body">
 									<p class="mbr-text mbr-fonts-style display-7">
-									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€
+									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€<br>
+									Description: {{$article->description_article}}.
 									</p>
 									<form method="post" action="{{ route('Boutique_post') }}">
 										@csrf
