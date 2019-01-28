@@ -45,13 +45,19 @@
 									<p class="mbr-text mbr-fonts-style display-7">
 									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€
 									</p>
-									<form method="post" action="">
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
+										<?php
+        								$guest = Session::get('role');
+       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        								{?>
 										<label for="number">Quantité :</label>
 										<input type="number" name="number" id="number">
+       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
+       									<?php }?>
 									</form>
-									<div class="mbr-section-btn pt-4 text-center">
-									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -99,13 +105,19 @@
 									<p class="mbr-text mbr-fonts-style display-7">
 									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€
 									</p>
-									<form method="post" action="">
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
+										<?php
+        								$guest = Session::get('role');
+       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        								{?>
 										<label for="number">Quantité :</label>
 										<input type="number" name="number" id="number">
+       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
+       									<?php }?>
 									</form>
-									<div class="mbr-section-btn pt-4 text-center">
-									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
-									</div>
 								</div>
 							</div>
 						</div>
