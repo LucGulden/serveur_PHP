@@ -23,10 +23,9 @@
         <main>
             @yield('content')
         </main>
-
-        <footer>
+        
             @include('footer')
-        </footer>
+        
 
 
         <script src="js/jquery-3.3.1.min.js"></script>
