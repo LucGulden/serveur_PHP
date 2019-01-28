@@ -76,7 +76,7 @@
 				<form action="/action_page.php">
  					Créer une nouvelle catégorie:<br>
   					<input type="text" name="newcategory"><br>
- 					<input type="Ajouter" value="Submit">
+ 					<input type="Submit" value="Ajouter!">
 				</form>
 			</div>
 		
