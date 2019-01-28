@@ -32,7 +32,7 @@
         <p>{{ $event->description_events }}</p>
 		<img src="{{ $event->image_events }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
 		<div class="jaime">
-        <button type="submit" class="btn btn-form btn-black display-4" name="liste_participe"><a href=<?=$nom_event.".csv"?>>Liste participants</a></button>
+        <a href=<?=$nom_event.".csv"?> class="btn btn-form btn-black display-4">Liste participants</a>
            <form method="post" action="{{ route('Evenementscoming_post') }}">
         @csrf
         <span class="input-group-btn">
@@ -51,9 +51,5 @@
     @endforeach
    
 </section>
-<!-- <script>
-    function maFonction(id) {
-        alert(id);
-    }
-</script> -->
+
 @endsection

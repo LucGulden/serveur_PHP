@@ -42,13 +42,19 @@
 									<p class="mbr-text mbr-fonts-style display-7">
 									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€
 									</p>
-									<form method="post" action="">
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
+										<?php
+        								$guest = Session::get('role');
+       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        								{?>
 										<label for="number">Quantité :</label>
-										<input type="number" name="number" id="number">
+										<input type="number" name="number" id="number"value=1>
+       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
+       									<?php }?>
 									</form>
-									<div class="mbr-section-btn pt-4 text-center">
-									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -70,11 +76,29 @@
   					@endforeach
 					<input type="submit" value="Submit">
 				</form>
-				<form action="/action_page.php">
- 					Créer une nouvelle catégorie:<br>
-  					<input type="text" name="newcategory"><br>
- 					<input type="Submit" value="Ajouter!">
+				<form method="post" action="{{ route('Boutique_post') }}">
+							@csrf
+							<span class="input-group-btn">
+							Créer une nouvelle catégorie:<br>
+							<input type="text" name="newcategory"><br>
+							<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
 				</form>
+				<form method="post" action="{{ route('Boutique_post') }}">
+							@csrf
+							<span class="input-group-btn">
+							Créer une nouvelle catégorie:<br>
+							<label for="nom_article">Nom de l'article :</label>
+       	   					<input type="text" name="nom_article" id="nom_article" /><br>
+       						<label for="description_article">Description de l'article:</label>
+							<textarea name="description_article" id="description_article"></textarea><br>
+							<label for="prix_article">Prix de l'article :</label>
+							<input type="text" name="prix_article" id="prix_article" /><br>
+							<label for="image_article">Photo de l'article :</label>
+							<input type="text" name="image_article" id="image_article" /><br>
+							<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
+				</form>
+				
+			
 			</div>
 		
 			<section class="topsales">
@@ -96,13 +120,25 @@
 									<p class="mbr-text mbr-fonts-style display-7">
 									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€
 									</p>
-									<form method="post" action="">
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
+										<?php
+        								$guest = Session::get('role');
+       									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        								{?>
 										<label for="number">Quantité :</label>
-										<input type="number" name="number" id="number">
+										<input type="number" name="number" id="number" value=1>
+       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
+       									<?php }?>
 									</form>
-									<div class="mbr-section-btn pt-4 text-center">
-									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
-									</div>
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
+										<button type="submit" class="btn btn-form btn-black display-4" name="supprimer">Supprimer</button></span>
+									</form>
 								</div>
 							</div>
 						</div>

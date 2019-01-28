@@ -19,7 +19,11 @@
         		if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         				{?>
         					<div class="panier">
-							<a href="#" class="btn btn-black display-4">Commander</a>
+								<form method="post" action="{{ route('panier_post') }}">
+								@csrf
+									<span class="input-group-btn">
+									<button type="submit" class="btn btn-form btn-black display-4" name="commander">Commander</button></span>
+								</form>
         				<?php }?>
 			<section class="topsales">
 				<div class="container">
@@ -45,7 +49,12 @@
 									</p>
 								
 									<div class="mbr-section-btn pt-4 text-center">
-									<a href="" class="btn btn-black display-4">Supprimer</a>
+									<form method="post" action="{{ route('panier_post') }}">
+								@csrf
+									<span class="input-group-btn">
+									<input type="hidden" name="id_article" value="{{$article->id_article}}">
+									<button type="submit" class="btn btn-form btn-black display-4" name="supprimer">Supprimer</button></span>
+								</form>
 									</div>
 								</div>
 							</div>
