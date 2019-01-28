@@ -2,11 +2,8 @@
 
 @section('content')
 
-@if(Session::has('connexion')) 
-    <div class="alert alert-danger">
-        <p> voues etes bien connectée<p>
-        {{Session::get('connexion')}}
-    </div>
+@if(Session::has('connexion'))
+		<p > <p>
 @else 
         <?php 
           header('Location: /');

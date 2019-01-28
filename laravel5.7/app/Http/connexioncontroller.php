@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class connexioncontroller extends Controller
 {
@@ -48,9 +49,11 @@ class connexioncontroller extends Controller
 	if (Hash::check($request->input('password'), $user->mdp_user)) 
 	{
 		session_start();
+		session::put('prenom', $user->prenom_users);
 		session::put('id', $user->id_users);
 		session::put('connexion','1');
 		session::put('role', $user->id_role);
+		session::put('cookie','0');
 		return redirect('/accueil');
 	}
 	else
@@ -76,6 +79,7 @@ class connexioncontroller extends Controller
 
 	function deconnexion(){
 		Session::forget('connexion');
+		Session::forget('cookie');
 		Session::save();
 		header('location: /');
 		exit;
@@ -86,6 +90,7 @@ class connexioncontroller extends Controller
 		session::put('prenom','invité');
 		session::put('connexion','1');
 		session::put('role', '3');
+		session::put('cookie','0');
 		return redirect('/accueil');
 
 	}

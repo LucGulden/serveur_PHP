@@ -10,6 +10,13 @@
         <link href="css/main.css" rel="stylesheet">
         <link href="css/all.min.css" rel="stylesheet">
         <title>BDE Exia</title>
+        <style>
+            .success
+                {
+                    text-align: center;
+                    font-family: verdana;
+                }
+        </style>
     </head>
 
     

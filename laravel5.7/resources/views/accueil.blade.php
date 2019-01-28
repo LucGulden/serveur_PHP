@@ -6,16 +6,23 @@ use Illuminate\Support\Facades\Session;
 ?>
 
 @if(Session::has('connexion')) 
-    <div class="alert alert-danger">
-        <p> voues etes bien connectée<p>
-        {{Session::get('connexion')}}
-    </div>
+  <div class="alert alert-success success">
+    <p > Vous êtes bien connecté en tant que <?php echo e(Session::get('prenom')); ?><p>
+  </div>
 @else 
         <?php 
         	header('Location: /');
         	exit();
          ?>
 @endif
+
+<script >
+  function alerte()
+  {
+  alert("En poursuivant votre navigation (notamment via une action de scrolling - faire défiler la page), vous acceptez l’utilisation de Cookies nous permettant de personnaliser le contenu et les annonces, d’offrir des fonctionnalités Pour plus d'infirmation voir les conditions du règlement");
+  }
+</script>
+
 <div class="container-fluid border border-warning rounded mb-0" style="margin-top: 30px; width: 90%; background-color: rgba(204,204,204,0.33); border-width: 10px;">
         <!--Carousel Wrapper-->
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel" style="padding-top: 20px; padding-bottom: 20px;">
@@ -49,4 +56,11 @@ use Illuminate\Support\Facades\Session;
           </div>
       </div>
     </div>
+    <?php
+        $cookie = Session::get('cookie');
+
+        if ($cookie == 0 ) 
+        {session::put('cookie','1');?>
+          <img src onerror='alerte()'>
+    <?php }?>
 @endsection
