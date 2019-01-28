@@ -73,6 +73,11 @@
   					@endforeach
 					<input type="submit" value="Submit">
 				</form>
+				<form action="/action_page.php">
+ 					Créer une nouvelle catégorie:<br>
+  					<input type="text" name="newcategory"><br>
+ 					<input type="Submit" value="Ajouter!">
+				</form>
 			</div>
 		
 			<section class="topsales">
