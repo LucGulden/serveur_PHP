@@ -1,23 +1,45 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Mail;
 
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Http\Request;
+use Mail;
+use App\User;
 use App\Article;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Session;
-use App\Mail\CommandeRecue;
+use Illuminate\Support\Facades\DB;
 
-class PanierController extends Controller
+
+class CommandeRecue extends Mailable
 {
-    public function MonPanier()
-    {
-        $BDE = DB::connection('mysql2')->table('users')
-        ->where('id_role', 4)
-        ->get();
 
+    use Queueable, SerializesModels;
+
+
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        
         $id_user = Session::get('id');
+        
         $articles = DB::connection('mysql')->table('users')
         ->join('achete','achete.id_users','users.id_users')
         ->join('commande','commande.id_commande','achete.id_commande')
@@ -31,11 +53,6 @@ class PanierController extends Controller
         ->where('id_users', $id_user)
         ->get();
 
-        Mail::to($BDE)->send(new CommandeRecue);
-
-        return view('panier', [
-            'articles' => $articles,
-        ]);
+        return $this->view('emails.commande');
     }
-
 }
