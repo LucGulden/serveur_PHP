@@ -22,6 +22,17 @@ Route::get('/mentions_legales', function(){
     return view('mentions_legales');
 });
 
+Route::get('/inscription', function(){
+	return view ('Inscription');
+});
+
+Route::get('/ConditionsG', function(){
+	return view ('ConditionsG');
+});
+
+Route::get('/ConditionsV', function(){
+	return view('ConditionsV');
+});
 
 
 Route::get('/accueil', 'AccueilController@topvente');
