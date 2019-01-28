@@ -24,7 +24,7 @@
 									<span class="input-group-btn">
 									<button type="submit" class="btn btn-form btn-black display-4" name="commander">Commander</button></span>
 								</form>
-        				<?php }?>
+        				
 			<section class="topsales">
 				<div class="container">
 					<div class="row">
@@ -63,4 +63,5 @@
 						</div>
 					</div>
 			</section>
+			<?php }?>
 @endsection

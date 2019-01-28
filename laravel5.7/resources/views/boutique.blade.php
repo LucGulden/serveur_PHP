@@ -15,9 +15,15 @@
 						Boutique
 					</h1>
 				</div>
-			<div class="panier">
-				<a href="/panier" class="btn btn-black display-4">Panier</a>
-			</div>
+				<?php
+        			$guest = Session::get('role');
+       				if ($guest == 1 || $guest == 2 || $guest == 4   ) 
+        		{?>
+					<div class="panier">
+						<a href="/panier" class="btn btn-black display-4">Panier</a>
+					</div>
+				<?php }?>
+					
 			<section class="topsales">
 				<div class="container">
 					<div class="top-sales">
@@ -43,7 +49,6 @@
 									</p>
 									
 									<?php
-        								$guest = Session::get('role');
        									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         								{?>
 									<form method="post" action="{{ route('Boutique_post') }}">
@@ -83,6 +88,7 @@
 
 					<div id="categorie">
 						<form action="/action_page.php">
+							<h4>Catégories:</h4>
 							@foreach($categories as $categorie)
 							<input type="checkbox" name="categorie" value="{{$categorie->nom_categorie}}"> {{$categorie->nom_categorie}} <br>
 							@endforeach
