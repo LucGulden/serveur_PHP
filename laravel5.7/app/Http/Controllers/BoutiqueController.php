@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Categorie;
 
 class BoutiqueController extends Controller
 {
@@ -15,9 +16,12 @@ class BoutiqueController extends Controller
         
         $articles = Article::get();
 
+        $categories = Categorie::get();
+
         return view('boutique', [
             'topventes' => $topvente,
             'articles' => $articles,
+            'categories'=>$categories,
         ]);
     }
 }

@@ -45,6 +45,10 @@
 									<p class="mbr-text mbr-fonts-style display-7">
 									<?php echo(number_format($topvente->prix_article, 2, ',', ' ')) ?>€
 									</p>
+									<form method="post" action="">
+										<label for="number">Quantité :</label>
+										<input type="number" name="number" id="number">
+									</form>
 									<div class="mbr-section-btn pt-4 text-center">
 									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
 									</div>
@@ -62,17 +66,14 @@
 				</p>
 			</div>
 			
-			<div class="dropdown" id="tri">
-				<button class="btn btn-black dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  Catégorie
-				
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				  <a class="dropdown-item" href="#">Vêtements</a>
-				  <a class="dropdown-item" href="#">Chapeaux</a>
-				  <a class="dropdown-item" href="#">Mugs</a>
-				</div>
-</button>
-			  </div>
+			<div id="categorie">
+				<form action="/action_page.php">
+					@foreach($categories as $categorie)
+					<input type="checkbox" name="categorie" value="{{$categorie->nom_categorie}}"> {{$categorie->nom_categorie}} <br>
+  					@endforeach
+					<input type="submit" value="Submit">
+				</form>
+			</div>
 		
 			<section class="topsales">
 				<div class="container">
@@ -93,6 +94,10 @@
 									<p class="mbr-text mbr-fonts-style display-7">
 									<?php echo(number_format($article->prix_article, 2, ',', ' ')) ?>€
 									</p>
+									<form method="post" action="">
+										<label for="number">Quantité :</label>
+										<input type="number" name="number" id="number">
+									</form>
 									<div class="mbr-section-btn pt-4 text-center">
 									<a href="/panier" class="btn btn-black display-4">Ajouter au panier</a>
 									</div>
