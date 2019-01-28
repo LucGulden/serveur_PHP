@@ -80,9 +80,7 @@
 				</p>
 			</div>
 			
-			<?php
-				if ($guest == 4) 
-        	{?>
+
 					<div id="categorie">
 						<form action="/action_page.php">
 							@foreach($categories as $categorie)
@@ -91,6 +89,10 @@
 							<input type="submit" value="Submit">
 						</form>
 						
+						<?php
+						if ($guest == 4) 
+        				{?>
+
 						<form method="post" action="{{ route('Boutique_post') }}">
 									@csrf
 									<span class="input-group-btn">
@@ -112,8 +114,9 @@
 									<input type="text" name="image_article" id="image_article" /><br>
 									<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
 						</form>
+						<?php }?>
 					</div>
-					<?php }?>
+					
 		
 			<section class="topsales">
 				<div class="container">
