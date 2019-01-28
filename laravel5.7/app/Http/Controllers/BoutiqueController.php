@@ -40,14 +40,15 @@ class BoutiqueController extends Controller
             ->OrderBy('id_article','asc')
             ->get();
 
-            $categorieIDs=Categorie::where('nom_categorie', '=', '$categorie_article')->get();
+            $categorieIDs=Categorie::where('nom_categorie', '=', $categorie_article)->get();
 
             foreach($articleIDs as $articleID){
             $newArticleID=$articleID->id_article;
             }
 
-            foreach($categorieIDs as $categorieID){
-            Correspond::create(['id_article'=>$newArticleID, 'id_categorie'=>$categorieID->id_categorie]);
+            foreach($categorieIDs as $categorieID)
+            {
+                Correspond::create(['id_article'=>$newArticleID, 'id_categorie'=>$categorieID->id_categorie]);
             }
         }
         
