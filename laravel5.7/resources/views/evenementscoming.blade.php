@@ -20,15 +20,18 @@
 
     
   @foreach($events as $event)
+  <?php $count=0;?>
     <div class="container-fluid border border-warning rounded mb-0">
         <h3>{{ $event->nom_events }}</h3>
         <p>{{ $event->description_events }}</p>
 		<img src="{{ $event->image_events }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
 		<div class="jaime">
-        <form method="post" action="{{ route('Evenementscoming_post') }}">
+       
+           <form method="post" action="{{ route('Evenementscoming_post') }}">
         @csrf
         <span class="input-group-btn">
         <input type="hidden" name="id_event_post" value="{{ $event->id_events }}"/>
+        <button type="submit" class="btn btn-form btn-black display-4" name="liste_participe">Liste</button>
         <button type="submit" class="btn btn-form btn-black display-4" name="participe_event">Participer à l'événement</button></span>
         </form>
         <p>{{ $event->nbrparticipants_events }} personnes participent à cet événement</p>

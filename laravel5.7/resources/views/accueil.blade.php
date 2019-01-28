@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Session;
           </ol>
           <!--/.Indicators-->
           <!--Slides-->
-          <?php $id_utilisateur = Session::get('id'); echo($id_utilisateur) ?>
+          <?php $id_utilisateur = Session::get('id');?>
           <div class="carousel-inner" role="listbox">
             <?php $i=0; ?>
             @foreach($articles as $article)
