@@ -79,10 +79,12 @@
   					@endforeach
 					<input type="submit" value="Submit">
 				</form>
-				<form action="/action_page.php">
- 					Créer une nouvelle catégorie:<br>
-  					<input type="text" name="newcategory"><br>
- 					<input type="Submit" value="Ajouter!">
+				<form method="post" action="{{ route('Boutique_post') }}">
+							@csrf
+							<span class="input-group-btn">
+							Créer une nouvelle catégorie:<br>
+							<input type="text" name="newcategory"><br>
+							<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
 				</form>
 			</div>
 		
@@ -117,6 +119,12 @@
 										<input type="number" name="number" id="number" value=1>
        									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
        									<?php }?>
+									</form>
+									<form method="post" action="{{ route('Boutique_post') }}">
+										@csrf
+										<span class="input-group-btn">
+										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
+										<button type="submit" class="btn btn-form btn-black display-4" name="supprimer">Supprimer</button></span>
 									</form>
 								</div>
 							</div>

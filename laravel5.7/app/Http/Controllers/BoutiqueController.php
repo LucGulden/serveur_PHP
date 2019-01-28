@@ -23,6 +23,20 @@ class BoutiqueController extends Controller
 
         $categories = Categorie::get();
 
+        
+        if(isset($_POST['supprimer']))
+        {
+            $id_article=$_POST['id_article'];
+            Contient::where(['id_article'=>$id_article])->delete();
+            Article::where(['id_article'=>$id_article])->delete();
+        }
+        
+        if(isset($_POST['add_category']))
+        {
+            $categorie=$_POST['newcategory'];
+            Categorie::create(['nom_categorie'=>$categorie]);
+        }
+
         if(isset($_POST['add_basket']))
         {
             $id_article=$_POST['id_article'];
