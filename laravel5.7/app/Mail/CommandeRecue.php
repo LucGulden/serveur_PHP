@@ -49,10 +49,14 @@ class CommandeRecue extends Mailable
         ->where('commande.achevement_commande',0)
         ->get();
 
-        $user = DB::connection('mysql2')->table('users')
+        $users = DB::connection('mysql2')->table('users')
         ->where('id_users', $id_user)
         ->get();
 
-        return $this->view('emails.commande');
+        return $this->view('emails.commande')
+                    ->with([
+                        'users'=>$users,
+                        'articles'=>$articles,
+                    ]);
     }
 }

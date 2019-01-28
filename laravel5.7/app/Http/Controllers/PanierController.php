@@ -13,7 +13,7 @@ class PanierController extends Controller
 {
     public function MonPanier()
     {
-        $BDE = DB::connection('mysql2')->table('users')
+        $BDEs = DB::connection('mysql2')->table('users')
         ->where('id_role', 4)
         ->get();
 
@@ -27,12 +27,13 @@ class PanierController extends Controller
         ->where('commande.achevement_commande',0)
         ->get();
 
-        $user = DB::connection('mysql2')->table('users')
+        $users = DB::connection('mysql2')->table('users')
         ->where('id_users', $id_user)
         ->get();
 
-        Mail::to($BDE)->send(new CommandeRecue);
-
+        foreach ($BDEs as $BDE){
+        Mail::to($BDE->mail_user)->send(new CommandeRecue);
+        }
         return view('panier', [
             'articles' => $articles,
         ]);
