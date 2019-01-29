@@ -78,8 +78,6 @@ class connexioncontroller extends Controller
 				session::put('connexion','1');
 				session::put('role', $user->id_role);
 				session::put('cookie','0');
-				//return redirect('/accueil');
-				
 			}
 			else {
 				?>
