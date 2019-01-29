@@ -47,10 +47,16 @@ Route::get('/evenementscoming', 'EventController@eventcoming')-> name('Evenement
 Route::post('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming_post');
 
 Route::get('/boutique', 'BoutiqueController@topvente')->name('Boutique');
-Route::post('/boutique', 'BoutiqueController@topvente')->name('Boutique_post');
+Route::post('/boutique-sort', 'BoutiqueController@sort')->name('sort');
+Route::post('/boutique-add', 'BoutiqueController@addbasket')->name('addbasket');
+Route::post('/boutique-delete', 'BoutiqueController@deletearticle')->name('deletearticle');
+Route::post('/boutique-category', 'BoutiqueController@addcategory')->name('addcategory');
+Route::post('/boutique-create', 'BoutiqueController@createarticle')->name('createarticle');
 
 Route::get('/panier', 'PanierController@MonPanier')->name('panier');
-Route::post('/panier', 'PanierController@MonPanier')->name('panier_post');
+Route::post('/panier-commander', 'PanierController@commander')->name('commander');
+Route::post('/panier-delete', 'PanierController@deletebasket')->name('deletebasket');
+
 
 Route::get('/boite-a-idees', function () {
     return view('idee');

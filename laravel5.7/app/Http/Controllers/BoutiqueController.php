@@ -24,6 +24,141 @@ class BoutiqueController extends Controller
 
         $categories = Categorie::get();
 
+        return view('boutique', [
+            'topventes' => $topvente,
+            'articles' => $articles,
+            'categories'=>$categories,
+        ]);
+    
+    }
+
+    public function sort(){
+        $topvente = Article::get()
+        ->sortByDesc('nbr_ventes_article')
+        ->take(3);
+        
+        $categories = Categorie::get();
+
+        if(isset($_POST['sort']))
+        {
+
+            $articles = DB::connection('mysql')->table('articles')
+            ->join('correspond','correspond.id_article','articles.id_article')
+            ->join('categorie','categorie.id_categorie','correspond.id_categorie')
+            ->get();
+
+            if($_POST['category_sort']==null){
+            if($_POST['price_sort']=="Croissant"){
+                $articles = Article::OrderBy('prix_article', 'asc')->get();
+                }
+
+            else if ($_POST['price_sort']=="Decroissant"){
+                $articles = Article::OrderBy('prix_article', 'desc')->get();
+                }
+               
+            else if ($_POST['price_sort']==""){    
+                $articles = Article::get();
+
+            }
+            }
+
+            else if($_POST['category_sort']==!null){
+            foreach($categories as $categorie){
+                if($_POST['category_sort']==$categorie->nom_categorie){
+                    $categoriechoisie=$categorie->id_categorie;
+                    $articles = DB::connection('mysql')->table('articles')
+                    ->join('correspond','correspond.id_article','articles.id_article')
+                    ->join('categorie','categorie.id_categorie','correspond.id_categorie')
+                    ->where('correspond.id_categorie', '=', $categoriechoisie)
+                    ->get();
+
+                    if($_POST['price_sort']=="Croissant"){
+                        $articles = DB::connection('mysql')->table('articles')
+                        ->join('correspond','correspond.id_article','articles.id_article')
+                        ->join('categorie','categorie.id_categorie','correspond.id_categorie')
+                        ->where('correspond.id_categorie', '=', $categoriechoisie)
+                        ->OrderBy('prix_article', 'asc')
+                        ->get();
+                    }
+            
+                    else if ($_POST['price_sort']=="Decroissant"){
+                        $articles = DB::connection('mysql')->table('articles')
+                        ->join('correspond','correspond.id_article','articles.id_article')
+                        ->join('categorie','categorie.id_categorie','correspond.id_categorie')
+                        ->where('correspond.id_categorie', '=', $categoriechoisie)
+                        ->OrderBy('prix_article', 'desc')
+                        ->get();                        
+                    }
+                }
+            }
+            }
+            return view('boutique', [
+                'topventes' => $topvente,
+                'articles' => $articles,
+                'categories'=>$categories,
+            ]);
+        }
+    }
+
+    public function addbasket(){
+        if(isset($_POST['add_basket']))
+        {
+            $id_article=$_POST['id_article'];
+            $quantite=$_POST['number'];
+            $id_user = Session::get('id');
+            $commandes = DB::connection('mysql')->table('users')
+            ->join('achete','achete.id_users','users.id_users')
+            ->join('commande','commande.id_commande','achete.id_commande')
+            ->where('users.id_users',$id_user)
+            ->where('commande.achevement_commande',0)
+            ->get();
+
+            foreach($commandes as $commande)
+            {
+                $existants=Achete::where('id_users', '=', $id_user)
+                ->where('id_commande', '=', $commande->id_commande)
+                ->get();
+                $count=0;
+                
+                foreach($existants as $existant)
+                {
+                    $count++;
+                }
+            
+                //  if($count==0)
+                //  {
+                    $contient=new Contient;
+                    $contient->id_article=$id_article;
+                    $contient->id_commande=$commande->id_commande;
+                    $contient->quantite=$quantite;
+                    $contient->save();
+                //  }
+            }
+        }
+        return redirect('boutique');
+    }
+
+    public function deletearticle(){
+        if(isset($_POST['supprimer']))
+        {
+            $id_article=$_POST['id_article'];
+            Correspond::where(['id_article'=>$id_article])->delete();
+            Contient::where(['id_article'=>$id_article])->delete();
+            Article::where(['id_article'=>$id_article])->delete();
+        }
+        return redirect('boutique');
+    }
+
+    public function addcategory(){
+        if(isset($_POST['add_category']))
+        {
+            $categorie=$_POST['newcategory'];
+            Categorie::create(['nom_categorie'=>$categorie]);
+        }
+        return redirect('boutique');
+    }
+
+    public function createarticle(){
         if(isset($_POST['add_article']))
         {
             $nom_article=$_POST['nom_article'];
@@ -50,67 +185,8 @@ class BoutiqueController extends Controller
             {
                 Correspond::create(['id_article'=>$newArticleID, 'id_categorie'=>$categorieID->id_categorie]);
             }
-
-            return redirect('boutique');
         }
-        
-        if(isset($_POST['supprimer']))
-        {
-            $id_article=$_POST['id_article'];
-            Correspond::where(['id_article'=>$id_article])->delete();
-            Contient::where(['id_article'=>$id_article])->delete();
-            Article::where(['id_article'=>$id_article])->delete();
-            return redirect('boutique');
-        }
-        
-        if(isset($_POST['add_category']))
-        {
-            $categorie=$_POST['newcategory'];
-            Categorie::create(['nom_categorie'=>$categorie]);
-            return redirect('boutique');
-        }
-
-        if(isset($_POST['add_basket']))
-        {
-            $id_article=$_POST['id_article'];
-            $quantite=$_POST['number'];
-            $id_user = Session::get('id');
-            $commandes = DB::connection('mysql')->table('users')
-            ->join('achete','achete.id_users','users.id_users')
-            ->join('commande','commande.id_commande','achete.id_commande')
-            ->where('users.id_users',$id_user)
-            ->where('commande.achevement_commande',0)
-            ->get();
-
-            foreach($commandes as $commande)
-            {
-                $existants=Achete::where('id_users', '=', $id_user)
-                ->where('id_commande', '=', $commande->id_commande)
-                ->get();
-                $count=0;
-                
-                foreach($existants as $existant)
-                {
-                    $count++;
-                }
-            
-                // if($count==0)
-                // {
-                    $contient=new Contient;
-                    $contient->id_article=$id_article;
-                    $contient->id_commande=$commande->id_commande;
-                    $contient->quantite=$quantite;
-                    $contient->save();
-                // }
-            }
-            return redirect('boutique');
-        }
-
-        return view('boutique', [
-            'topventes' => $topvente,
-            'articles' => $articles,
-            'categories'=>$categories,
-        ]);
-    
+        return redirect('boutique');
     }
+
 }
