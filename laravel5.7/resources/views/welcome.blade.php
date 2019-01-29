@@ -1,4 +1,5 @@
 @extends('csswelcome')
+@section('content')
 	<header>
     	<h1 class="title">Bienvenue sur le site du BDE</h1>
     </header>
@@ -18,4 +19,5 @@
     			<a href="/inscription"> Pas encore inscrit ?</a><br><br>
 				<a href="/Guest" class="button guest" >Continuer en tant qu'invité</a>
     	</div>  	
-    </main>   
+    </main>
+@endsection   

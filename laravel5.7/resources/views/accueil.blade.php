@@ -46,7 +46,7 @@ use Illuminate\Support\Facades\Session;
 <script >
   function alerte()
   {
-  alert("En poursuivant votre navigation (notamment via une action de scrolling - faire défiler la page), vous acceptez l’utilisation de Cookies nous permettant de personnaliser le contenu et les annonces, d’offrir des fonctionnalités Pour plus d'infirmation voir les conditions du règlement");
+  alert("En poursuivant votre navigation, vous acceptez l’utilisation de Cookies nous permettant de personnaliser le contenu et les annonces, d’offrir des fonctionnalités. Pour plus d'infirmation voir les conditions du règlement");
   }
 </script>
 
