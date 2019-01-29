@@ -70,6 +70,8 @@ class PanierController extends Controller
 
             Achete::create(['id_commande'=>$newCommandeID, 'id_users'=>$id_user]);
             }
+
+            return redirect('boutique');
         }
 
         if(isset($_POST['supprimer']))
@@ -90,6 +92,8 @@ class PanierController extends Controller
                 ->where('id_commande','=',$commande->id_commande)
                 ->delete();
             }
+
+            return redirect('panier');
         }
 
         return view('panier', [

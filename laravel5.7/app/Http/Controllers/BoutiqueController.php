@@ -50,19 +50,24 @@ class BoutiqueController extends Controller
             {
                 Correspond::create(['id_article'=>$newArticleID, 'id_categorie'=>$categorieID->id_categorie]);
             }
+
+            return redirect('boutique');
         }
         
         if(isset($_POST['supprimer']))
         {
             $id_article=$_POST['id_article'];
+            Correspond::where(['id_article'=>$id_article])->delete();
             Contient::where(['id_article'=>$id_article])->delete();
             Article::where(['id_article'=>$id_article])->delete();
+            return redirect('boutique');
         }
         
         if(isset($_POST['add_category']))
         {
             $categorie=$_POST['newcategory'];
             Categorie::create(['nom_categorie'=>$categorie]);
+            return redirect('boutique');
         }
 
         if(isset($_POST['add_basket']))
@@ -98,6 +103,7 @@ class BoutiqueController extends Controller
                     $contient->save();
                 // }
             }
+            return redirect('boutique');
         }
 
         return view('boutique', [
