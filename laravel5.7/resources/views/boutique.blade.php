@@ -111,17 +111,18 @@
 						if ($guest == 4) 
         				{?>
 
+						<br><br>
 						<form method="post" action="{{ route('addcategory') }}">
 									@csrf
 									<span class="input-group-btn">
-									Créer une nouvelle catégorie:<br>
+									<h4>Créer une nouvelle catégorie:</h4><br>
 									<input type="text" name="newcategory" id="newcategory" required="required"><br>
 									<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
-						</form>
+						</form><br><br>
 						<form method="post" action="{{ route('createarticle') }}">
 									@csrf
 									<span class="input-group-btn">
-									Créer un nouvel article:<br>
+									<h4>Créer un nouvel article:</h4><br>
 									<label for="nom_article">Nom de l'article :</label>
 									<input type="text" name="nom_article" id="nom_article" required="required"/><br>
 									<label for="description_article">Description de l'article:</label>
