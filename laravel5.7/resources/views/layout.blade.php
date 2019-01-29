@@ -45,6 +45,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/mdb.min.js"></script>
         <script src="js/all.min.js"></script>
+        <script src="js/baguettebox.min.js"></script>
     </body>
 </html>
 

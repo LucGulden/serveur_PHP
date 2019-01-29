@@ -1,14 +1,16 @@
+<!--importation du css de la page et des balises nécéssaires au fonctionnement du html-->
 @extends('cssinscription')
 @section('content')
     <main>
     	<div class="container">
     		<h2 class="titre">Inscription</h2>
-    		
+    		<!--affichage des erreurs liées au validator--> 
     		@if(count($errors)>0)
     				@foreach($errors->all() as $error)
     				<p class="alert aler-danger">{{$error}}</p>
     				@endforeach
     		@endif
+			<!--création du formulaire d'inscription-->
     		<form action="{{ route('Inscription') }}" method="POST">
     			{{ csrf_field() }}
     			<div class="form-input">
