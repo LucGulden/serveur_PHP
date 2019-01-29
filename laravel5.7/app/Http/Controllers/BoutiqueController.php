@@ -47,25 +47,28 @@ class BoutiqueController extends Controller
             ->join('categorie','categorie.id_categorie','correspond.id_categorie')
             ->get();
 
+            if($_POST['category_sort']==null){
             if($_POST['price_sort']=="Croissant"){
                 $articles = Article::OrderBy('prix_article', 'asc')->get();
                 }
-    
+
             else if ($_POST['price_sort']=="Decroissant"){
                 $articles = Article::OrderBy('prix_article', 'desc')->get();
                 }
+            }
 
+            else if($_POST['category_sort']==!null){
             foreach($categories as $categorie){
                 if($_POST['category_sort']==$categorie->nom_categorie){
                     $categoriechoisie=$categorie->id_categorie;
-                    $articles = $articles = DB::connection('mysql')->table('articles')
+                    $articles = DB::connection('mysql')->table('articles')
                     ->join('correspond','correspond.id_article','articles.id_article')
                     ->join('categorie','categorie.id_categorie','correspond.id_categorie')
                     ->where('correspond.id_categorie', '=', $categoriechoisie)
                     ->get();
 
                     if($_POST['price_sort']=="Croissant"){
-                        $articles = $articles = DB::connection('mysql')->table('articles')
+                        $articles = DB::connection('mysql')->table('articles')
                         ->join('correspond','correspond.id_article','articles.id_article')
                         ->join('categorie','categorie.id_categorie','correspond.id_categorie')
                         ->where('correspond.id_categorie', '=', $categoriechoisie)
@@ -74,7 +77,7 @@ class BoutiqueController extends Controller
                     }
             
                     else if ($_POST['price_sort']=="Decroissant"){
-                        $articles = $articles = DB::connection('mysql')->table('articles')
+                        $articles = DB::connection('mysql')->table('articles')
                         ->join('correspond','correspond.id_article','articles.id_article')
                         ->join('categorie','categorie.id_categorie','correspond.id_categorie')
                         ->where('correspond.id_categorie', '=', $categoriechoisie)
@@ -83,13 +86,6 @@ class BoutiqueController extends Controller
                     }
                 }
             }
-
-            if($_POST['price_sort']=="Croissant"){
-            $articles = Article::OrderBy('prix_article', 'asc')->get();
-            }
-
-            else if ($_POST['price_sort']=="Decroissant"){
-            $articles = Article::OrderBy('prix_article', 'desc')->get();
             }
             return view('boutique', [
                 'topventes' => $topvente,
