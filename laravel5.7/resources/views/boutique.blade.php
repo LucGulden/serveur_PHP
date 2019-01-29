@@ -56,8 +56,9 @@
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
 										<label for="number">Quantité :</label>
-										<input type="number" name="number" id="number"value=1>
-       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
+										<input type="number" name="number" id="number"value=1  required="required"><br>
+										<span id="erreur_format"></span>
+       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket" id="bouton_envoi">Ajouter au panier</button></span>
 									</form>
 									<?php }?>
 								
@@ -113,28 +114,28 @@
 									@csrf
 									<span class="input-group-btn">
 									Créer une nouvelle catégorie:<br>
-									<input type="text" name="newcategory"><br>
+									<input type="text" name="newcategory" id="newcategory" required="required"><br>
 									<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
 						</form>
 						<form method="post" action="{{ route('createarticle') }}">
 									@csrf
 									<span class="input-group-btn">
-									Créer une nouvelle catégorie:<br>
+									Créer un nouvel article:<br>
 									<label for="nom_article">Nom de l'article :</label>
-									<input type="text" name="nom_article" id="nom_article" /><br>
+									<input type="text" name="nom_article" id="nom_article" required="required"/><br>
 									<label for="description_article">Description de l'article:</label>
 									<textarea name="description_article" id="description_article"></textarea><br>
 									<label for="prix_article">Prix de l'article :</label>
-									<input type="text" name="prix_article" id="prix_article" /><br>
+									<input type="text" name="prix_article" id="prix_article"  required="required"/><span id="erreurPrice"></span><br>
 									<label for="image_article">Photo de l'article :</label>
 									<input type="text" name="image_article" id="image_article" /><br>
-									<label for="categorie_article">Catégorie de l'article :</label>
+									<label for="categorie_article" required="required">Catégorie de l'article :</label>
 									<select name="categorie_article" id="categorie_article">
 										@foreach($categories as $categorie)
 											<option value="{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</option>
 										@endforeach
 									</select><br>
-									<button type="submit" class="btn btn-form btn-black display-4" name="add_article">Ajouter!</button></span>
+									<button type="submit" class="btn btn-form btn-black display-4" name="add_article" id="add_button">Ajouter!</button></span>
 						</form>
 						<?php }?>
 					</div>
@@ -168,8 +169,9 @@
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
 										<label for="number">Quantité :</label>
-										<input type="number" name="number" id="number" value=1>
-       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket">Ajouter au panier</button></span>
+										<input type="number" name="number" id="number" value=1  required="required"><br>
+										<span id="erreur_format"></span>
+       									<button type="submit" class="btn btn-form btn-black display-4" name="add_basket" id="bouton_envoi">Ajouter au panier</button></span>
 									</form>
 									<?php }?>
 
@@ -190,4 +192,27 @@
 						</div>
 					</div>
 			</section>
+			<script>
+				var formValid = document.getElementById('bouton_envoi');
+				var quantite = document.getElementById('number');
+				var formError = document.getElementById('erreur_format');
+				var quantiteValid = /[\u0400-\u04FF]+/g;
+
+				var buttonValid = document.getElementById('add_button');
+				var price = document.getElementById('prix_article');
+				var priceError = document.getElementById('erreurPrice');
+				var priceValid =  /^[0-9]+(.[0-9]+)?$/;
+				
+				buttonValid.addEventListener('click', validation);
+
+				function validation(event){
+					if (priceValid.test(price.value)==false){
+						event.preventDefault();
+						priceError.textContent = 'Format de données entrées non valide!';
+						priceError.style.color = 'red';
+					}else{
+					}
+				}
+
+			</script>
 @endsection
