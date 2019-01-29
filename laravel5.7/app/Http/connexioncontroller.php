@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class connexioncontroller extends Controller
 {
@@ -42,23 +43,22 @@ class connexioncontroller extends Controller
     } 
 
     function login (Request $request){
-
 		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
 		if($user != null){
 			if (Hash::check($request->input('password'), $user->mdp_user)) {
 				?>
 				<script>
-				 	alert("Ma bite");
-				 	var loginData = JSON.stringify({
-				 		"mail_user": $user->mail_user,
-				 		"mdp_user": $user->mdp_user
-				 	});
+					alert("Ma bite");
+					var loginData = JSON.stringify({
+						"mail_user": $user->mail_user,
+						"mdp_user": $user->mdp_user
+					});
 
-				 	$.ajax({
-				 		type: "POST",
+					$.ajax({
+						type: "POST",
 						url: "http://localhost:3000/users/login",
 						data: loginData,
-				 		success: function(response, status){
+						success: function(response, status){
 							$token = response.id_users;
 							alert(response.id_users);
 							console.log($token);
@@ -68,9 +68,11 @@ class connexioncontroller extends Controller
 				</script>
 				<?php
 				session_start();
+				session::put('prenom', $user->prenom_users);
 				session::put('id', $user->id_users);
 				session::put('connexion','1');
 				session::put('role', $user->id_role);
+				session::put('cookie','0');
 				return redirect('/accueil');
 			}
 			else {
@@ -94,6 +96,7 @@ class connexioncontroller extends Controller
 
 	function deconnexion(){
 		Session::forget('connexion');
+		Session::forget('cookie');
 		Session::save();
 		header('location: /');
 		exit;
@@ -104,6 +107,7 @@ class connexioncontroller extends Controller
 		session::put('prenom','invité');
 		session::put('connexion','1');
 		session::put('role', '3');
+		session::put('cookie','0');
 		return redirect('/accueil');
 
 	}

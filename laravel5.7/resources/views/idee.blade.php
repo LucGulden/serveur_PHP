@@ -1,4 +1,12 @@
 @extends('layout')
+@if(Session::has('connexion'))
+		<p > <p>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 
 @section('content')
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">

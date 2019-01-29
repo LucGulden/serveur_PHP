@@ -1,6 +1,14 @@
 @extends('layout')
 
 @section('content')
+@if(Session::has('connexion'))
+		<p > <p>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
 
@@ -25,7 +33,7 @@
         <p>{{ $event->description_events }}</p>
 		<img src="{{ $event->image_events }}" alt="image de présentation de l'évènement" style="max-width: 300px"/>
 		<div class="jaime">
-		<span class="input-group-btn"><button href="" type="submit" class="btn btn-form btn-black display-4">Voir les photos de l'évènements</button></span>
+		<span class="input-group-btn"><button type="submit" class="btn btn-form btn-black display-4">Voir les photos de l'évènements</button></span>
         </div>
     </div>
     @endforeach

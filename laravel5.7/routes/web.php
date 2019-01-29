@@ -42,9 +42,11 @@ Route::get('/evenementspasses', 'EventController@eventpassed');
 Route::get('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming');
 Route::post('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming_post');
 
-Route::get('/boutique', 'BoutiqueController@topvente');
+Route::get('/boutique', 'BoutiqueController@topvente')->name('Boutique');
+Route::post('/boutique', 'BoutiqueController@topvente')->name('Boutique_post');
 
-Route::get('/panier', 'PanierController@MonPanier');
+Route::get('/panier', 'PanierController@MonPanier')->name('panier');
+Route::post('/panier', 'PanierController@MonPanier')->name('panier_post');
 
 Route::get('/boite-a-idees', function () {
     return view('idee');

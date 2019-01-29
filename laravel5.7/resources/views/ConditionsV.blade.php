@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Conditions de vente</title>
-	<style> html {font-family: Verdana;}</style>
-</head>
-	<body>
-		<header>
+@extends('second_layout')
+
+@section('content')
+
+		<div class="container">
 			<p style="text-align: center;"><strong><span style="font-size:18px;"><span style="font-family: &quot;Times New Roman&quot;, Times, serif;">Conditions générales de vente de prestations de services en ligne à des consommateurs particuliers</span></span></strong><br>
 			</p>
 
@@ -26,8 +21,8 @@
 			<p>- téléphone :<span >0770062034</span></p>
 
 			<p>Le client déclare avoir pris connaissance et avoir accepté les conditions générales de vente antérieurement à la passation de la commande.La validation de la commande vaut donc acceptation des conditions générales de vente.</p>
-		</header>
-		<main>
+		
+		
 			<p><b>Article 1 -Contenu et champ d'application</b><br>
 			Les présentes conditions générales de vente s'appliquent de plein droit aux prestations de services suivantes :<span >service de vente d'objet liées au Cesi.eXia</span>.</p>
 
@@ -281,6 +276,6 @@
 			<p style="text-align: center;"></p>
 
 			<p style="color: rgb(0, 0, 0); text-align: left;"></p>
-		</main>
-	</body>
-</html>
+</div>
+		
+@endsection
