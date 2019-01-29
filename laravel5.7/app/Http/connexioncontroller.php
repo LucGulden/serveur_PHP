@@ -26,7 +26,7 @@ class connexioncontroller extends Controller
   		if($user != null){
   			?>
   			<script>
-			alert("email deja existant");	
+				alert("email deja existant");	
 			</script>
 			<?php
 			return view('welcome');
@@ -43,35 +43,53 @@ class connexioncontroller extends Controller
 
     function login (Request $request){
 
-	$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
-	if($user != null){
-	if (Hash::check($request->input('password'), $user->mdp_user)) 
-	{
-		session_start();
-		session::put('id', $user->id_users);
-		session::put('connexion','1');
-		session::put('role', $user->id_role);
-		return redirect('/accueil');
-	}
-	else
-	{
-		?>
-	<script>
-	alert("Mdp Incorrect");	
-	</script>
-	<?php
-	return view('welcome');	
-	}
-	}
-	else 
-	{
-		?>
-	<script>
-	alert("Identifiant Incorrect");	
-	</script>
-	<?php
-	return view('welcome');
-	}
+		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
+		if($user != null){
+			if (Hash::check($request->input('password'), $user->mdp_user)) {
+				?>
+				<script>
+				 	alert("Ma bite");
+				 	var loginData = JSON.stringify({
+				 		"mail_user": $user->mail_user,
+				 		"mdp_user": $user->mdp_user
+				 	});
+
+				 	$.ajax({
+				 		type: "POST",
+						url: "http://localhost:3000/users/login",
+						data: loginData,
+				 		success: function(response, status){
+							$token = response.id_users;
+							alert(response.id_users);
+							console.log($token);
+						},
+						contentType : "application/json"
+					});
+				</script>
+				<?php
+				session_start();
+				session::put('id', $user->id_users);
+				session::put('connexion','1');
+				session::put('role', $user->id_role);
+				return redirect('/accueil');
+			}
+			else {
+				?>
+				<script>
+					alert("Mdp Incorrect");	
+				</script>
+				<?php
+				return view('welcome');	
+			}
+		}
+		else {
+			?>
+			<script>
+				alert("Identifiant Incorrect");	
+			</script>
+			<?php
+			return view('welcome');
+		}
 	}
 
 	function deconnexion(){

@@ -60,26 +60,17 @@ var blockIdee = "";
 const getIdee = function(idee){
     var taille = idee.length - 1;
     for(var i = taille; i >=0; i--) {
-        //getJSON('http://localhost:3000/aime/' + idee[i].id_idee).then(getLike(data, i));
-        console.log(i);
-        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + idee[i].id_idee + "</button></span></div> </div>";
+        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime!</button></span></div> </div>";
         document.getElementById("sectionIdee").innerHTML = blockIdee;
     }
-    //getJSON('http://localhost:3000/aime/11').then(getLike);
-
-    // var taille = idee.length - 1;
-    // for(var i = taille; i >= 0; i--) {
-    //     blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + idee[i].id_idee + "</button> </span></div> </div>";
-    //     document.getElementById("sectionIdee").innerHTML = blockIdee;
-    // }
 };
 
-const getLike = function(like, test) {
-    console.log(like);
-    console.log(test);
-}
+// const getLike = function(listIdee) {
+//     getJSON('http://localhost:3000/aime' + i).then(getLike);
+// }
 
 getJSON('http://localhost:3000/idee/').then(getIdee);
+
 //getJSON('http://localhost:3000/aime/11').then(getLike);
 </script>
 
