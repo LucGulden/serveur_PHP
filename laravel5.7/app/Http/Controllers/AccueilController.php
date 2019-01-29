@@ -16,7 +16,6 @@ class AccueilController extends Controller
 
         $databaseusers = DB::connection('mysql2')->table('users')
         ->join('role', 'role.id_role', '=', 'users.id_role')
-        ->join('centre', 'role.id_centre', '=', 'users.id_centre')
         ->get();
         
         return view('accueil', [
