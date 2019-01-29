@@ -118,6 +118,8 @@ function soumettreIdee(){
         
     function aimeIdee(id) {
         
+        var token = "{{Session::get('token')}}";
+
         var aimePost = JSON.stringify({
             "id_idee": id,
             "id_users": 1
@@ -127,9 +129,15 @@ function soumettreIdee(){
             type: "POST",
             url: "http://localhost:3000/aime/",
             data: aimePost,
+            headers: {
+                'authorization': 'Bearer ' + token
+            },
             success: function(){
                 alert("Vous avez aimé l'idée " + id);
                 location.reload(true);
+            },
+            error: function(response, status, err) {
+                alert(response.responseJSON.error);
             },
             contentType : "application/json"
         });
