@@ -59,7 +59,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© CESI 2019 - <a href="/mentions_legales">Mentions Légales </a> - <a href="/ConditionV">Conditions de Ventes</a> - <a href="/ConditionsG">Conditions Général</a>
+    <div class="footer-copyright text-center py-3">© CESI 2019 - <a href="/mentions_legales">Mentions Légales </a> - <a href="/ConditionsV">Conditions de Ventes</a> - <a href="/ConditionsG">Les Conditions du règlement</a>
     </div>
     <!-- Copyright -->
 

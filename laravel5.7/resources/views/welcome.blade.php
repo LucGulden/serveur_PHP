@@ -118,6 +118,8 @@ a:hover{
         </style>
     </head>
     <body>
+@extends('csswelcome')
+@section('content')
 	<header>
     	<h1 class="title">Bienvenue sur le site du BDE</h1>
     </header>
@@ -134,9 +136,8 @@ a:hover{
     			</div>
     				<input type="submit" name="submit" value="Connexion" class="btn-login" required="true">	
     		</form><br>
-    			<a href="http://127.0.0.1:8000/inscription"> Pas encore inscrit ?</a><br><br>
+    			<a href="/inscription"> Pas encore inscrit ?</a><br><br>
 				<a href="/Guest" class="button guest" >Continuer en tant qu'invité</a>
     	</div>  	
-    </main>   
-    </body>
-</html>
+    </main>
+@endsection   

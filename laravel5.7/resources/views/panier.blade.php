@@ -1,6 +1,14 @@
 @extends('layout')
 
 @section('content')
+@if(Session::has('connexion'))
+		<p > <p>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 				<div class="title">
 					<h1>
 						Votre panier
@@ -11,8 +19,12 @@
         		if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         				{?>
         					<div class="panier">
-							<a href="#" class="btn btn-black display-4">Commander</a>
-        				<?php }?>
+								<form method="post" action="{{ route('commander') }}">
+								@csrf
+									<span class="input-group-btn">
+									<button type="submit" class="btn btn-form btn-black display-4" name="commander">Commander</button></span>
+								</form>
+        				
 			<section class="topsales">
 				<div class="container">
 					<div class="row">
@@ -37,7 +49,12 @@
 									</p>
 								
 									<div class="mbr-section-btn pt-4 text-center">
-									<a href="" class="btn btn-black display-4">Supprimer</a>
+									<form method="post" action="{{ route('deletebasket') }}">
+								@csrf
+									<span class="input-group-btn">
+									<input type="hidden" name="id_article" value="{{$article->id_article}}">
+									<button type="submit" class="btn btn-form btn-black display-4" name="supprimer">Supprimer</button></span>
+								</form>
 									</div>
 								</div>
 							</div>
@@ -46,4 +63,5 @@
 						</div>
 					</div>
 			</section>
+			<?php }?>
 @endsection

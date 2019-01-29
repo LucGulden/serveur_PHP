@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
-
+?>
+<script src="js/jquery-3.3.1.min.js"></script>
+<?php
 use Illuminate\Foundation\Auth\RegisterUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class connexioncontroller extends Controller
 {
@@ -20,13 +23,14 @@ class connexioncontroller extends Controller
   			'prénom' =>['required','string','max:15'],
 			'password'=> ['required','string','min:6','max:15','regex:/.*(?=.*\d+).*(?=.*[A-Z]).*/'],
 			'centre'=> ['required', 'string', 'regex:/(Strasbourg|Lyon|Nancy)/']
-  		]);
+		  ]);
+		$databaseusers = DB::connection('mysql2')->table('users')->get();
 		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
 		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
   		if($user != null){
   			?>
   			<script>
-			alert("email deja existant");	
+				alert("email deja existant");	
 			</script>
 			<?php
 			return view('welcome');
@@ -38,44 +42,66 @@ class connexioncontroller extends Controller
 		$julien=DB::getPdo()->lastInsertId();
 
 		DB::connection('mysql')->table('achete')->insert(['id_users'=>$luc->id_users,'id_commande'=>$julien]);
-		return view('welcome');
+		return view('welcome',[
+			'databaseusers'=> $databaseusers,
+		]);
     } 
 
     function login (Request $request){
+		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
+		if($user != null){
+			if (Hash::check($request->input('password'), $user->mdp_user)) {
+				?>
+				<script>
+						var token = 0;
+						var loginData = JSON.stringify({
+							"mail_user": "dylan.lafarge@viacesi.fr",
+							"mdp_user": "Qehun966"
+						});
 
-	$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
-	if($user != null){
-	if (Hash::check($request->input('password'), $user->mdp_user)) 
-	{
-		session_start();
-		session::put('id', $user->id_users);
-		session::put('connexion','1');
-		session::put('role', $user->id_role);
-		return redirect('/accueil');
-	}
-	else
-	{
-		?>
-	<script>
-	alert("Mdp Incorrect");	
-	</script>
-	<?php
-	return view('welcome');	
-	}
-	}
-	else 
-	{
-		?>
-	<script>
-	alert("Identifiant Incorrect");	
-	</script>
-	<?php
-	return view('welcome');
-	}
+						$.ajax({
+							type: "POST",
+							url: "http://localhost:3000/users/login",
+							data: loginData,
+							success: function(response, status){
+								token = response.token
+								location.href="/setToken/"+ token +"/";
+							},
+							contentType : "application/json"
+						});
+					
+				</script>
+				<?php
+				session_start();
+				session::put('prenom', $user->prenom_users);
+				session::put('id', $user->id_users);
+				session::put('connexion','1');
+				session::put('role', $user->id_role);
+				session::put('cookie','0');
+			}
+			else {
+				?>
+				<script>
+					alert("Mdp Incorrect");	
+				</script>
+				<?php
+				return view('welcome');	
+			}
+		}
+		else {
+			?>
+			<script>
+				alert("Identifiant Incorrect");	
+			</script>
+			<?php
+			return view('welcome');
+		}
 	}
 
 	function deconnexion(){
+		Session::forget('token');
 		Session::forget('connexion');
+		Session::forget('cookie');
 		Session::save();
 		header('location: /');
 		exit;
@@ -86,8 +112,14 @@ class connexioncontroller extends Controller
 		session::put('prenom','invité');
 		session::put('connexion','1');
 		session::put('role', '3');
+		session::put('cookie','0');
 		return redirect('/accueil');
 
+	}
+
+	function valider($token){
+		session::put('token', $token);
+		return redirect('/accueil');
 	}
 
 }

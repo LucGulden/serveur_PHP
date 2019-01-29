@@ -1,6 +1,14 @@
 @extends('layout')
 
 @section('content')
+@if(Session::has('connexion'))
+		<p > <p>
+@else 
+        <?php 
+          header('Location: /');
+          exit();
+         ?>
+@endif
 
 
 <!-- Section représentant le titre 'Evenements passés' en grand -->
