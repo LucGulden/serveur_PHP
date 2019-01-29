@@ -37,16 +37,18 @@ class PanierController extends Controller
         
         $id_user = Session::get('id');
 
-        $user_centre = DB::connection('mysql2')->table('centre')
+        $user_centres = DB::connection('mysql2')->table('centre')
         ->join('users', 'users.id_centre', 'centre.id_centre')
         ->where('users.id_users', $id_user)
         ->get();
 
+        foreach($user_centres as $user_centre){
         $BDEs = DB::connection('mysql2')->table('users')
         ->where('id_role', 4)
         ->where('id_centre', $user_centre->id_centre)
         ->get();
-
+        }
+        
         $articles = DB::connection('mysql')->table('users')
         ->join('achete','achete.id_users','users.id_users')
         ->join('commande','commande.id_commande','achete.id_commande')
