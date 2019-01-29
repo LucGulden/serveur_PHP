@@ -89,17 +89,20 @@
 					<div id="categorie">
 					<form method="post" action="{{ route('sort') }}">					
 							@csrf
-							<h4>Catégories:</h4>
+							<label for="category_sort">Trier par catégorie :</label>
+							<select name="category_sort" id="category_sort">
+							<option value=""></option>
 							@foreach($categories as $categorie)
-							<input type="checkbox" name="categorie" value="{{$categorie->nom_categorie}}"> {{$categorie->nom_categorie}} <br>
+							<option value="{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</option>
 							@endforeach
+							</select><br>
 							<label for="price_sort">Trier par prix :</label>
 							<select name="price_sort" id="price_sort">
 											<option value=""></option>
 											<option value="Croissant">Croissant</option>
 											<option value="Decroissant">Décroissant</option>
 							</select><br>
-							<button type="submit" class="btn btn-form btn-black display-4" name="price">Trier!</button></span>
+							<button type="submit" class="btn btn-form btn-black display-4" name="sort">Trier!</button></span>
 						</form>
 						
 						<?php
