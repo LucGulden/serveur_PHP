@@ -115,7 +115,7 @@ class BoutiqueController extends Controller
 
             foreach($commandes as $commande)
             {
-                $existants=Achete::where('id_users', '=', $id_user)
+                $existants=Contient::where('id_article', '=', $id_article)
                 ->where('id_commande', '=', $commande->id_commande)
                 ->get();
                 $count=0;
@@ -125,14 +125,14 @@ class BoutiqueController extends Controller
                     $count++;
                 }
             
-                //  if($count==0)
-                //  {
+                if($count==0)
+                {
                     $contient=new Contient;
                     $contient->id_article=$id_article;
                     $contient->id_commande=$commande->id_commande;
                     $contient->quantite=$quantite;
                     $contient->save();
-                //  }
+                }
             }
         }
         return redirect('boutique');

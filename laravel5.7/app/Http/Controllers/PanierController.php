@@ -26,23 +26,14 @@ class PanierController extends Controller
         ->where('commande.achevement_commande',0)
         ->get();
 
-        $commandes = DB::connection('mysql')->table('users')
-        ->join('achete','achete.id_users','users.id_users')
-        ->join('commande','commande.id_commande','achete.id_commande')
-        ->where('users.id_users',$id_user)
-        ->where('commande.achevement_commande',0)
-        ->get();
-
-        $users = DB::connection('mysql2')->table('users')
-        ->where('id_users', $id_user)
-        ->get();
-
         return view('panier', [
             'articles' => $articles,
         ]);
     }
 
     public function commander(){
+        $id_user = Session::get('id');
+        
         $BDEs = DB::connection('mysql2')->table('users')
         ->where('id_role', 4)
         ->get();
@@ -55,17 +46,30 @@ class PanierController extends Controller
         ->where('users.id_users',$id_user)
         ->where('commande.achevement_commande',0)
         ->get();
+
+        $commandes = DB::connection('mysql')->table('users')
+        ->join('achete','achete.id_users','users.id_users')
+        ->join('commande','commande.id_commande','achete.id_commande')
+        ->where('users.id_users',$id_user)
+        ->where('commande.achevement_commande',0)
+        ->get();
+
+        $count=0;
        
         if(isset($_POST['commander']))
         {
+            foreach($articles as $article){
+                Article::where('id_article','=',$article->id_article)
+                ->increment('nbr_ventes_article', $article->quantite);
+                $count++;
+            }
+
+            if($count!=0){
+
             foreach ($BDEs as $BDE){
             Mail::to($BDE->mail_user)->send(new CommandeRecue);
             }
 
-            foreach($articles as $article){
-                Article::where('id_article','=',$article->id_article)
-                ->increment('nbr_ventes_article', $article->quantite);
-            }
 
             foreach($commandes as $commande){
             Commande::where('id_commande', '=', $commande->id_commande)
@@ -83,6 +87,7 @@ class PanierController extends Controller
             }
 
             Achete::create(['id_commande'=>$newCommandeID, 'id_users'=>$id_user]);
+            }
             }
         }
         return redirect('boutique');
