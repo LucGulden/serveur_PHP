@@ -101,6 +101,7 @@ class connexioncontroller extends Controller
 	}
 
 	function deconnexion(){
+		Session::forget('token');
 		Session::forget('connexion');
 		Session::forget('cookie');
 		Session::save();

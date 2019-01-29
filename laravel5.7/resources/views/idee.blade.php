@@ -9,14 +9,9 @@
 @endif
 
 @section('content')
-<?php
-    use Illuminate\Support\Facades\Session;
-    $token = session::get('token');
-?>
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="titrepage">
                 <h1>Boite à idées</h1>
-                <?php echo($token); ?>
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	

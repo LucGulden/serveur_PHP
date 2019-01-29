@@ -16,10 +16,6 @@ class PanierController extends Controller
 {
     public function MonPanier()
     {
-        $BDEs = DB::connection('mysql2')->table('users')
-        ->where('id_role', 4)
-        ->get();
-
         $id_user = Session::get('id');
         $articles = DB::connection('mysql')->table('users')
         ->join('achete','achete.id_users','users.id_users')
@@ -46,7 +42,20 @@ class PanierController extends Controller
         ]);
     }
 
-    public function commande(){
+    public function commander(){
+        $BDEs = DB::connection('mysql2')->table('users')
+        ->where('id_role', 4)
+        ->get();
+
+        $articles = DB::connection('mysql')->table('users')
+        ->join('achete','achete.id_users','users.id_users')
+        ->join('commande','commande.id_commande','achete.id_commande')
+        ->join('contient','contient.id_commande','commande.id_commande')
+        ->join('articles','articles.id_article','contient.id_article')
+        ->where('users.id_users',$id_user)
+        ->where('commande.achevement_commande',0)
+        ->get();
+       
         if(isset($_POST['commander']))
         {
             foreach ($BDEs as $BDE){
