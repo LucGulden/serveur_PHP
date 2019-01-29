@@ -5,13 +5,18 @@
         <?php 
           header('Location: /');
           exit();
-         ?>
+        ?>
 @endif
 
 @section('content')
+<?php
+    use Illuminate\Support\Facades\Session;
+    $token = session::get('token');
+?>
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="titrepage">
                 <h1>Boite à idées</h1>
+                <?php echo($token); ?>
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	
@@ -40,7 +45,6 @@
 
 </section>
 
-
 <!-- GET -->
 <script>
 
@@ -68,48 +72,41 @@ var blockIdee = "";
 const getIdee = function(idee){
     var taille = idee.length - 1;
     for(var i = taille; i >=0; i--) {
-        //getJSON('http://localhost:3000/aime/' + idee[i].id_idee).then(getLike(data, i));
-        console.log(i);
-        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + idee[i].id_idee + "</button></span></div> </div>";
+        blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime!</button></span></div> </div>";
         document.getElementById("sectionIdee").innerHTML = blockIdee;
     }
-    //getJSON('http://localhost:3000/aime/11').then(getLike);
-
-    // var taille = idee.length - 1;
-    // for(var i = taille; i >= 0; i--) {
-    //     blockIdee = blockIdee + "<div class='container-fluid border border-warning rounded mb-0'> <h3>" + idee[i].titre_idee + "</h3> <p>" + idee[i].description_idee + "</p> <div class='jaime'> <span class='input-group-btn'><button type='submit' id='" + idee[i].id_idee + "' onclick='aimeIdee(this.id)'>J'aime! " + idee[i].id_idee + "</button> </span></div> </div>";
-    //     document.getElementById("sectionIdee").innerHTML = blockIdee;
-    // }
 };
 
-const getLike = function(like, test) {
-    console.log(like);
-    console.log(test);
-}
-
 getJSON('http://localhost:3000/idee/').then(getIdee);
-//getJSON('http://localhost:3000/aime/11').then(getLike);
+
 </script>
 
 <!-- POST -->
 <script>
-   
+
 function soumettreIdee(){
+
+    var token = "{{Session::get('token')}}";
+    console.log(token);
 
     var ideePost = JSON.stringify({
         "titre_idee":$("#titreidee").val(),
         "description_idee":$("#descriptionidee").val(),
         "id_users": 1
     });
-
-   //console.log(datapost);
-    console.log(ideePost);
+    
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/idee/",
+        headers: {
+            'authorization': 'Bearer ' + token
+        },
         data: ideePost,
-        success: function(){
+        success: function(response, status){
             window.location.reload(true);
+        },
+        error: function(response, status, err) {
+            alert(response.responseJSON.error);
         },
         contentType : "application/json"
     });
