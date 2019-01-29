@@ -55,6 +55,11 @@ class BoutiqueController extends Controller
             else if ($_POST['price_sort']=="Decroissant"){
                 $articles = Article::OrderBy('prix_article', 'desc')->get();
                 }
+               
+            else if ($_POST['price_sort']==""){    
+                $articles = Article::get();
+
+            }
             }
 
             else if($_POST['category_sort']==!null){
