@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('content')
 <!-- Consition premettant d'afficher la page qu'a des utilisateurs connectés-->
 @if(Session::has('connexion'))
 		<p > <p>
@@ -10,7 +11,6 @@
         ?>
 @endif
 
-@section('content')
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="titrepage">
                 <h1>Boite à idées</h1>
