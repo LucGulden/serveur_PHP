@@ -233,78 +233,78 @@
 
 <p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="color:#2c3e50;"><span  style="font-size:16px;"><span  style="font-style: normal;">- vérification, identification et authentification des données transmises par l'utilisateur&nbsp;;</span></span></span></p>
 
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="color:#2c3e50;"><span  style="font-size:16px;"><span  style="font-style: normal;">- perso</span></span><span  style="font-family:Times New Roman,Times,serif;"><span  style="font-style: normal;">nnalisation des services en affichant des publicités en fonction de l'historique de navigation de l'utilisateur, selon ses préférences&nbsp;;</span></span></span></p>
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="color:#2c3e50;"><span  style="font-size:16px;"><span  style="font-style: normal;">- perso</span></span><span  style=""><span  style="font-style: normal;">nnalisation des services en affichant des publicités en fonction de l'historique de navigation de l'utilisateur, selon ses préférences&nbsp;;</span></span></span></p>
 
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- prévention et détection des fraudes, malwares (malicious softwares ou logiciels malveillants) et gestion des incidents de sécurité&nbsp;;</span></span></span></p>
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- prévention et détection des fraudes, malwares (malicious softwares ou logiciels malveillants) et gestion des incidents de sécurité&nbsp;;</span></span></span></p>
 
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- gestion des éventuels litiges avec les utilisateurs&nbsp;;</span></span></span></p>
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- gestion des éventuels litiges avec les utilisateurs&nbsp;;</span></span></span></p>
 
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- envoi d'informations commerciales et publicitaires, en fonction des préférences de l'utilisateur ;</span></span></span></p>
-
-<!---->
-
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">&nbsp;</span></span></p>
-
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><strong >Article 10 - Politique de conservation des données</strong></span></span></p>
-
-<p  style="">&nbsp;</p>
-
-<p  dir="ltr" style="text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">La Plateforme conserve vos données pour la durée nécessaire pour vous fournir ses services ou de vous fournir une assistance. </span></span></span></p>
-
-<p ><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">Dans la mesure raisonnablement nécessaire ou requise pour satisfaire aux obligations légales ou réglementaires, régler des litiges, empêcher les fraudes et abus ou appliquer nos modalités et conditions, nous pouvons également conserver certaines de vos informations si nécessaire, même après que vous ayez fermé votre compte ou que nous n'avons plus besoin pour vous fournir des services.</span></span></span></p>
-
-<p >&nbsp;</p>
-
-<p ><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><strong ><span  style="font-style: normal;">Article 11- Partage des données personnelles avec des tiers</span></strong></span></span></p>
-
-<p >&nbsp;</p>
-
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">Les données personnelles peuvent être partagées avec des sociétés tierces exclusivement dans l’Union européenne, dans les cas suivants&nbsp;:</span></span></span></p>
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- envoi d'informations commerciales et publicitaires, en fonction des préférences de l'utilisateur ;</span></span></span></p>
 
 <!---->
 
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- lorsque l'utilisateur publie, dans les zones de commentaires libres de la Plateforme, des informations accessibles au public&nbsp;;</span></span></span></p>
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;">&nbsp;</span></span></p>
 
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- quand l'utilisateur autorise le site web d'un tiers à accéder à ses données&nbsp;;</span></span></span></p>
-
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- quand la Plateforme recourt aux services de prestataires pour fournir l'assistance utilisateurs, la publicité et les services de paiement. Ces prestataires disposent d'un accès limité aux données de l'utilisateur, dans le cadre de l'exécution de ces prestations, et ont une obligation contractuelle de les utiliser en conformité avec les dispositions de la réglementation applicable en matière protection des données à caractère personnel&nbsp;;</span></span></span></p>
-
-<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><span  style="font-style: normal;">- si la loi l'exige, la Plateforme peut effectuer la transmission de données pour donner suite aux réclamations présentées contre la Plateforme et se conformer aux procédures administratives et judiciaires&nbsp;;</span></span></span></p>
+<p  style=""><span  style=""><span  style="color:#2c3e50;"><strong >Article 10 - Politique de conservation des données</strong></span></span></p>
 
 <p  style="">&nbsp;</p>
 
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><strong >Article 12&nbsp;- Offres commerciales</strong></span></span></p>
+<p  dir="ltr" style="text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">La Plateforme conserve vos données pour la durée nécessaire pour vous fournir ses services ou de vous fournir une assistance. </span></span></span></p>
+
+<p ><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">Dans la mesure raisonnablement nécessaire ou requise pour satisfaire aux obligations légales ou réglementaires, régler des litiges, empêcher les fraudes et abus ou appliquer nos modalités et conditions, nous pouvons également conserver certaines de vos informations si nécessaire, même après que vous ayez fermé votre compte ou que nous n'avons plus besoin pour vous fournir des services.</span></span></span></p>
+
+<p >&nbsp;</p>
+
+<p ><span  style=""><span  style="color:#2c3e50;"><strong ><span  style="font-style: normal;">Article 11- Partage des données personnelles avec des tiers</span></strong></span></span></p>
+
+<p >&nbsp;</p>
+
+<p  style=""><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">Les données personnelles peuvent être partagées avec des sociétés tierces exclusivement dans l’Union européenne, dans les cas suivants&nbsp;:</span></span></span></p>
+
+<!---->
+
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- lorsque l'utilisateur publie, dans les zones de commentaires libres de la Plateforme, des informations accessibles au public&nbsp;;</span></span></span></p>
+
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- quand l'utilisateur autorise le site web d'un tiers à accéder à ses données&nbsp;;</span></span></span></p>
+
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- quand la Plateforme recourt aux services de prestataires pour fournir l'assistance utilisateurs, la publicité et les services de paiement. Ces prestataires disposent d'un accès limité aux données de l'utilisateur, dans le cadre de l'exécution de ces prestations, et ont une obligation contractuelle de les utiliser en conformité avec les dispositions de la réglementation applicable en matière protection des données à caractère personnel&nbsp;;</span></span></span></p>
+
+<p  dir="ltr" style="color: rgb(0, 0, 0); font-style: normal;text-align: justify;"><span  style=""><span  style="color:#2c3e50;"><span  style="font-style: normal;">- si la loi l'exige, la Plateforme peut effectuer la transmission de données pour donner suite aux réclamations présentées contre la Plateforme et se conformer aux procédures administratives et judiciaires&nbsp;;</span></span></span></p>
 
 <p  style="">&nbsp;</p>
 
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Vous êtes susceptible de recevoir des offres commerciales de l'éditeur. Si vous ne le souhaitez pas, veuillez cliquer sur le lien suivant&nbsp;: <span  class="boiler-field empty"></span></span></span></p>
+<p  style=""><span  style=""><span  style="color:#2c3e50;"><strong >Article 12&nbsp;- Offres commerciales</strong></span></span></p>
 
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Vos données sont susceptibles d’être utilisées par les partenaires de l'éditeur à des fins de prospection commerciale, Si vous ne le souhaitez pas, veuillez cliquer sur le lien suivant&nbsp;: <span  class="boiler-field empty"></span></span></span></p>
+<p  style="">&nbsp;</p>
 
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Si, lors de la consultation du site, vous accédez à des données à caractère personnel, vous devez vous abstenir de toute collecte, de toute utilisation non autorisée et de tout acte pouvant constituer une atteinte à la vie privée ou à la réputation des personnes. L'éditeur décline toute responsabilité à cet égard.</span></span></p>
+<p  style=""><span  style=""><span  style="color:#2c3e50;">Vous êtes susceptible de recevoir des offres commerciales de l'éditeur. Si vous ne le souhaitez pas, veuillez cliquer sur le lien suivant&nbsp;: <span  class="boiler-field empty"></span></span></span></p>
 
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Les données sont conservées et utilisées pour une durée conforme à la législation en vigueur.</span></span></p>
+<p  style=""><span  style=""><span  style="color:#2c3e50;">Vos données sont susceptibles d’être utilisées par les partenaires de l'éditeur à des fins de prospection commerciale, Si vous ne le souhaitez pas, veuillez cliquer sur le lien suivant&nbsp;: <span  class="boiler-field empty"></span></span></span></p>
+
+<p  style=""><span  style=""><span  style="color:#2c3e50;">Si, lors de la consultation du site, vous accédez à des données à caractère personnel, vous devez vous abstenir de toute collecte, de toute utilisation non autorisée et de tout acte pouvant constituer une atteinte à la vie privée ou à la réputation des personnes. L'éditeur décline toute responsabilité à cet égard.</span></span></p>
+
+<p  style=""><span  style=""><span  style="color:#2c3e50;">Les données sont conservées et utilisées pour une durée conforme à la législation en vigueur.</span></span></p>
 
 <p  style=""><br >
-<span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><strong >Article 13&nbsp;-&nbsp;Cookies</strong>&nbsp;</span></span></p>
+<span  style=""><span  style="color:#2c3e50;"><strong >Article 13&nbsp;-&nbsp;Cookies</strong>&nbsp;</span></span></p>
 
 <p  style="">&nbsp;</p>
 
-<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Qu’est-ce qu’un «&nbsp;cookie&nbsp;»&nbsp;?</span></span></p>
+<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style=""><span  style="color:#2c3e50;">Qu’est-ce qu’un «&nbsp;cookie&nbsp;»&nbsp;?</span></span></p>
 
-<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Un «&nbsp;Cookie&nbsp;» ou traceur est un fichier électronique déposé sur un terminal (ordinateur, tablette, smartphone,…) et lu par exemple lors de la consultation d'un site internet, de la lecture d'un courrier électronique, de l'installation ou de l'utilisation d'un logiciel ou d'une application mobile et ce quel que soit le type de terminal utilisé&nbsp;<span  style="font-style: normal; text-align: start;">(source&nbsp;:&nbsp;</span></span><a  href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi" style="color: rgb(148, 88, 23); font-style: normal; text-align: start;"><span  style="color:#2c3e50;">https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi</span></a><span  style="color:#2c3e50;"><span  style="font-style: normal; text-align: start;">&nbsp;)</span>.</span></span></p>
+<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style=""><span  style="color:#2c3e50;">Un «&nbsp;Cookie&nbsp;» ou traceur est un fichier électronique déposé sur un terminal (ordinateur, tablette, smartphone,…) et lu par exemple lors de la consultation d'un site internet, de la lecture d'un courrier électronique, de l'installation ou de l'utilisation d'un logiciel ou d'une application mobile et ce quel que soit le type de terminal utilisé&nbsp;<span  style="font-style: normal; text-align: start;">(source&nbsp;:&nbsp;</span></span><a  href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi" style="color: rgb(148, 88, 23); font-style: normal; text-align: start;"><span  style="color:#2c3e50;">https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi</span></a><span  style="color:#2c3e50;"><span  style="font-style: normal; text-align: start;">&nbsp;)</span>.</span></span></p>
 
-<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">En naviguant sur ce site, des «&nbsp;cookies&nbsp;» émanant de la société responsable du site concerné et/ou des sociétés tiers pourront être déposés sur votre terminal.</span></span></p>
+<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style=""><span  style="color:#2c3e50;">En naviguant sur ce site, des «&nbsp;cookies&nbsp;» émanant de la société responsable du site concerné et/ou des sociétés tiers pourront être déposés sur votre terminal.</span></span></p>
 
-<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Lors de la première navigation sur ce site, une bannière explicative sur l’utilisation des «&nbsp;cookies&nbsp;» apparaîtra. Dès lors, en poursuivant la navigation, le client et/ou prospect sera réputé informé et avoir accepté l’utilisation desdits «&nbsp;cookies&nbsp;». Le consentement donné sera valable pour une période de treize (13) mois.&nbsp;<span  style="font-style: normal;">L'utilisateur a la possibilité de désactiver les cookies à partir des paramètres de son navigateur. </span></span></span></p>
-
-<p  style="">&nbsp;</p>
-
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Toutes les informations collectées&nbsp;ne seront utilisées que pour suivre le volume, le type et la configuration du trafic utilisant ce site, pour en développer la conception et l'agencement et à d'autres fins administratives et de planification et plus généralement pour améliorer le service que nous vous offrons.</span></span></p>
+<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style=""><span  style="color:#2c3e50;">Lors de la première navigation sur ce site, une bannière explicative sur l’utilisation des «&nbsp;cookies&nbsp;» apparaîtra. Dès lors, en poursuivant la navigation, le client et/ou prospect sera réputé informé et avoir accepté l’utilisation desdits «&nbsp;cookies&nbsp;». Le consentement donné sera valable pour une période de treize (13) mois.&nbsp;<span  style="font-style: normal;">L'utilisateur a la possibilité de désactiver les cookies à partir des paramètres de son navigateur. </span></span></span></p>
 
 <p  style="">&nbsp;</p>
 
-<p  style=""><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Les cookies suivants sont présents sur ce site :&nbsp;</span></span></p>
+<p  style=""><span  style=""><span  style="color:#2c3e50;">Toutes les informations collectées&nbsp;ne seront utilisées que pour suivre le volume, le type et la configuration du trafic utilisant ce site, pour en développer la conception et l'agencement et à d'autres fins administratives et de planification et plus généralement pour améliorer le service que nous vous offrons.</span></span></p>
+
+<p  style="">&nbsp;</p>
+
+<p  style=""><span  style=""><span  style="color:#2c3e50;">Les cookies suivants sont présents sur ce site :&nbsp;</span></span></p>
 
 <p  style="">&nbsp;</p>
 
@@ -319,24 +319,24 @@
 <div >
 <!----><div>
 <div >
-<p ><span  style="font-family:Times New Roman,Times,serif;">-&nbsp;<span  class="boiler-field">Coockie fait maison</span></span></p>
+<p ><span  style="">-&nbsp;<span  class="boiler-field">Coockie fait maison</span></span></p>
 </div>
 </div>
 
-<p >&nbsp;<span  style="font-family:Times New Roman,Times,serif;">&nbsp;</span></p>
+<p >&nbsp;<span  style="">&nbsp;</span></p>
 </div>
 
-<p ><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">La&nbsp;durée de vie de ces cookies est de treize mois.</span></span></p>
+<p ><span  style=""><span  style="color:#2c3e50;">La&nbsp;durée de vie de ces cookies est de treize mois.</span></span></p>
 
 <p >&nbsp;</p>
 
-<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Pour plus d’informations sur l’utilisation, la gestion et la suppression des «&nbsp;cookies&nbsp;», pour tout type de navigateur, nous vous invitons à consulter le lien suivant&nbsp;:&nbsp;</span><a  href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser" style="color: rgb(214, 128, 33);"><span  style="color:#2c3e50;">https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser</span></a><span  style="color:#2c3e50;">.</span></span></p>
+<p  style="color: rgb(82, 82, 82); font-style: normal; text-align: start;"><span  style=""><span  style="color:#2c3e50;">Pour plus d’informations sur l’utilisation, la gestion et la suppression des «&nbsp;cookies&nbsp;», pour tout type de navigateur, nous vous invitons à consulter le lien suivant&nbsp;:&nbsp;</span><a  href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser" style="color: rgb(214, 128, 33);"><span  style="color:#2c3e50;">https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser</span></a><span  style="color:#2c3e50;">.</span></span></p>
 
 <p  style=""><br >
-<span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;"><strong >Article 14&nbsp;-&nbsp;Photographies et représentation des produits</strong></span></span></p>
+<span  style=""><span  style="color:#2c3e50;"><strong >Article 14&nbsp;-&nbsp;Photographies et représentation des produits</strong></span></span></p>
 
 <p  style=""><br >
-<span  style="font-family:Times New Roman,Times,serif;"><span  style="color:#2c3e50;">Les photographies de produits, accompagnant leur description, ne sont pas contractuelles et n'engagent pas l'éditeur.</span></span></p>
+<span  style=""><span  style="color:#2c3e50;">Les photographies de produits, accompagnant leur description, ne sont pas contractuelles et n'engagent pas l'éditeur.</span></span></p>
 
 <p  style=""><br >
 <span  style="color:#2c3e50;"><span  style="font-size:16px;"><strong >Article 15&nbsp;-&nbsp;Loi applicable</strong></span></span></p>

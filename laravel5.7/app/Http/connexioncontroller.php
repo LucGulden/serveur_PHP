@@ -23,7 +23,8 @@ class connexioncontroller extends Controller
   			'prénom' =>['required','string','max:15'],
 			'password'=> ['required','string','min:6','max:15','regex:/.*(?=.*\d+).*(?=.*[A-Z]).*/'],
 			'centre'=> ['required', 'string', 'regex:/(Strasbourg|Lyon|Nancy)/']
-  		]);
+		  ]);
+		$databaseusers = DB::connection('mysql2')->table('users')->get();
 		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
 		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
   		if($user != null){
@@ -41,7 +42,9 @@ class connexioncontroller extends Controller
 		$julien=DB::getPdo()->lastInsertId();
 
 		DB::connection('mysql')->table('achete')->insert(['id_users'=>$luc->id_users,'id_commande'=>$julien]);
-		return view('welcome');
+		return view('welcome',[
+			'databaseusers'=> $databaseusers,
+		]);
     } 
 
     function login (Request $request){
