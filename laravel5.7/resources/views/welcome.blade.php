@@ -1,9 +1,11 @@
+<!--importation du css de la page et des balises nécéssaires au fonctionnement du html-->
 @extends('csswelcome')
 @section('content')
 	<header>
     	<h1 class="title">Bienvenue sur le site du BDE</h1>
     </header>
     <main>
+		<!--création du formulaire de connection-->
     	<div class="container">
     	    <img src="https://www.conversationnel.fr/wp-content/uploads/2018/04/personnage.png" alt="personnage">
     		<form action="{{ route('Connexion') }}" method="POST">

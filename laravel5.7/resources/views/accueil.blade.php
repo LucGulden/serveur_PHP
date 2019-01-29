@@ -5,6 +5,7 @@
 use Illuminate\Support\Facades\Session;
 ?>
 
+<!-- Consition premettant d'afficher la page qu'a des utilisateurs connectés-->
 @if(Session::has('connexion')) 
   <div class="alert alert-success success">
     <p > Vous êtes bien connecté en tant que <?php echo e(Session::get('prenom')); ?><p>
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Session;
          ?>
 @endif
 
+<!-- création d'une datatable-->
+<!-- condition permetant de vérifier l'affichage uniquement pour les salariés--> 
 <?php
         $guest = Session::get('role');
             if ($guest == 2) 
@@ -43,6 +46,7 @@ use Illuminate\Support\Facades\Session;
 </table>
 <?php }?>
 
+<!-- création d'un message d'erreur pour les cookies-->
 <script >
   function alerte()
   {
@@ -83,6 +87,8 @@ use Illuminate\Support\Facades\Session;
           </div>
       </div>
     </div>
+
+    <!--Variable de session utilisé pour n'afficher qu'une fois l'alerte des cookies-->
     <?php
         $cookie = Session::get('cookie');
 
