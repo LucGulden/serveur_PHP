@@ -1,4 +1,7 @@
 @extends('layout')
+
+
+@section('content')
 @if(Session::has('connexion'))
 		<p > <p>
 @else 
@@ -7,8 +10,6 @@
           exit();
         ?>
 @endif
-
-@section('content')
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="titrepage">
                 <h1>Boite à idées</h1>

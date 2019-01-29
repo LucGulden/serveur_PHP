@@ -44,6 +44,7 @@ Route::get('/accueil', 'AccueilController@topvente');
 Route::get('/evenementspasses', 'EventController@eventpassed');
 Route::post('/evenementspasses', 'EventController@eventpassed')->name('Evenementspasses_post');
 
+
 Route::get('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming');
 Route::post('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming_post');
 

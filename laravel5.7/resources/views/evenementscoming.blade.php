@@ -9,7 +9,7 @@
           exit();
          ?>
 @endif
-
+<?php $guest = Session::get('role'); ?>
 <!-- Section représentant le titre 'Evenements à venir' en grand -->
 <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
 	<div class="container">
@@ -34,15 +34,21 @@
 		<div class="jaime">
 
             <!-- lien pour télécharger la liste de participants à un événement au format csv -->
-			<a href=<?=$nom_event.".csv"?> class="btn btn-form btn-black display-4">Liste participants</a>
-			<form method="post" action="{{ route('Evenementscoming_post') }}">
+            <?php if($guest == 4){
+                ?>
+                    <a href=<?=$nom_event.".csv"?> class="btn btn-form btn-black display-4">Télécharger liste participants</a>
+                <?php
+            }
+            ?>
+            
+            <form method="post" action="{{ route('Evenementscoming_post') }}">
 				@csrf
 				<span class="input-group-btn">
 
                 <!-- permet de renvoyer l'id de l'événement au controller -->
 				<input type="hidden" name="id_event_post" value="{{ $event->id_events }}"/>
 				<?php
-					$guest = Session::get('role');
+					
 					if ($guest == 1 || $guest == 2 || $guest == 4   ) 
 					{?>
 				<button type="submit" class="btn btn-form btn-black display-4" name="participe_event">Participer à l'événement</button></span>

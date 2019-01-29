@@ -54,9 +54,6 @@ class EventController extends Controller
         }
 
 
-
-
-        
         $participations = Participe::where('id_users', '=', Session::get('id'))->get();
 
         // Lorsque l'utilisateur clique sur participer, on vérifie si il ne participe pas déjà
@@ -105,5 +102,14 @@ class EventController extends Controller
             ->get();
         }
         return view('evenementspasses', compact('events', 'photos_events'));
+    }
+
+
+
+
+    public function upload()
+    {
+        $events = Event::where('date_events', '<', Carbon::today()->toDateString())->get();
+        return redirect('evenementspasses');
     }
 }
