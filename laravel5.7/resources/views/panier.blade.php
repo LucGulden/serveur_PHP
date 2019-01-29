@@ -19,7 +19,7 @@
         		if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         				{?>
         					<div class="panier">
-								<form method="post" action="{{ route('panier_post') }}">
+								<form method="post" action="{{ route('commander') }}">
 								@csrf
 									<span class="input-group-btn">
 									<button type="submit" class="btn btn-form btn-black display-4" name="commander">Commander</button></span>
@@ -49,7 +49,7 @@
 									</p>
 								
 									<div class="mbr-section-btn pt-4 text-center">
-									<form method="post" action="{{ route('panier_post') }}">
+									<form method="post" action="{{ route('deletebasket') }}">
 								@csrf
 									<span class="input-group-btn">
 									<input type="hidden" name="id_article" value="{{$article->id_article}}">

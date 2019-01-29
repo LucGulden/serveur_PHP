@@ -41,7 +41,12 @@ class PanierController extends Controller
         ->where('id_users', $id_user)
         ->get();
 
-        
+        return view('panier', [
+            'articles' => $articles,
+        ]);
+    }
+
+    public function commande(){
         if(isset($_POST['commander']))
         {
             foreach ($BDEs as $BDE){
@@ -70,10 +75,11 @@ class PanierController extends Controller
 
             Achete::create(['id_commande'=>$newCommandeID, 'id_users'=>$id_user]);
             }
-
-            return redirect('boutique');
         }
+        return redirect('boutique');
+    }
 
+    public function deletebasket(){
         if(isset($_POST['supprimer']))
         {
             $id_article=$_POST['id_article'];
@@ -92,13 +98,7 @@ class PanierController extends Controller
                 ->where('id_commande','=',$commande->id_commande)
                 ->delete();
             }
-
-            return redirect('panier');
         }
-
-        return view('panier', [
-            'articles' => $articles,
-        ]);
+        return redirect('panier');
     }
-
 }

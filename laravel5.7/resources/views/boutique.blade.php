@@ -51,7 +51,7 @@
 									<?php
        									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         								{?>
-									<form method="post" action="{{ route('Boutique_post') }}">
+									<form method="post" action="{{ route('addbasket') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
@@ -64,7 +64,7 @@
 									<?php
        									if ($guest == 4) 
         								{?>
-									<form method="post" action="{{ route('Boutique_post') }}">
+									<form method="post" action="{{ route('deletearticle') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$topvente->id_article}}"/>
@@ -87,26 +87,33 @@
 			
 
 					<div id="categorie">
-						<form action="/action_page.php">
+					<form method="post" action="{{ route('sort') }}">					
+							@csrf
 							<h4>Catégories:</h4>
 							@foreach($categories as $categorie)
 							<input type="checkbox" name="categorie" value="{{$categorie->nom_categorie}}"> {{$categorie->nom_categorie}} <br>
 							@endforeach
-							<input type="submit" value="Submit">
+							<label for="price_sort">Trier par prix :</label>
+							<select name="price_sort" id="price_sort">
+											<option value=""></option>
+											<option value="Croissant">Croissant</option>
+											<option value="Decroissant">Décroissant</option>
+							</select><br>
+							<button type="submit" class="btn btn-form btn-black display-4" name="price">Trier!</button></span>
 						</form>
 						
 						<?php
 						if ($guest == 4) 
         				{?>
 
-						<form method="post" action="{{ route('Boutique_post') }}">
+						<form method="post" action="{{ route('addcategory') }}">
 									@csrf
 									<span class="input-group-btn">
 									Créer une nouvelle catégorie:<br>
 									<input type="text" name="newcategory"><br>
 									<button type="submit" class="btn btn-form btn-black display-4" name="add_category">Ajouter!</button></span>
 						</form>
-						<form method="post" action="{{ route('Boutique_post') }}">
+						<form method="post" action="{{ route('createarticle') }}">
 									@csrf
 									<span class="input-group-btn">
 									Créer une nouvelle catégorie:<br>
@@ -118,7 +125,7 @@
 									<input type="text" name="prix_article" id="prix_article" /><br>
 									<label for="image_article">Photo de l'article :</label>
 									<input type="text" name="image_article" id="image_article" /><br>
-									<label for="categorie_article">Photo de l'article :</label>
+									<label for="categorie_article">Catégorie de l'article :</label>
 									<select name="categorie_article" id="categorie_article">
 										@foreach($categories as $categorie)
 											<option value="{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</option>
@@ -153,7 +160,7 @@
 									<?php
        									if ($guest == 1 || $guest == 2 || $guest == 4   ) 
         								{?>
-									<form method="post" action="{{ route('Boutique_post') }}">
+									<form method="post" action="{{ route('addbasket') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
@@ -166,7 +173,7 @@
 									<?php
        									if ($guest == 4) 
         								{?>
-									<form method="post" action="{{ route('Boutique_post') }}">
+									<form method="post" action="{{ route('deletearticle') }}">
 										@csrf
 										<span class="input-group-btn">
 										<input type="hidden" name="id_article" value="{{$article->id_article}}"/>
