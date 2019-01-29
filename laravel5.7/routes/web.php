@@ -38,6 +38,7 @@ Route::get('/ConditionsV', function(){
 Route::get('/accueil', 'AccueilController@topvente');
 
 Route::get('/evenementspasses', 'EventController@eventpassed');
+Route::post('/evenementspasses', 'EventController@eventpassed')->name('Evenementspasses_post');
 
 Route::get('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming');
 Route::post('/evenementscoming', 'EventController@eventcoming')-> name('Evenementscoming_post');
@@ -62,3 +63,5 @@ Route::post('Inscription','connexioncontroller@register')-> name('Inscription');
 Route::post('Connexion','connexioncontroller@login')-> name('Connexion');
 
 Route::get('Deconnexion', 'connexioncontroller@deconnexion')-> name('Deconnexion');
+
+
