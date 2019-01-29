@@ -40,9 +40,10 @@
 
 </section>
 
-<!-- GET -->
+<!-- Requete GET : Get l'ensemble des idées -->
 <script>
 
+// Requete envoyé au serveur
 var getJSON = function(url) {
 	return new Promise(function (data,err){
 		var xhr = new XMLHttpRequest();
@@ -62,7 +63,7 @@ var getJSON = function(url) {
 	});
 };
 
-
+// Affichage des idées
 var blockIdee = "";
 const getIdee = function(idee){
     var taille = idee.length - 1;
@@ -76,7 +77,7 @@ getJSON('http://localhost:3000/idee/').then(getIdee);
 
 </script>
 
-<!-- POST -->
+<!-- Requète POST : Soumettre une idée-->
 <script>
 
 function soumettreIdee(){
@@ -108,7 +109,7 @@ function soumettreIdee(){
  }
  </script>
 
-<!-- J'aime -->
+<!-- Requete POST : Aimer une idée -->
 <script>
         
     function aimeIdee(id) {
