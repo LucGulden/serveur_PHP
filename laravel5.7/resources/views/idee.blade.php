@@ -1,4 +1,6 @@
 @extends('layout')
+
+<!-- Consition premettant d'afficher la page qu'a des utilisateurs connectés-->
 @if(Session::has('connexion'))
 		<p > <p>
 @else 
