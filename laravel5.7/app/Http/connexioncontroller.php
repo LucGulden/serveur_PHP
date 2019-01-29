@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-
+?>
+<script src="js/jquery-3.3.1.min.js"></script>
+<?php
 use Illuminate\Foundation\Auth\RegisterUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -48,23 +50,23 @@ class connexioncontroller extends Controller
 			if (Hash::check($request->input('password'), $user->mdp_user)) {
 				?>
 				<script>
-					alert("Ma bite");
-					var loginData = JSON.stringify({
-						"mail_user": $user->mail_user,
-						"mdp_user": $user->mdp_user
-					});
+						var token = 0;
+						var loginData = JSON.stringify({
+							"mail_user": "dylan.lafarge@viacesi.fr",
+							"mdp_user": "Qehun966"
+						});
 
-					$.ajax({
-						type: "POST",
-						url: "http://localhost:3000/users/login",
-						data: loginData,
-						success: function(response, status){
-							$token = response.id_users;
-							alert(response.id_users);
-							console.log($token);
-						},
-						contentType : "application/json"
-					});
+						$.ajax({
+							type: "POST",
+							url: "http://localhost:3000/users/login",
+							data: loginData,
+							success: function(response, status){
+								token = response.token
+								location.href="/setToken/"+ token +"/";
+							},
+							contentType : "application/json"
+						});
+					
 				</script>
 				<?php
 				session_start();
@@ -73,7 +75,8 @@ class connexioncontroller extends Controller
 				session::put('connexion','1');
 				session::put('role', $user->id_role);
 				session::put('cookie','0');
-				return redirect('/accueil');
+				//return redirect('/accueil');
+				
 			}
 			else {
 				?>
@@ -110,6 +113,11 @@ class connexioncontroller extends Controller
 		session::put('cookie','0');
 		return redirect('/accueil');
 
+	}
+
+	function valider($token){
+		session::put('token', $token);
+		return redirect('/accueil');
 	}
 
 }

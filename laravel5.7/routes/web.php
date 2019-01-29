@@ -35,6 +35,10 @@ Route::get('/ConditionsV', function(){
 });
 
 
+
+Route::get('/setToken/{token}', 'connexioncontroller@valider');
+
+
 Route::get('/accueil', 'AccueilController@topvente');
 
 Route::get('/evenementspasses', 'EventController@eventpassed');

@@ -5,13 +5,18 @@
         <?php 
           header('Location: /');
           exit();
-         ?>
+        ?>
 @endif
 
 @section('content')
+<?php
+    use Illuminate\Support\Facades\Session;
+    $token = session::get('token');
+?>
   <section class="mbr-section form1 cid-rfRVRaDa1Q" id="form1-c">
     <div class="titrepage">
                 <h1>Boite à idées</h1>
+                <?php echo($token); ?>
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	
@@ -39,7 +44,6 @@
     </div>
 
 </section>
-
 
 <!-- GET -->
 <script>
@@ -73,34 +77,36 @@ const getIdee = function(idee){
     }
 };
 
-// const getLike = function(listIdee) {
-//     getJSON('http://localhost:3000/aime' + i).then(getLike);
-// }
-
 getJSON('http://localhost:3000/idee/').then(getIdee);
 
-//getJSON('http://localhost:3000/aime/11').then(getLike);
 </script>
 
 <!-- POST -->
 <script>
-   
+
 function soumettreIdee(){
+
+    var token = "{{Session::get('token')}}";
+    console.log(token);
 
     var ideePost = JSON.stringify({
         "titre_idee":$("#titreidee").val(),
         "description_idee":$("#descriptionidee").val(),
         "id_users": 1
     });
-
-   //console.log(datapost);
-    console.log(ideePost);
+    
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/idee/",
+        headers: {
+            'authorization': 'Bearer ' + token
+        },
         data: ideePost,
-        success: function(){
+        success: function(response, status){
             window.location.reload(true);
+        },
+        error: function(response, status, err) {
+            alert(response.responseJSON.error);
         },
         contentType : "application/json"
     });
