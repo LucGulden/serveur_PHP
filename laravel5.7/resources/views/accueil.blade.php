@@ -2,6 +2,7 @@
 
 @section('content')
 
+<!-- Consition premettant d'afficher la page qu'a des utilisateurs connectés-->
 <?php
     use Illuminate\Support\Facades\Session;
     ?>
@@ -16,6 +17,8 @@
     ?>
 @endif
 
+<!-- création d'une datatable-->
+<!-- condition permetant de vérifier l'affichage uniquement pour les salariés--> 
 <?php
         $guest = Session::get('role');
             if ($guest == 2) 
@@ -43,6 +46,7 @@
 </table>
 <?php }?>
 
+<!-- création d'un message d'erreur pour les cookies-->
 <script >
   function alerte()
   {
@@ -81,6 +85,8 @@
             @endforeach
         </div>
     </div>
+
+    <!--Variable de session utilisé pour n'afficher qu'une fois l'alerte des cookies-->
 </div>
     <?php
         $cookie = Session::get('cookie');
