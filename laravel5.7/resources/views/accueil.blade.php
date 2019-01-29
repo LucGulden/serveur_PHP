@@ -16,6 +16,33 @@ use Illuminate\Support\Facades\Session;
          ?>
 @endif
 
+<?php
+        $guest = Session::get('role');
+            if ($guest == 2) 
+                {?>
+            
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+      @foreach($databaseusers as $databaseuser)
+        <tr>
+           <td>{{$databaseuser->prenom_users}}</td>
+           <td>{{$databaseuser->nom_users}}</td>
+           <td>{{$databaseuser->mail_user}}</td>
+           <td>{{$databaseuser->nom_role}}</td>
+        </tr>
+      @endforeach
+    </tbody>
+</table>
+<?php }?>
+
 <script >
   function alerte()
   {
