@@ -16,6 +16,7 @@
                 <h2>Proposez nous des idées d'évènements</h2>
     </div>
 	
+    <!-- Formulaire de proposition d'une idée -->
 	<div id = "formulaire">
    		<p>
 		   <label for="titreidee">Titre de votre idée :</label>
@@ -30,6 +31,7 @@
 
 </section>
 
+<!-- Section où les idées sont affichées -->
 <section id = "sectionIdee">
     <div class="container-fluid border border-warning rounded mb-0">
         <h3>Lorem ipsum dolor sit amet</h3>
@@ -86,17 +88,19 @@ function soumettreIdee(){
     var token = "{{Session::get('token')}}";
     console.log(token);
 
+    // Création du json à envoyer
     var ideePost = JSON.stringify({
         "titre_idee":$("#titreidee").val(),
         "description_idee":$("#descriptionidee").val(),
-        "id_users": 1
+        "id_users": "{{Session::get('id')}}"
     });
     
+    // Envoie de la requête POST 
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/idee/",
         headers: {
-            'authorization': 'Bearer ' + token
+            'authorization': 'siteBDE ' + token
         },
         data: ideePost,
         success: function(response, status){
@@ -117,17 +121,19 @@ function soumettreIdee(){
         
         var token = "{{Session::get('token')}}";
 
+        // Création du json à envoyer
         var aimePost = JSON.stringify({
             "id_idee": id,
-            "id_users": 1
+            "id_users": "{{Session::get('id')}}"
         });
 
+        // Envoie de la requête POST
         $.ajax({
             type: "POST",
             url: "http://localhost:3000/aime/",
             data: aimePost,
             headers: {
-                'authorization': 'Bearer ' + token
+                'authorization': 'siteBDE ' + token
             },
             success: function(){
                 alert("Vous avez aimé l'idée " + id);

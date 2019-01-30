@@ -27,7 +27,7 @@ class connexioncontroller extends Controller
 		$databaseusers = DB::connection('mysql2')->table('users')->get();
 		$centre = DB::connection('mysql2')->table('centre')->where('lieu_centre', $request->input('centre'))->first();
 		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
-		/*Condition permettant de vérifier que l'email renseigner n'existe pas déja dans la bdd*/
+		/*Condition permettant de vérifier que l'email renseigné n'existe pas déjà dans la bdd*/
 		  if($user != null)
 		  {
   			?>
@@ -37,7 +37,7 @@ class connexioncontroller extends Controller
 			<?php
 			return view('welcome');
   			}
-		/*insert les éléments du formualire dans la bdd*/
+		/*Insert les éléments du formualire dans la bdd*/
 		DB::connection('mysql2')->table('users')->insert(['nom_users'=>$request->input('nom'),'mdp_user'=>Hash::make($request->input('password')),'prenom_users'=>$request->input('prénom'),'mail_user'=>$request->input('mail'),'id_centre'=>$centre->id_centre,'id_role'=>1]);
 		$idinsert=DB::connection('mysql2')->table('users')->where('mail_user', $request->input('mail'))->first();
 		DB::connection('mysql')->table('users')->insert(['id_users'=>$idinsert->id_users]);
@@ -51,7 +51,7 @@ class connexioncontroller extends Controller
 		]);
     } 
 
-	/*fontion permettant la connection*/
+	/*fonction permettant la connection*/
     function login (Request $request){
 		$user = DB::connection('mysql2')->table('users')->where('mail_user',$request->input('mail'))->first();
 		/*condition vérifiant si l'iditifiant a été trouvé*/
@@ -67,7 +67,7 @@ class connexioncontroller extends Controller
 							"mdp_user": "Qehun966"
 						});
 						
-						/* requete d'envoie à l'API*/
+						/* requete envoyé à l'API*/
 						$.ajax({
 							type: "POST",
 							url: "http://localhost:3000/users/login",
